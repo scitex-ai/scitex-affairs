@@ -51,6 +51,7 @@
 <li class="toctree-l2"><a class="reference internal" href="../quickstart.html#configuration">Configuration</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../quickstart.html#command-line">Command line</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../quickstart.html#python">Python</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../quickstart.html#prices-in-another-currency">Prices in another currency</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../quickstart.html#actual-observations">Actual observations</a></li>
 </ul>
 </li>
@@ -67,6 +68,7 @@
 <li class="toctree-l3"><a class="reference internal" href="#scitex_affairs.AffairsConfig.scenarios"><code class="docutils literal notranslate"><span class="pre">AffairsConfig.scenarios</span></code></a></li>
 <li class="toctree-l3"><a class="reference internal" href="#scitex_affairs.AffairsConfig.pricing_policies"><code class="docutils literal notranslate"><span class="pre">AffairsConfig.pricing_policies</span></code></a></li>
 <li class="toctree-l3"><a class="reference internal" href="#scitex_affairs.AffairsConfig.sources"><code class="docutils literal notranslate"><span class="pre">AffairsConfig.sources</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="#scitex_affairs.AffairsConfig.fx"><code class="docutils literal notranslate"><span class="pre">AffairsConfig.fx</span></code></a></li>
 <li class="toctree-l3"><a class="reference internal" href="#scitex_affairs.AffairsConfig.from_mapping"><code class="docutils literal notranslate"><span class="pre">AffairsConfig.from_mapping()</span></code></a></li>
 </ul>
 </li>
@@ -94,6 +96,17 @@
 <li class="toctree-l3"><a class="reference internal" href="#scitex_affairs.DiscountPhase.contains"><code class="docutils literal notranslate"><span class="pre">DiscountPhase.contains()</span></code></a></li>
 </ul>
 </li>
+<li class="toctree-l2"><a class="reference internal" href="#scitex_affairs.FxError"><code class="docutils literal notranslate"><span class="pre">FxError</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="#scitex_affairs.FxRate"><code class="docutils literal notranslate"><span class="pre">FxRate</span></code></a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#scitex_affairs.FxRate.base"><code class="docutils literal notranslate"><span class="pre">FxRate.base</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="#scitex_affairs.FxRate.quote"><code class="docutils literal notranslate"><span class="pre">FxRate.quote</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="#scitex_affairs.FxRate.rate"><code class="docutils literal notranslate"><span class="pre">FxRate.rate</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="#scitex_affairs.FxRate.as_of"><code class="docutils literal notranslate"><span class="pre">FxRate.as_of</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="#scitex_affairs.FxRate.source"><code class="docutils literal notranslate"><span class="pre">FxRate.source</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="#scitex_affairs.FxRate.retrieved_at"><code class="docutils literal notranslate"><span class="pre">FxRate.retrieved_at</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="#scitex_affairs.FxRate.source_label"><code class="docutils literal notranslate"><span class="pre">FxRate.source_label</span></code></a></li>
+</ul>
+</li>
 <li class="toctree-l2"><a class="reference internal" href="#scitex_affairs.Price"><code class="docutils literal notranslate"><span class="pre">Price</span></code></a><ul>
 <li class="toctree-l3"><a class="reference internal" href="#scitex_affairs.Price.amount"><code class="docutils literal notranslate"><span class="pre">Price.amount</span></code></a></li>
 <li class="toctree-l3"><a class="reference internal" href="#scitex_affairs.Price.interval"><code class="docutils literal notranslate"><span class="pre">Price.interval</span></code></a></li>
@@ -104,6 +117,7 @@
 <li class="toctree-l3"><a class="reference internal" href="#scitex_affairs.Price.markup_percent"><code class="docutils literal notranslate"><span class="pre">Price.markup_percent</span></code></a></li>
 <li class="toctree-l3"><a class="reference internal" href="#scitex_affairs.Price.policy"><code class="docutils literal notranslate"><span class="pre">Price.policy</span></code></a></li>
 <li class="toctree-l3"><a class="reference internal" href="#scitex_affairs.Price.discount_schedule"><code class="docutils literal notranslate"><span class="pre">Price.discount_schedule</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="#scitex_affairs.Price.currency"><code class="docutils literal notranslate"><span class="pre">Price.currency</span></code></a></li>
 <li class="toctree-l3"><a class="reference internal" href="#scitex_affairs.Price.from_mapping"><code class="docutils literal notranslate"><span class="pre">Price.from_mapping()</span></code></a></li>
 <li class="toctree-l3"><a class="reference internal" href="#scitex_affairs.Price.amount_on"><code class="docutils literal notranslate"><span class="pre">Price.amount_on()</span></code></a></li>
 </ul>
@@ -119,6 +133,7 @@
 </ul>
 </li>
 <li class="toctree-l2"><a class="reference internal" href="#scitex_affairs.catalog_frame"><code class="docutils literal notranslate"><span class="pre">catalog_frame()</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="#scitex_affairs.fetch_rate"><code class="docutils literal notranslate"><span class="pre">fetch_rate()</span></code></a></li>
 <li class="toctree-l2"><a class="reference internal" href="#scitex_affairs.financial_statement"><code class="docutils literal notranslate"><span class="pre">financial_statement()</span></code></a></li>
 <li class="toctree-l2"><a class="reference internal" href="#scitex_affairs.load_config"><code class="docutils literal notranslate"><span class="pre">load_config()</span></code></a></li>
 <li class="toctree-l2"><a class="reference internal" href="#scitex_affairs.resolve_config_path"><code class="docutils literal notranslate"><span class="pre">resolve_config_path()</span></code></a></li>
@@ -145,6 +160,7 @@
 <li class="toctree-l4"><a class="reference internal" href="#scitex_affairs.config.Price.markup_percent"><code class="docutils literal notranslate"><span class="pre">Price.markup_percent</span></code></a></li>
 <li class="toctree-l4"><a class="reference internal" href="#scitex_affairs.config.Price.policy"><code class="docutils literal notranslate"><span class="pre">Price.policy</span></code></a></li>
 <li class="toctree-l4"><a class="reference internal" href="#scitex_affairs.config.Price.discount_schedule"><code class="docutils literal notranslate"><span class="pre">Price.discount_schedule</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#scitex_affairs.config.Price.currency"><code class="docutils literal notranslate"><span class="pre">Price.currency</span></code></a></li>
 <li class="toctree-l4"><a class="reference internal" href="#scitex_affairs.config.Price.from_mapping"><code class="docutils literal notranslate"><span class="pre">Price.from_mapping()</span></code></a></li>
 <li class="toctree-l4"><a class="reference internal" href="#scitex_affairs.config.Price.amount_on"><code class="docutils literal notranslate"><span class="pre">Price.amount_on()</span></code></a></li>
 </ul>
@@ -182,6 +198,7 @@
 <li class="toctree-l4"><a class="reference internal" href="#scitex_affairs.config.AffairsConfig.scenarios"><code class="docutils literal notranslate"><span class="pre">AffairsConfig.scenarios</span></code></a></li>
 <li class="toctree-l4"><a class="reference internal" href="#scitex_affairs.config.AffairsConfig.pricing_policies"><code class="docutils literal notranslate"><span class="pre">AffairsConfig.pricing_policies</span></code></a></li>
 <li class="toctree-l4"><a class="reference internal" href="#scitex_affairs.config.AffairsConfig.sources"><code class="docutils literal notranslate"><span class="pre">AffairsConfig.sources</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#scitex_affairs.config.AffairsConfig.fx"><code class="docutils literal notranslate"><span class="pre">AffairsConfig.fx</span></code></a></li>
 <li class="toctree-l4"><a class="reference internal" href="#scitex_affairs.config.AffairsConfig.from_mapping"><code class="docutils literal notranslate"><span class="pre">AffairsConfig.from_mapping()</span></code></a></li>
 </ul>
 </li>
@@ -191,6 +208,24 @@
 </li>
 <li class="toctree-l2"><a class="reference internal" href="#module-scitex_affairs.scenario">Scenarios</a><ul>
 <li class="toctree-l3"><a class="reference internal" href="#scitex_affairs.scenario.monthly_report"><code class="docutils literal notranslate"><span class="pre">monthly_report()</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#module-scitex_affairs.fx">Exchange rates</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#scitex_affairs.fx.PROVIDERS"><code class="docutils literal notranslate"><span class="pre">PROVIDERS</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="#scitex_affairs.fx.Opener"><code class="docutils literal notranslate"><span class="pre">Opener</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="#scitex_affairs.fx.FxError"><code class="docutils literal notranslate"><span class="pre">FxError</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="#scitex_affairs.fx.FxRate"><code class="docutils literal notranslate"><span class="pre">FxRate</span></code></a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#scitex_affairs.fx.FxRate.base"><code class="docutils literal notranslate"><span class="pre">FxRate.base</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#scitex_affairs.fx.FxRate.quote"><code class="docutils literal notranslate"><span class="pre">FxRate.quote</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#scitex_affairs.fx.FxRate.rate"><code class="docutils literal notranslate"><span class="pre">FxRate.rate</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#scitex_affairs.fx.FxRate.as_of"><code class="docutils literal notranslate"><span class="pre">FxRate.as_of</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#scitex_affairs.fx.FxRate.source"><code class="docutils literal notranslate"><span class="pre">FxRate.source</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#scitex_affairs.fx.FxRate.retrieved_at"><code class="docutils literal notranslate"><span class="pre">FxRate.retrieved_at</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#scitex_affairs.fx.FxRate.source_label"><code class="docutils literal notranslate"><span class="pre">FxRate.source_label</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="#scitex_affairs.fx.fetch_rate"><code class="docutils literal notranslate"><span class="pre">fetch_rate()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="#scitex_affairs.fx.disclosure"><code class="docutils literal notranslate"><span class="pre">disclosure()</span></code></a></li>
 </ul>
 </li>
 <li class="toctree-l2"><a class="reference internal" href="#module-scitex_affairs.describe">Descriptions and rendering</a><ul>
@@ -234,7 +269,7 @@
 <p>Business and personal affairs: catalogs, actuals, scenarios, reports, and plots.</p>
 <dl class="py class">
 <dt class="sig sig-object py" id="scitex_affairs.AffairsConfig">
-<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">scitex_affairs.</span></span><span class="sig-name descname"><span class="pre">AffairsConfig</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">schema_version</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">organization</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">currency</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">fiscal_year_start_month</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">catalog</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">scenarios</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">pricing_policies</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">sources</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">()</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/scitex_affairs/config.html#AffairsConfig"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#scitex_affairs.AffairsConfig" title="Link to this definition"></a></dt>
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">scitex_affairs.</span></span><span class="sig-name descname"><span class="pre">AffairsConfig</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">schema_version</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">organization</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">currency</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">fiscal_year_start_month</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">catalog</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">scenarios</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">pricing_policies</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">sources</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">()</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">fx</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/scitex_affairs/config.html#AffairsConfig"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#scitex_affairs.AffairsConfig" title="Link to this definition"></a></dt>
 <dd><p>Bases: <a class="reference external" href="https://docs.python.org/3/builtins/functions.html#object" title="(in Python v3.15)"><code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></a></p>
 <p>Validated single source of truth for business design facts.</p>
 <dl class="py attribute">
@@ -276,6 +311,17 @@
 <dt class="sig sig-object py" id="scitex_affairs.AffairsConfig.sources">
 <span class="sig-name descname"><span class="pre">sources</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><a class="reference external" href="https://docs.python.org/3/builtins/stdtypes.html#tuple" title="(in Python v3.15)"><code class="xref py py-class docutils literal notranslate"><span class="pre">tuple</span></code></a><span class="pre">[</span><a class="reference external" href="https://docs.python.org/3/library/collections.abc.html#collections.abc.Mapping" title="(in Python v3.15)"><code class="xref py py-class docutils literal notranslate"><span class="pre">Mapping</span></code></a><span class="pre">[</span><a class="reference external" href="https://docs.python.org/3/builtins/stdtypes.html#str" title="(in Python v3.15)"><code class="xref py py-class docutils literal notranslate"><span class="pre">str</span></code></a><span class="pre">,</span> <a class="reference external" href="https://docs.python.org/3/library/typing.html#typing.Any" title="(in Python v3.15)"><code class="xref py py-data docutils literal notranslate"><span class="pre">Any</span></code></a><span class="pre">],</span> <a class="reference external" href="https://docs.python.org/3/builtins/constants.html#Ellipsis" title="(in Python v3.15)"><code class="xref py py-data docutils literal notranslate"><span class="pre">...</span></code></a><span class="pre">]</span></em><a class="headerlink" href="#scitex_affairs.AffairsConfig.sources" title="Link to this definition"></a></dt>
 <dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="scitex_affairs.AffairsConfig.fx">
+<span class="sig-name descname"><span class="pre">fx</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><a class="reference external" href="https://docs.python.org/3/library/collections.abc.html#collections.abc.Mapping" title="(in Python v3.15)"><code class="xref py py-class docutils literal notranslate"><span class="pre">Mapping</span></code></a><span class="pre">[</span><a class="reference external" href="https://docs.python.org/3/builtins/stdtypes.html#str" title="(in Python v3.15)"><code class="xref py py-class docutils literal notranslate"><span class="pre">str</span></code></a><span class="pre">,</span> <a class="reference external" href="https://docs.python.org/3/library/typing.html#typing.Any" title="(in Python v3.15)"><code class="xref py py-data docutils literal notranslate"><span class="pre">Any</span></code></a><span class="pre">]</span> <span class="pre">|</span> <a class="reference external" href="https://docs.python.org/3/builtins/constants.html#None" title="(in Python v3.15)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">None</span></code></a></em><a class="headerlink" href="#scitex_affairs.AffairsConfig.fx" title="Link to this definition"></a></dt>
+<dd><p>…}.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Type<span class="colon">:</span></dt>
+<dd class="field-odd"><p>Live-rate source for prices in another currency, e.g. {“provider”</p>
+</dd>
+</dl>
+</dd></dl>
 
 <dl class="py method">
 <dt class="sig sig-object py" id="scitex_affairs.AffairsConfig.from_mapping">
@@ -405,9 +451,58 @@
 
 </dd></dl>
 
+<dl class="py exception">
+<dt class="sig sig-object py" id="scitex_affairs.FxError">
+<em class="property"><span class="pre">exception</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">scitex_affairs.</span></span><span class="sig-name descname"><span class="pre">FxError</span></span><a class="reference internal" href="../_modules/scitex_affairs/fx.html#FxError"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#scitex_affairs.FxError" title="Link to this definition"></a></dt>
+<dd><p>Bases: <a class="reference internal" href="#scitex_affairs.config.ConfigError" title="scitex_affairs.config.ConfigError"><code class="xref py py-class docutils literal notranslate"><span class="pre">ConfigError</span></code></a></p>
+<p>A rate could not be obtained or the supplier’s answer was unusable.</p>
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="scitex_affairs.FxRate">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">scitex_affairs.</span></span><span class="sig-name descname"><span class="pre">FxRate</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">base</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">quote</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">rate</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">as_of</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">source</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">retrieved_at</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/scitex_affairs/fx.html#FxRate"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#scitex_affairs.FxRate" title="Link to this definition"></a></dt>
+<dd><p>Bases: <a class="reference external" href="https://docs.python.org/3/builtins/functions.html#object" title="(in Python v3.15)"><code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></a></p>
+<p>One <code class="docutils literal notranslate"><span class="pre">base</span> <span class="pre">-&gt;</span> <span class="pre">quote</span></code> rate with everything needed to disclose it.</p>
+<dl class="py attribute">
+<dt class="sig sig-object py" id="scitex_affairs.FxRate.base">
+<span class="sig-name descname"><span class="pre">base</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><a class="reference external" href="https://docs.python.org/3/builtins/stdtypes.html#str" title="(in Python v3.15)"><code class="xref py py-class docutils literal notranslate"><span class="pre">str</span></code></a></em><a class="headerlink" href="#scitex_affairs.FxRate.base" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="scitex_affairs.FxRate.quote">
+<span class="sig-name descname"><span class="pre">quote</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><a class="reference external" href="https://docs.python.org/3/builtins/stdtypes.html#str" title="(in Python v3.15)"><code class="xref py py-class docutils literal notranslate"><span class="pre">str</span></code></a></em><a class="headerlink" href="#scitex_affairs.FxRate.quote" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="scitex_affairs.FxRate.rate">
+<span class="sig-name descname"><span class="pre">rate</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><a class="reference external" href="https://docs.python.org/3/builtins/functions.html#float" title="(in Python v3.15)"><code class="xref py py-class docutils literal notranslate"><span class="pre">float</span></code></a></em><a class="headerlink" href="#scitex_affairs.FxRate.rate" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="scitex_affairs.FxRate.as_of">
+<span class="sig-name descname"><span class="pre">as_of</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><a class="reference external" href="https://docs.python.org/3/builtins/stdtypes.html#str" title="(in Python v3.15)"><code class="xref py py-class docutils literal notranslate"><span class="pre">str</span></code></a></em><a class="headerlink" href="#scitex_affairs.FxRate.as_of" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="scitex_affairs.FxRate.source">
+<span class="sig-name descname"><span class="pre">source</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><a class="reference external" href="https://docs.python.org/3/builtins/stdtypes.html#str" title="(in Python v3.15)"><code class="xref py py-class docutils literal notranslate"><span class="pre">str</span></code></a></em><a class="headerlink" href="#scitex_affairs.FxRate.source" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="scitex_affairs.FxRate.retrieved_at">
+<span class="sig-name descname"><span class="pre">retrieved_at</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><a class="reference external" href="https://docs.python.org/3/builtins/stdtypes.html#str" title="(in Python v3.15)"><code class="xref py py-class docutils literal notranslate"><span class="pre">str</span></code></a></em><a class="headerlink" href="#scitex_affairs.FxRate.retrieved_at" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="scitex_affairs.FxRate.source_label">
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">source_label</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><a class="reference external" href="https://docs.python.org/3/builtins/stdtypes.html#str" title="(in Python v3.15)"><span class="pre">str</span></a></em><a class="headerlink" href="#scitex_affairs.FxRate.source_label" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
 <dl class="py class">
 <dt class="sig sig-object py" id="scitex_affairs.Price">
-<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">scitex_affairs.</span></span><span class="sig-name descname"><span class="pre">Price</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">amount</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">interval</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">unit</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">kind</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'fixed'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">list_amount</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">discount_percent</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">0.0</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">markup_percent</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">policy</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">''</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">discount_schedule</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">()</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/scitex_affairs/config.html#Price"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#scitex_affairs.Price" title="Link to this definition"></a></dt>
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">scitex_affairs.</span></span><span class="sig-name descname"><span class="pre">Price</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">amount</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">interval</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">unit</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">kind</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'fixed'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">list_amount</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">discount_percent</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">0.0</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">markup_percent</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">policy</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">''</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">discount_schedule</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">()</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">currency</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">''</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/scitex_affairs/config.html#Price"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#scitex_affairs.Price" title="Link to this definition"></a></dt>
 <dd><p>Bases: <a class="reference external" href="https://docs.python.org/3/builtins/functions.html#object" title="(in Python v3.15)"><code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></a></p>
 <p>A catalog price in the configuration’s currency.</p>
 <dl class="py attribute">
@@ -454,6 +549,12 @@
 <dt class="sig sig-object py" id="scitex_affairs.Price.discount_schedule">
 <span class="sig-name descname"><span class="pre">discount_schedule</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><a class="reference external" href="https://docs.python.org/3/builtins/stdtypes.html#tuple" title="(in Python v3.15)"><code class="xref py py-class docutils literal notranslate"><span class="pre">tuple</span></code></a><span class="pre">[</span><a class="reference internal" href="#scitex_affairs.config.DiscountPhase" title="scitex_affairs.config.DiscountPhase"><code class="xref py py-class docutils literal notranslate"><span class="pre">DiscountPhase</span></code></a><span class="pre">,</span> <a class="reference external" href="https://docs.python.org/3/builtins/constants.html#Ellipsis" title="(in Python v3.15)"><code class="xref py py-data docutils literal notranslate"><span class="pre">...</span></code></a><span class="pre">]</span></em><a class="headerlink" href="#scitex_affairs.Price.discount_schedule" title="Link to this definition"></a></dt>
 <dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="scitex_affairs.Price.currency">
+<span class="sig-name descname"><span class="pre">currency</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><a class="reference external" href="https://docs.python.org/3/builtins/stdtypes.html#str" title="(in Python v3.15)"><code class="xref py py-class docutils literal notranslate"><span class="pre">str</span></code></a></em><a class="headerlink" href="#scitex_affairs.Price.currency" title="Link to this definition"></a></dt>
+<dd><p>Currency the price is denominated in; “” means the config’s currency.</p>
+</dd></dl>
 
 <dl class="py method">
 <dt class="sig sig-object py" id="scitex_affairs.Price.from_mapping">
@@ -537,6 +638,19 @@
 </dd></dl>
 
 <dl class="py function">
+<dt class="sig sig-object py" id="scitex_affairs.fetch_rate">
+<span class="sig-prename descclassname"><span class="pre">scitex_affairs.</span></span><span class="sig-name descname"><span class="pre">fetch_rate</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">base</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">quote</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">provider='open.er-api.com'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">*</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">opener=&lt;function</span> <span class="pre">_urlopen&gt;</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">timeout=10.0</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/scitex_affairs/fx.html#fetch_rate"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#scitex_affairs.fetch_rate" title="Link to this definition"></a></dt>
+<dd><p>Fetch the current <code class="docutils literal notranslate"><span class="pre">base</span> <span class="pre">-&gt;</span> <span class="pre">quote</span></code> rate from a declared provider.</p>
+<p>Raises <a class="reference internal" href="#scitex_affairs.FxError" title="scitex_affairs.FxError"><code class="xref py py-class docutils literal notranslate"><span class="pre">FxError</span></code></a> when the provider is unknown, unreachable, or
+answers with anything but a positive rate for <code class="docutils literal notranslate"><span class="pre">quote</span></code>.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Return type<span class="colon">:</span></dt>
+<dd class="field-odd"><p><span class="sphinx_autodoc_typehints-type"><a class="reference internal" href="#scitex_affairs.fx.FxRate" title="scitex_affairs.fx.FxRate"><code class="xref py py-class docutils literal notranslate"><span class="pre">FxRate</span></code></a></span></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
 <dt class="sig sig-object py" id="scitex_affairs.financial_statement">
 <span class="sig-prename descclassname"><span class="pre">scitex_affairs.</span></span><span class="sig-name descname"><span class="pre">financial_statement</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">report</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/scitex_affairs/describe.html#financial_statement"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#scitex_affairs.financial_statement" title="Link to this definition"></a></dt>
 <dd><p>Reduce an item-level report to revenue, expense, and net by period.</p>
@@ -575,8 +689,13 @@ by the ecosystem-wide <code class="xref py py-mod docutils literal notranslate">
 
 <dl class="py function">
 <dt class="sig sig-object py" id="scitex_affairs.monthly_report">
-<span class="sig-prename descclassname"><span class="pre">scitex_affairs.</span></span><span class="sig-name descname"><span class="pre">monthly_report</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">config</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">scenario_id</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/scitex_affairs/scenario.html#monthly_report"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#scitex_affairs.monthly_report" title="Link to this definition"></a></dt>
+<span class="sig-prename descclassname"><span class="pre">scitex_affairs.</span></span><span class="sig-name descname"><span class="pre">monthly_report</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">config</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">scenario_id</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">*</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">rates</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/scitex_affairs/scenario.html#monthly_report"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#scitex_affairs.monthly_report" title="Link to this definition"></a></dt>
 <dd><p>Calculate the canonical monthly ledger for one optional scenario.</p>
+<p>Amounts are in <code class="docutils literal notranslate"><span class="pre">config.currency</span></code>. A price set in another currency is
+converted at a live rate from <code class="docutils literal notranslate"><span class="pre">config.fx[&quot;provider&quot;]</span></code> (or from
+<code class="docutils literal notranslate"><span class="pre">rates</span></code>, keyed by the price currency, when the caller already holds
+them). Converted rows record the rate, its as-of time and source; the
+rates used are also in <code class="docutils literal notranslate"><span class="pre">report.attrs[&quot;fx&quot;]</span></code> for <a class="reference internal" href="#scitex_affairs.fx.disclosure" title="scitex_affairs.fx.disclosure"><code class="xref py py-func docutils literal notranslate"><span class="pre">fx.disclosure()</span></code></a>.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Return type<span class="colon">:</span></dt>
 <dd class="field-odd"><p><span class="sphinx_autodoc_typehints-type"><a class="reference external" href="https://pandas.pydata.org/docs/reference/api/pandas.DataFrame.html#pandas.DataFrame" title="(in pandas v3.1)"><code class="xref py py-class docutils literal notranslate"><span class="pre">DataFrame</span></code></a></span></p>
@@ -647,7 +766,7 @@ by the ecosystem-wide <code class="xref py py-mod docutils literal notranslate">
 
 <dl class="py class">
 <dt class="sig sig-object py" id="scitex_affairs.config.Price">
-<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">scitex_affairs.config.</span></span><span class="sig-name descname"><span class="pre">Price</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">amount</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">interval</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">unit</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">kind</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'fixed'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">list_amount</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">discount_percent</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">0.0</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">markup_percent</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">policy</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">''</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">discount_schedule</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">()</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/scitex_affairs/config.html#Price"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#scitex_affairs.config.Price" title="Link to this definition"></a></dt>
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">scitex_affairs.config.</span></span><span class="sig-name descname"><span class="pre">Price</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">amount</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">interval</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">unit</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">kind</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'fixed'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">list_amount</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">discount_percent</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">0.0</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">markup_percent</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">policy</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">''</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">discount_schedule</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">()</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">currency</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">''</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/scitex_affairs/config.html#Price"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#scitex_affairs.config.Price" title="Link to this definition"></a></dt>
 <dd><p>A catalog price in the configuration’s currency.</p>
 <dl class="py attribute">
 <dt class="sig sig-object py" id="scitex_affairs.config.Price.amount">
@@ -693,6 +812,12 @@ by the ecosystem-wide <code class="xref py py-mod docutils literal notranslate">
 <dt class="sig sig-object py" id="scitex_affairs.config.Price.discount_schedule">
 <span class="sig-name descname"><span class="pre">discount_schedule</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><a class="reference external" href="https://docs.python.org/3/builtins/stdtypes.html#tuple" title="(in Python v3.15)"><code class="xref py py-class docutils literal notranslate"><span class="pre">tuple</span></code></a><span class="pre">[</span><a class="reference internal" href="#scitex_affairs.config.DiscountPhase" title="scitex_affairs.config.DiscountPhase"><code class="xref py py-class docutils literal notranslate"><span class="pre">DiscountPhase</span></code></a><span class="pre">,</span> <a class="reference external" href="https://docs.python.org/3/builtins/constants.html#Ellipsis" title="(in Python v3.15)"><code class="xref py py-data docutils literal notranslate"><span class="pre">...</span></code></a><span class="pre">]</span></em><a class="headerlink" href="#scitex_affairs.config.Price.discount_schedule" title="Link to this definition"></a></dt>
 <dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="scitex_affairs.config.Price.currency">
+<span class="sig-name descname"><span class="pre">currency</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><a class="reference external" href="https://docs.python.org/3/builtins/stdtypes.html#str" title="(in Python v3.15)"><code class="xref py py-class docutils literal notranslate"><span class="pre">str</span></code></a></em><a class="headerlink" href="#scitex_affairs.config.Price.currency" title="Link to this definition"></a></dt>
+<dd><p>Currency the price is denominated in; “” means the config’s currency.</p>
+</dd></dl>
 
 <dl class="py method">
 <dt class="sig sig-object py" id="scitex_affairs.config.Price.from_mapping">
@@ -831,7 +956,7 @@ by the ecosystem-wide <code class="xref py py-mod docutils literal notranslate">
 
 <dl class="py class">
 <dt class="sig sig-object py" id="scitex_affairs.config.AffairsConfig">
-<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">scitex_affairs.config.</span></span><span class="sig-name descname"><span class="pre">AffairsConfig</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">schema_version</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">organization</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">currency</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">fiscal_year_start_month</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">catalog</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">scenarios</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">pricing_policies</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">sources</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">()</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/scitex_affairs/config.html#AffairsConfig"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#scitex_affairs.config.AffairsConfig" title="Link to this definition"></a></dt>
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">scitex_affairs.config.</span></span><span class="sig-name descname"><span class="pre">AffairsConfig</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">schema_version</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">organization</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">currency</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">fiscal_year_start_month</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">catalog</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">scenarios</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">pricing_policies</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">sources</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">()</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">fx</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/scitex_affairs/config.html#AffairsConfig"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#scitex_affairs.config.AffairsConfig" title="Link to this definition"></a></dt>
 <dd><p>Validated single source of truth for business design facts.</p>
 <dl class="py attribute">
 <dt class="sig sig-object py" id="scitex_affairs.config.AffairsConfig.schema_version">
@@ -872,6 +997,17 @@ by the ecosystem-wide <code class="xref py py-mod docutils literal notranslate">
 <dt class="sig sig-object py" id="scitex_affairs.config.AffairsConfig.sources">
 <span class="sig-name descname"><span class="pre">sources</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><a class="reference external" href="https://docs.python.org/3/builtins/stdtypes.html#tuple" title="(in Python v3.15)"><code class="xref py py-class docutils literal notranslate"><span class="pre">tuple</span></code></a><span class="pre">[</span><a class="reference external" href="https://docs.python.org/3/library/collections.abc.html#collections.abc.Mapping" title="(in Python v3.15)"><code class="xref py py-class docutils literal notranslate"><span class="pre">Mapping</span></code></a><span class="pre">[</span><a class="reference external" href="https://docs.python.org/3/builtins/stdtypes.html#str" title="(in Python v3.15)"><code class="xref py py-class docutils literal notranslate"><span class="pre">str</span></code></a><span class="pre">,</span> <a class="reference external" href="https://docs.python.org/3/library/typing.html#typing.Any" title="(in Python v3.15)"><code class="xref py py-data docutils literal notranslate"><span class="pre">Any</span></code></a><span class="pre">],</span> <a class="reference external" href="https://docs.python.org/3/builtins/constants.html#Ellipsis" title="(in Python v3.15)"><code class="xref py py-data docutils literal notranslate"><span class="pre">...</span></code></a><span class="pre">]</span></em><a class="headerlink" href="#scitex_affairs.config.AffairsConfig.sources" title="Link to this definition"></a></dt>
 <dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="scitex_affairs.config.AffairsConfig.fx">
+<span class="sig-name descname"><span class="pre">fx</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><a class="reference external" href="https://docs.python.org/3/library/collections.abc.html#collections.abc.Mapping" title="(in Python v3.15)"><code class="xref py py-class docutils literal notranslate"><span class="pre">Mapping</span></code></a><span class="pre">[</span><a class="reference external" href="https://docs.python.org/3/builtins/stdtypes.html#str" title="(in Python v3.15)"><code class="xref py py-class docutils literal notranslate"><span class="pre">str</span></code></a><span class="pre">,</span> <a class="reference external" href="https://docs.python.org/3/library/typing.html#typing.Any" title="(in Python v3.15)"><code class="xref py py-data docutils literal notranslate"><span class="pre">Any</span></code></a><span class="pre">]</span> <span class="pre">|</span> <a class="reference external" href="https://docs.python.org/3/builtins/constants.html#None" title="(in Python v3.15)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">None</span></code></a></em><a class="headerlink" href="#scitex_affairs.config.AffairsConfig.fx" title="Link to this definition"></a></dt>
+<dd><p>…}.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Type<span class="colon">:</span></dt>
+<dd class="field-odd"><p>Live-rate source for prices in another currency, e.g. {“provider”</p>
+</dd>
+</dl>
+</dd></dl>
 
 <dl class="py method">
 <dt class="sig sig-object py" id="scitex_affairs.config.AffairsConfig.from_mapping">
@@ -917,11 +1053,122 @@ by the ecosystem-wide <code class="xref py py-mod docutils literal notranslate">
 <p>Scenario calculation with explicit stock/flow time semantics.</p>
 <dl class="py function">
 <dt class="sig sig-object py" id="scitex_affairs.scenario.monthly_report">
-<span class="sig-prename descclassname"><span class="pre">scitex_affairs.scenario.</span></span><span class="sig-name descname"><span class="pre">monthly_report</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">config</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">scenario_id</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/scitex_affairs/scenario.html#monthly_report"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#scitex_affairs.scenario.monthly_report" title="Link to this definition"></a></dt>
+<span class="sig-prename descclassname"><span class="pre">scitex_affairs.scenario.</span></span><span class="sig-name descname"><span class="pre">monthly_report</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">config</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">scenario_id</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">*</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">rates</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/scitex_affairs/scenario.html#monthly_report"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#scitex_affairs.scenario.monthly_report" title="Link to this definition"></a></dt>
 <dd><p>Calculate the canonical monthly ledger for one optional scenario.</p>
+<p>Amounts are in <code class="docutils literal notranslate"><span class="pre">config.currency</span></code>. A price set in another currency is
+converted at a live rate from <code class="docutils literal notranslate"><span class="pre">config.fx[&quot;provider&quot;]</span></code> (or from
+<code class="docutils literal notranslate"><span class="pre">rates</span></code>, keyed by the price currency, when the caller already holds
+them). Converted rows record the rate, its as-of time and source; the
+rates used are also in <code class="docutils literal notranslate"><span class="pre">report.attrs[&quot;fx&quot;]</span></code> for <code class="xref py py-func docutils literal notranslate"><span class="pre">fx.disclosure()</span></code>.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Return type<span class="colon">:</span></dt>
 <dd class="field-odd"><p><span class="sphinx_autodoc_typehints-type"><a class="reference external" href="https://pandas.pydata.org/docs/reference/api/pandas.DataFrame.html#pandas.DataFrame" title="(in pandas v3.1)"><code class="xref py py-class docutils literal notranslate"><span class="pre">DataFrame</span></code></a></span></p>
+</dd>
+</dl>
+</dd></dl>
+
+</section>
+<section id="module-scitex_affairs.fx">
+<span id="exchange-rates"></span><h2>Exchange rates<a class="headerlink" href="#module-scitex_affairs.fx" title="Link to this heading"></a></h2>
+<p>Live exchange rates for prices denominated in another currency.</p>
+<p>A price may be set in one currency (for example USD, the SciTeX price list)
+while plans and accounts are kept in another (for example JPY). Converting
+between them needs a rate, and a stale or invented rate silently misstates
+every derived figure. So the rate is always <strong>fetched from a declared
+reference source</strong>, recorded with its source and timestamps on every
+converted figure, and a failure to fetch is an error, never a fallback.</p>
+<p>The converted figure is an <strong>estimate</strong>. Actual billing happens in the price’s
+own currency; what a customer is charged in another currency is set by their
+card issuer’s rate and fees at settlement. <a class="reference internal" href="#scitex_affairs.fx.disclosure" title="scitex_affairs.fx.disclosure"><code class="xref py py-func docutils literal notranslate"><span class="pre">disclosure()</span></code></a> renders that
+statement so every output that shows a converted figure can carry it.</p>
+<dl class="py data">
+<dt class="sig sig-object py" id="scitex_affairs.fx.PROVIDERS">
+<span class="sig-prename descclassname"><span class="pre">scitex_affairs.fx.</span></span><span class="sig-name descname"><span class="pre">PROVIDERS</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><a class="reference external" href="https://docs.python.org/3/builtins/stdtypes.html#dict" title="(in Python v3.15)"><span class="pre">dict</span></a><span class="p"><span class="pre">[</span></span><a class="reference external" href="https://docs.python.org/3/builtins/stdtypes.html#str" title="(in Python v3.15)"><span class="pre">str</span></a><span class="p"><span class="pre">,</span></span><span class="w"> </span><a class="reference external" href="https://docs.python.org/3/builtins/stdtypes.html#tuple" title="(in Python v3.15)"><span class="pre">tuple</span></a><span class="p"><span class="pre">[</span></span><a class="reference external" href="https://docs.python.org/3/builtins/stdtypes.html#str" title="(in Python v3.15)"><span class="pre">str</span></a><span class="p"><span class="pre">,</span></span><span class="w"> </span><a class="reference external" href="https://docs.python.org/3/builtins/stdtypes.html#str" title="(in Python v3.15)"><span class="pre">str</span></a><span class="p"><span class="pre">]</span></span><span class="p"><span class="pre">]</span></span></em><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">{'open.er-api.com':</span> <span class="pre">('ExchangeRate-API</span> <span class="pre">(open.er-api.com)',</span> <span class="pre">'https://open.er-api.com/v6/latest/{base}')}</span></em><a class="headerlink" href="#scitex_affairs.fx.PROVIDERS" title="Link to this definition"></a></dt>
+<dd><p>id -&gt; (display name, URL template taking the base code).
+ExchangeRate-API is the source SciTeX Hub uses for its yen reference column,
+so a figure computed here and one shown on scitex.ai agree on method.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Type<span class="colon">:</span></dt>
+<dd class="field-odd"><p>Reference sources</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py data">
+<dt class="sig sig-object py" id="scitex_affairs.fx.Opener">
+<span class="sig-prename descclassname"><span class="pre">scitex_affairs.fx.</span></span><span class="sig-name descname"><span class="pre">Opener</span></span><a class="headerlink" href="#scitex_affairs.fx.Opener" title="Link to this definition"></a></dt>
+<dd><p><code class="docutils literal notranslate"><span class="pre">opener(url,</span> <span class="pre">timeout_seconds)</span> <span class="pre">-&gt;</span> <span class="pre">response</span> <span class="pre">body</span> <span class="pre">bytes</span></code>. Injectable so tests
+can serve a real JSON body without patching this module.</p>
+<p>alias of <a class="reference external" href="https://docs.python.org/3/library/collections.abc.html#collections.abc.Callable" title="(in Python v3.15)"><code class="xref py py-class docutils literal notranslate"><span class="pre">Callable</span></code></a>[<a class="reference external" href="https://docs.python.org/3/builtins/stdtypes.html#str" title="(in Python v3.15)"><code class="xref py py-class docutils literal notranslate"><span class="pre">str</span></code></a>, <a class="reference external" href="https://docs.python.org/3/builtins/functions.html#float" title="(in Python v3.15)"><code class="xref py py-class docutils literal notranslate"><span class="pre">float</span></code></a>, <a class="reference external" href="https://docs.python.org/3/builtins/stdtypes.html#bytes" title="(in Python v3.15)"><code class="xref py py-class docutils literal notranslate"><span class="pre">bytes</span></code></a>]</p>
+</dd></dl>
+
+<dl class="py exception">
+<dt class="sig sig-object py" id="scitex_affairs.fx.FxError">
+<em class="property"><span class="pre">exception</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">scitex_affairs.fx.</span></span><span class="sig-name descname"><span class="pre">FxError</span></span><a class="reference internal" href="../_modules/scitex_affairs/fx.html#FxError"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#scitex_affairs.fx.FxError" title="Link to this definition"></a></dt>
+<dd><p>A rate could not be obtained or the supplier’s answer was unusable.</p>
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="scitex_affairs.fx.FxRate">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">scitex_affairs.fx.</span></span><span class="sig-name descname"><span class="pre">FxRate</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">base</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">quote</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">rate</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">as_of</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">source</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">retrieved_at</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/scitex_affairs/fx.html#FxRate"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#scitex_affairs.fx.FxRate" title="Link to this definition"></a></dt>
+<dd><p>One <code class="docutils literal notranslate"><span class="pre">base</span> <span class="pre">-&gt;</span> <span class="pre">quote</span></code> rate with everything needed to disclose it.</p>
+<dl class="py attribute">
+<dt class="sig sig-object py" id="scitex_affairs.fx.FxRate.base">
+<span class="sig-name descname"><span class="pre">base</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><a class="reference external" href="https://docs.python.org/3/builtins/stdtypes.html#str" title="(in Python v3.15)"><code class="xref py py-class docutils literal notranslate"><span class="pre">str</span></code></a></em><a class="headerlink" href="#scitex_affairs.fx.FxRate.base" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="scitex_affairs.fx.FxRate.quote">
+<span class="sig-name descname"><span class="pre">quote</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><a class="reference external" href="https://docs.python.org/3/builtins/stdtypes.html#str" title="(in Python v3.15)"><code class="xref py py-class docutils literal notranslate"><span class="pre">str</span></code></a></em><a class="headerlink" href="#scitex_affairs.fx.FxRate.quote" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="scitex_affairs.fx.FxRate.rate">
+<span class="sig-name descname"><span class="pre">rate</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><a class="reference external" href="https://docs.python.org/3/builtins/functions.html#float" title="(in Python v3.15)"><code class="xref py py-class docutils literal notranslate"><span class="pre">float</span></code></a></em><a class="headerlink" href="#scitex_affairs.fx.FxRate.rate" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="scitex_affairs.fx.FxRate.as_of">
+<span class="sig-name descname"><span class="pre">as_of</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><a class="reference external" href="https://docs.python.org/3/builtins/stdtypes.html#str" title="(in Python v3.15)"><code class="xref py py-class docutils literal notranslate"><span class="pre">str</span></code></a></em><a class="headerlink" href="#scitex_affairs.fx.FxRate.as_of" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="scitex_affairs.fx.FxRate.source">
+<span class="sig-name descname"><span class="pre">source</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><a class="reference external" href="https://docs.python.org/3/builtins/stdtypes.html#str" title="(in Python v3.15)"><code class="xref py py-class docutils literal notranslate"><span class="pre">str</span></code></a></em><a class="headerlink" href="#scitex_affairs.fx.FxRate.source" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="scitex_affairs.fx.FxRate.retrieved_at">
+<span class="sig-name descname"><span class="pre">retrieved_at</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><a class="reference external" href="https://docs.python.org/3/builtins/stdtypes.html#str" title="(in Python v3.15)"><code class="xref py py-class docutils literal notranslate"><span class="pre">str</span></code></a></em><a class="headerlink" href="#scitex_affairs.fx.FxRate.retrieved_at" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="scitex_affairs.fx.FxRate.source_label">
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">source_label</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><a class="reference external" href="https://docs.python.org/3/builtins/stdtypes.html#str" title="(in Python v3.15)"><span class="pre">str</span></a></em><a class="headerlink" href="#scitex_affairs.fx.FxRate.source_label" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="scitex_affairs.fx.fetch_rate">
+<span class="sig-prename descclassname"><span class="pre">scitex_affairs.fx.</span></span><span class="sig-name descname"><span class="pre">fetch_rate</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">base</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">quote</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">provider='open.er-api.com'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">*</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">opener=&lt;function</span> <span class="pre">_urlopen&gt;</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">timeout=10.0</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/scitex_affairs/fx.html#fetch_rate"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#scitex_affairs.fx.fetch_rate" title="Link to this definition"></a></dt>
+<dd><p>Fetch the current <code class="docutils literal notranslate"><span class="pre">base</span> <span class="pre">-&gt;</span> <span class="pre">quote</span></code> rate from a declared provider.</p>
+<p>Raises <a class="reference internal" href="#scitex_affairs.fx.FxError" title="scitex_affairs.fx.FxError"><code class="xref py py-class docutils literal notranslate"><span class="pre">FxError</span></code></a> when the provider is unknown, unreachable, or
+answers with anything but a positive rate for <code class="docutils literal notranslate"><span class="pre">quote</span></code>.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Return type<span class="colon">:</span></dt>
+<dd class="field-odd"><p><span class="sphinx_autodoc_typehints-type"><a class="reference internal" href="#scitex_affairs.fx.FxRate" title="scitex_affairs.fx.FxRate"><code class="xref py py-class docutils literal notranslate"><span class="pre">FxRate</span></code></a></span></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="scitex_affairs.fx.disclosure">
+<span class="sig-prename descclassname"><span class="pre">scitex_affairs.fx.</span></span><span class="sig-name descname"><span class="pre">disclosure</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">rate</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">language</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'en'</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/scitex_affairs/fx.html#disclosure"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#scitex_affairs.fx.disclosure" title="Link to this definition"></a></dt>
+<dd><p>State how a converted figure was obtained and that billing differs.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Return type<span class="colon">:</span></dt>
+<dd class="field-odd"><p><span class="sphinx_autodoc_typehints-type"><a class="reference external" href="https://docs.python.org/3/builtins/stdtypes.html#str" title="(in Python v3.15)"><code class="xref py py-class docutils literal notranslate"><span class="pre">str</span></code></a></span></p>
 </dd>
 </dl>
 </dd></dl>

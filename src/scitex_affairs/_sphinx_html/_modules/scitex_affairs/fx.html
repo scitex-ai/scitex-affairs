@@ -1,0 +1,429 @@
+
+
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" data-content_root="../../">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>scitex_affairs.fx &mdash; SciTeX Affairs v0.1.0</title>
+      <link rel="stylesheet" type="text/css" href="../../_static/pygments.css?v=b86133f3" />
+      <link rel="stylesheet" type="text/css" href="../../_static/css/theme.css?v=9edc463e" />
+      <link rel="stylesheet" type="text/css" href="../../_static/copybutton.css?v=76b2166b" />
+
+  
+      <script src="../../_static/jquery.js?v=5d32c60e"></script>
+      <script src="../../_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
+      <script src="../../_static/documentation_options.js?v=01f34227"></script>
+      <script src="../../_static/doctools.js?v=9a2dae69"></script>
+      <script src="../../_static/sphinx_highlight.js?v=dc90522c"></script>
+      <script src="../../_static/clipboard.min.js?v=a7894cd8"></script>
+      <script src="../../_static/copybutton.js?v=f281be69"></script>
+    <script src="../../_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="../../genindex.html" />
+    <link rel="search" title="Search" href="../../search.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+
+          
+          
+          <a href="../../index.html" class="icon icon-home">
+            SciTeX Affairs
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <p class="caption" role="heading"><span class="caption-text">Getting Started</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../installation.html">Installation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../quickstart.html">Quick Start</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../quickstart.html#configuration">Configuration</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../quickstart.html#command-line">Command line</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../quickstart.html#python">Python</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../quickstart.html#prices-in-another-currency">Prices in another currency</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../quickstart.html#actual-observations">Actual observations</a></li>
+</ul>
+</li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">API Reference</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../api/scitex_affairs.html">scitex_affairs</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../api/scitex_affairs.html#scitex_affairs.AffairsConfig"><code class="docutils literal notranslate"><span class="pre">AffairsConfig</span></code></a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../../api/scitex_affairs.html#scitex_affairs.AffairsConfig.schema_version"><code class="docutils literal notranslate"><span class="pre">AffairsConfig.schema_version</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../api/scitex_affairs.html#scitex_affairs.AffairsConfig.organization"><code class="docutils literal notranslate"><span class="pre">AffairsConfig.organization</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../api/scitex_affairs.html#scitex_affairs.AffairsConfig.currency"><code class="docutils literal notranslate"><span class="pre">AffairsConfig.currency</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../api/scitex_affairs.html#scitex_affairs.AffairsConfig.fiscal_year_start_month"><code class="docutils literal notranslate"><span class="pre">AffairsConfig.fiscal_year_start_month</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../api/scitex_affairs.html#scitex_affairs.AffairsConfig.catalog"><code class="docutils literal notranslate"><span class="pre">AffairsConfig.catalog</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../api/scitex_affairs.html#scitex_affairs.AffairsConfig.scenarios"><code class="docutils literal notranslate"><span class="pre">AffairsConfig.scenarios</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../api/scitex_affairs.html#scitex_affairs.AffairsConfig.pricing_policies"><code class="docutils literal notranslate"><span class="pre">AffairsConfig.pricing_policies</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../api/scitex_affairs.html#scitex_affairs.AffairsConfig.sources"><code class="docutils literal notranslate"><span class="pre">AffairsConfig.sources</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../api/scitex_affairs.html#scitex_affairs.AffairsConfig.fx"><code class="docutils literal notranslate"><span class="pre">AffairsConfig.fx</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../api/scitex_affairs.html#scitex_affairs.AffairsConfig.from_mapping"><code class="docutils literal notranslate"><span class="pre">AffairsConfig.from_mapping()</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../api/scitex_affairs.html#scitex_affairs.CatalogItem"><code class="docutils literal notranslate"><span class="pre">CatalogItem</span></code></a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../../api/scitex_affairs.html#scitex_affairs.CatalogItem.id"><code class="docutils literal notranslate"><span class="pre">CatalogItem.id</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../api/scitex_affairs.html#scitex_affairs.CatalogItem.name"><code class="docutils literal notranslate"><span class="pre">CatalogItem.name</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../api/scitex_affairs.html#scitex_affairs.CatalogItem.direction"><code class="docutils literal notranslate"><span class="pre">CatalogItem.direction</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../api/scitex_affairs.html#scitex_affairs.CatalogItem.model"><code class="docutils literal notranslate"><span class="pre">CatalogItem.model</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../api/scitex_affairs.html#scitex_affairs.CatalogItem.price"><code class="docutils literal notranslate"><span class="pre">CatalogItem.price</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../api/scitex_affairs.html#scitex_affairs.CatalogItem.description"><code class="docutils literal notranslate"><span class="pre">CatalogItem.description</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../api/scitex_affairs.html#scitex_affairs.CatalogItem.category"><code class="docutils literal notranslate"><span class="pre">CatalogItem.category</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../api/scitex_affairs.html#scitex_affairs.CatalogItem.status"><code class="docutils literal notranslate"><span class="pre">CatalogItem.status</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../api/scitex_affairs.html#scitex_affairs.CatalogItem.automated"><code class="docutils literal notranslate"><span class="pre">CatalogItem.automated</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../api/scitex_affairs.html#scitex_affairs.CatalogItem.attributes"><code class="docutils literal notranslate"><span class="pre">CatalogItem.attributes</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../api/scitex_affairs.html#scitex_affairs.CatalogItem.from_mapping"><code class="docutils literal notranslate"><span class="pre">CatalogItem.from_mapping()</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../api/scitex_affairs.html#scitex_affairs.ConfigError"><code class="docutils literal notranslate"><span class="pre">ConfigError</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../api/scitex_affairs.html#scitex_affairs.DiscountPhase"><code class="docutils literal notranslate"><span class="pre">DiscountPhase</span></code></a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../../api/scitex_affairs.html#scitex_affairs.DiscountPhase.start"><code class="docutils literal notranslate"><span class="pre">DiscountPhase.start</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../api/scitex_affairs.html#scitex_affairs.DiscountPhase.end"><code class="docutils literal notranslate"><span class="pre">DiscountPhase.end</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../api/scitex_affairs.html#scitex_affairs.DiscountPhase.percent"><code class="docutils literal notranslate"><span class="pre">DiscountPhase.percent</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../api/scitex_affairs.html#scitex_affairs.DiscountPhase.status"><code class="docutils literal notranslate"><span class="pre">DiscountPhase.status</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../api/scitex_affairs.html#scitex_affairs.DiscountPhase.label"><code class="docutils literal notranslate"><span class="pre">DiscountPhase.label</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../api/scitex_affairs.html#scitex_affairs.DiscountPhase.contains"><code class="docutils literal notranslate"><span class="pre">DiscountPhase.contains()</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../api/scitex_affairs.html#scitex_affairs.FxError"><code class="docutils literal notranslate"><span class="pre">FxError</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../api/scitex_affairs.html#scitex_affairs.FxRate"><code class="docutils literal notranslate"><span class="pre">FxRate</span></code></a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../../api/scitex_affairs.html#scitex_affairs.FxRate.base"><code class="docutils literal notranslate"><span class="pre">FxRate.base</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../api/scitex_affairs.html#scitex_affairs.FxRate.quote"><code class="docutils literal notranslate"><span class="pre">FxRate.quote</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../api/scitex_affairs.html#scitex_affairs.FxRate.rate"><code class="docutils literal notranslate"><span class="pre">FxRate.rate</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../api/scitex_affairs.html#scitex_affairs.FxRate.as_of"><code class="docutils literal notranslate"><span class="pre">FxRate.as_of</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../api/scitex_affairs.html#scitex_affairs.FxRate.source"><code class="docutils literal notranslate"><span class="pre">FxRate.source</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../api/scitex_affairs.html#scitex_affairs.FxRate.retrieved_at"><code class="docutils literal notranslate"><span class="pre">FxRate.retrieved_at</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../api/scitex_affairs.html#scitex_affairs.FxRate.source_label"><code class="docutils literal notranslate"><span class="pre">FxRate.source_label</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../api/scitex_affairs.html#scitex_affairs.Price"><code class="docutils literal notranslate"><span class="pre">Price</span></code></a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../../api/scitex_affairs.html#scitex_affairs.Price.amount"><code class="docutils literal notranslate"><span class="pre">Price.amount</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../api/scitex_affairs.html#scitex_affairs.Price.interval"><code class="docutils literal notranslate"><span class="pre">Price.interval</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../api/scitex_affairs.html#scitex_affairs.Price.unit"><code class="docutils literal notranslate"><span class="pre">Price.unit</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../api/scitex_affairs.html#scitex_affairs.Price.kind"><code class="docutils literal notranslate"><span class="pre">Price.kind</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../api/scitex_affairs.html#scitex_affairs.Price.list_amount"><code class="docutils literal notranslate"><span class="pre">Price.list_amount</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../api/scitex_affairs.html#scitex_affairs.Price.discount_percent"><code class="docutils literal notranslate"><span class="pre">Price.discount_percent</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../api/scitex_affairs.html#scitex_affairs.Price.markup_percent"><code class="docutils literal notranslate"><span class="pre">Price.markup_percent</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../api/scitex_affairs.html#scitex_affairs.Price.policy"><code class="docutils literal notranslate"><span class="pre">Price.policy</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../api/scitex_affairs.html#scitex_affairs.Price.discount_schedule"><code class="docutils literal notranslate"><span class="pre">Price.discount_schedule</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../api/scitex_affairs.html#scitex_affairs.Price.currency"><code class="docutils literal notranslate"><span class="pre">Price.currency</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../api/scitex_affairs.html#scitex_affairs.Price.from_mapping"><code class="docutils literal notranslate"><span class="pre">Price.from_mapping()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../api/scitex_affairs.html#scitex_affairs.Price.amount_on"><code class="docutils literal notranslate"><span class="pre">Price.amount_on()</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../api/scitex_affairs.html#scitex_affairs.Scenario"><code class="docutils literal notranslate"><span class="pre">Scenario</span></code></a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../../api/scitex_affairs.html#scitex_affairs.Scenario.id"><code class="docutils literal notranslate"><span class="pre">Scenario.id</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../api/scitex_affairs.html#scitex_affairs.Scenario.label"><code class="docutils literal notranslate"><span class="pre">Scenario.label</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../api/scitex_affairs.html#scitex_affairs.Scenario.status"><code class="docutils literal notranslate"><span class="pre">Scenario.status</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../api/scitex_affairs.html#scitex_affairs.Scenario.start_date"><code class="docutils literal notranslate"><span class="pre">Scenario.start_date</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../api/scitex_affairs.html#scitex_affairs.Scenario.end_date"><code class="docutils literal notranslate"><span class="pre">Scenario.end_date</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../api/scitex_affairs.html#scitex_affairs.Scenario.series"><code class="docutils literal notranslate"><span class="pre">Scenario.series</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../api/scitex_affairs.html#scitex_affairs.Scenario.from_mapping"><code class="docutils literal notranslate"><span class="pre">Scenario.from_mapping()</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../api/scitex_affairs.html#scitex_affairs.catalog_frame"><code class="docutils literal notranslate"><span class="pre">catalog_frame()</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../api/scitex_affairs.html#scitex_affairs.fetch_rate"><code class="docutils literal notranslate"><span class="pre">fetch_rate()</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../api/scitex_affairs.html#scitex_affairs.financial_statement"><code class="docutils literal notranslate"><span class="pre">financial_statement()</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../api/scitex_affairs.html#scitex_affairs.load_config"><code class="docutils literal notranslate"><span class="pre">load_config()</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../api/scitex_affairs.html#scitex_affairs.resolve_config_path"><code class="docutils literal notranslate"><span class="pre">resolve_config_path()</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../api/scitex_affairs.html#scitex_affairs.monthly_report"><code class="docutils literal notranslate"><span class="pre">monthly_report()</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../api/scitex_affairs.html#scitex_affairs.summarize"><code class="docutils literal notranslate"><span class="pre">summarize()</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../api/scitex_affairs.html#module-scitex_affairs.config">Configuration</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../../api/scitex_affairs.html#scitex_affairs.config.ConfigError"><code class="docutils literal notranslate"><span class="pre">ConfigError</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../api/scitex_affairs.html#scitex_affairs.config.DiscountPhase"><code class="docutils literal notranslate"><span class="pre">DiscountPhase</span></code></a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../../api/scitex_affairs.html#scitex_affairs.config.DiscountPhase.start"><code class="docutils literal notranslate"><span class="pre">DiscountPhase.start</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../api/scitex_affairs.html#scitex_affairs.config.DiscountPhase.end"><code class="docutils literal notranslate"><span class="pre">DiscountPhase.end</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../api/scitex_affairs.html#scitex_affairs.config.DiscountPhase.percent"><code class="docutils literal notranslate"><span class="pre">DiscountPhase.percent</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../api/scitex_affairs.html#scitex_affairs.config.DiscountPhase.status"><code class="docutils literal notranslate"><span class="pre">DiscountPhase.status</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../api/scitex_affairs.html#scitex_affairs.config.DiscountPhase.label"><code class="docutils literal notranslate"><span class="pre">DiscountPhase.label</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../api/scitex_affairs.html#scitex_affairs.config.DiscountPhase.contains"><code class="docutils literal notranslate"><span class="pre">DiscountPhase.contains()</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../../api/scitex_affairs.html#scitex_affairs.config.Price"><code class="docutils literal notranslate"><span class="pre">Price</span></code></a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../../api/scitex_affairs.html#scitex_affairs.config.Price.amount"><code class="docutils literal notranslate"><span class="pre">Price.amount</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../api/scitex_affairs.html#scitex_affairs.config.Price.interval"><code class="docutils literal notranslate"><span class="pre">Price.interval</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../api/scitex_affairs.html#scitex_affairs.config.Price.unit"><code class="docutils literal notranslate"><span class="pre">Price.unit</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../api/scitex_affairs.html#scitex_affairs.config.Price.kind"><code class="docutils literal notranslate"><span class="pre">Price.kind</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../api/scitex_affairs.html#scitex_affairs.config.Price.list_amount"><code class="docutils literal notranslate"><span class="pre">Price.list_amount</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../api/scitex_affairs.html#scitex_affairs.config.Price.discount_percent"><code class="docutils literal notranslate"><span class="pre">Price.discount_percent</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../api/scitex_affairs.html#scitex_affairs.config.Price.markup_percent"><code class="docutils literal notranslate"><span class="pre">Price.markup_percent</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../api/scitex_affairs.html#scitex_affairs.config.Price.policy"><code class="docutils literal notranslate"><span class="pre">Price.policy</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../api/scitex_affairs.html#scitex_affairs.config.Price.discount_schedule"><code class="docutils literal notranslate"><span class="pre">Price.discount_schedule</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../api/scitex_affairs.html#scitex_affairs.config.Price.currency"><code class="docutils literal notranslate"><span class="pre">Price.currency</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../api/scitex_affairs.html#scitex_affairs.config.Price.from_mapping"><code class="docutils literal notranslate"><span class="pre">Price.from_mapping()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../api/scitex_affairs.html#scitex_affairs.config.Price.amount_on"><code class="docutils literal notranslate"><span class="pre">Price.amount_on()</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../../api/scitex_affairs.html#scitex_affairs.config.CatalogItem"><code class="docutils literal notranslate"><span class="pre">CatalogItem</span></code></a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../../api/scitex_affairs.html#scitex_affairs.config.CatalogItem.id"><code class="docutils literal notranslate"><span class="pre">CatalogItem.id</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../api/scitex_affairs.html#scitex_affairs.config.CatalogItem.name"><code class="docutils literal notranslate"><span class="pre">CatalogItem.name</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../api/scitex_affairs.html#scitex_affairs.config.CatalogItem.direction"><code class="docutils literal notranslate"><span class="pre">CatalogItem.direction</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../api/scitex_affairs.html#scitex_affairs.config.CatalogItem.model"><code class="docutils literal notranslate"><span class="pre">CatalogItem.model</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../api/scitex_affairs.html#scitex_affairs.config.CatalogItem.price"><code class="docutils literal notranslate"><span class="pre">CatalogItem.price</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../api/scitex_affairs.html#scitex_affairs.config.CatalogItem.description"><code class="docutils literal notranslate"><span class="pre">CatalogItem.description</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../api/scitex_affairs.html#scitex_affairs.config.CatalogItem.category"><code class="docutils literal notranslate"><span class="pre">CatalogItem.category</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../api/scitex_affairs.html#scitex_affairs.config.CatalogItem.status"><code class="docutils literal notranslate"><span class="pre">CatalogItem.status</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../api/scitex_affairs.html#scitex_affairs.config.CatalogItem.automated"><code class="docutils literal notranslate"><span class="pre">CatalogItem.automated</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../api/scitex_affairs.html#scitex_affairs.config.CatalogItem.attributes"><code class="docutils literal notranslate"><span class="pre">CatalogItem.attributes</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../api/scitex_affairs.html#scitex_affairs.config.CatalogItem.from_mapping"><code class="docutils literal notranslate"><span class="pre">CatalogItem.from_mapping()</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../../api/scitex_affairs.html#scitex_affairs.config.Scenario"><code class="docutils literal notranslate"><span class="pre">Scenario</span></code></a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../../api/scitex_affairs.html#scitex_affairs.config.Scenario.id"><code class="docutils literal notranslate"><span class="pre">Scenario.id</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../api/scitex_affairs.html#scitex_affairs.config.Scenario.label"><code class="docutils literal notranslate"><span class="pre">Scenario.label</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../api/scitex_affairs.html#scitex_affairs.config.Scenario.status"><code class="docutils literal notranslate"><span class="pre">Scenario.status</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../api/scitex_affairs.html#scitex_affairs.config.Scenario.start_date"><code class="docutils literal notranslate"><span class="pre">Scenario.start_date</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../api/scitex_affairs.html#scitex_affairs.config.Scenario.end_date"><code class="docutils literal notranslate"><span class="pre">Scenario.end_date</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../api/scitex_affairs.html#scitex_affairs.config.Scenario.series"><code class="docutils literal notranslate"><span class="pre">Scenario.series</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../api/scitex_affairs.html#scitex_affairs.config.Scenario.from_mapping"><code class="docutils literal notranslate"><span class="pre">Scenario.from_mapping()</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../../api/scitex_affairs.html#scitex_affairs.config.AffairsConfig"><code class="docutils literal notranslate"><span class="pre">AffairsConfig</span></code></a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../../api/scitex_affairs.html#scitex_affairs.config.AffairsConfig.schema_version"><code class="docutils literal notranslate"><span class="pre">AffairsConfig.schema_version</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../api/scitex_affairs.html#scitex_affairs.config.AffairsConfig.organization"><code class="docutils literal notranslate"><span class="pre">AffairsConfig.organization</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../api/scitex_affairs.html#scitex_affairs.config.AffairsConfig.currency"><code class="docutils literal notranslate"><span class="pre">AffairsConfig.currency</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../api/scitex_affairs.html#scitex_affairs.config.AffairsConfig.fiscal_year_start_month"><code class="docutils literal notranslate"><span class="pre">AffairsConfig.fiscal_year_start_month</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../api/scitex_affairs.html#scitex_affairs.config.AffairsConfig.catalog"><code class="docutils literal notranslate"><span class="pre">AffairsConfig.catalog</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../api/scitex_affairs.html#scitex_affairs.config.AffairsConfig.scenarios"><code class="docutils literal notranslate"><span class="pre">AffairsConfig.scenarios</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../api/scitex_affairs.html#scitex_affairs.config.AffairsConfig.pricing_policies"><code class="docutils literal notranslate"><span class="pre">AffairsConfig.pricing_policies</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../api/scitex_affairs.html#scitex_affairs.config.AffairsConfig.sources"><code class="docutils literal notranslate"><span class="pre">AffairsConfig.sources</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../api/scitex_affairs.html#scitex_affairs.config.AffairsConfig.fx"><code class="docutils literal notranslate"><span class="pre">AffairsConfig.fx</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../api/scitex_affairs.html#scitex_affairs.config.AffairsConfig.from_mapping"><code class="docutils literal notranslate"><span class="pre">AffairsConfig.from_mapping()</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../../api/scitex_affairs.html#scitex_affairs.config.resolve_config_path"><code class="docutils literal notranslate"><span class="pre">resolve_config_path()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../api/scitex_affairs.html#scitex_affairs.config.load_config"><code class="docutils literal notranslate"><span class="pre">load_config()</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../api/scitex_affairs.html#module-scitex_affairs.scenario">Scenarios</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../../api/scitex_affairs.html#scitex_affairs.scenario.monthly_report"><code class="docutils literal notranslate"><span class="pre">monthly_report()</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../api/scitex_affairs.html#module-scitex_affairs.fx">Exchange rates</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../../api/scitex_affairs.html#scitex_affairs.fx.PROVIDERS"><code class="docutils literal notranslate"><span class="pre">PROVIDERS</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../api/scitex_affairs.html#scitex_affairs.fx.Opener"><code class="docutils literal notranslate"><span class="pre">Opener</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../api/scitex_affairs.html#scitex_affairs.fx.FxError"><code class="docutils literal notranslate"><span class="pre">FxError</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../api/scitex_affairs.html#scitex_affairs.fx.FxRate"><code class="docutils literal notranslate"><span class="pre">FxRate</span></code></a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../../api/scitex_affairs.html#scitex_affairs.fx.FxRate.base"><code class="docutils literal notranslate"><span class="pre">FxRate.base</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../api/scitex_affairs.html#scitex_affairs.fx.FxRate.quote"><code class="docutils literal notranslate"><span class="pre">FxRate.quote</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../api/scitex_affairs.html#scitex_affairs.fx.FxRate.rate"><code class="docutils literal notranslate"><span class="pre">FxRate.rate</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../api/scitex_affairs.html#scitex_affairs.fx.FxRate.as_of"><code class="docutils literal notranslate"><span class="pre">FxRate.as_of</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../api/scitex_affairs.html#scitex_affairs.fx.FxRate.source"><code class="docutils literal notranslate"><span class="pre">FxRate.source</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../api/scitex_affairs.html#scitex_affairs.fx.FxRate.retrieved_at"><code class="docutils literal notranslate"><span class="pre">FxRate.retrieved_at</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../api/scitex_affairs.html#scitex_affairs.fx.FxRate.source_label"><code class="docutils literal notranslate"><span class="pre">FxRate.source_label</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../../api/scitex_affairs.html#scitex_affairs.fx.fetch_rate"><code class="docutils literal notranslate"><span class="pre">fetch_rate()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../api/scitex_affairs.html#scitex_affairs.fx.disclosure"><code class="docutils literal notranslate"><span class="pre">disclosure()</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../api/scitex_affairs.html#module-scitex_affairs.describe">Descriptions and rendering</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../../api/scitex_affairs.html#scitex_affairs.describe.catalog_frame"><code class="docutils literal notranslate"><span class="pre">catalog_frame()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../api/scitex_affairs.html#scitex_affairs.describe.summarize"><code class="docutils literal notranslate"><span class="pre">summarize()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../api/scitex_affairs.html#scitex_affairs.describe.financial_statement"><code class="docutils literal notranslate"><span class="pre">financial_statement()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../api/scitex_affairs.html#scitex_affairs.render.render_frame"><code class="docutils literal notranslate"><span class="pre">render_frame()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../api/scitex_affairs.html#scitex_affairs.render.write_frame"><code class="docutils literal notranslate"><span class="pre">write_frame()</span></code></a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../../index.html">SciTeX Affairs</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="../../index.html" class="icon icon-home" aria-label="Home"></a></li>
+          <li class="breadcrumb-item"><a href="../index.html">Module code</a></li>
+      <li class="breadcrumb-item active">scitex_affairs.fx</li>
+      <li class="wy-breadcrumbs-aside">
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <h1>Source code for scitex_affairs.fx</h1><div class="highlight"><pre>
+<span></span><span class="sd">"""Live exchange rates for prices denominated in another currency.</span>
+
+<span class="sd">A price may be set in one currency (for example USD, the SciTeX price list)</span>
+<span class="sd">while plans and accounts are kept in another (for example JPY). Converting</span>
+<span class="sd">between them needs a rate, and a stale or invented rate silently misstates</span>
+<span class="sd">every derived figure. So the rate is always **fetched from a declared</span>
+<span class="sd">reference source**, recorded with its source and timestamps on every</span>
+<span class="sd">converted figure, and a failure to fetch is an error, never a fallback.</span>
+
+<span class="sd">The converted figure is an **estimate**. Actual billing happens in the price's</span>
+<span class="sd">own currency; what a customer is charged in another currency is set by their</span>
+<span class="sd">card issuer's rate and fees at settlement. :func:`disclosure` renders that</span>
+<span class="sd">statement so every output that shows a converted figure can carry it.</span>
+<span class="sd">"""</span>
+
+<span class="kn">from</span><span class="w"> </span><span class="nn">__future__</span><span class="w"> </span><span class="kn">import</span> <span class="n">annotations</span>
+
+<span class="kn">import</span><span class="w"> </span><span class="nn">json</span>
+<span class="kn">import</span><span class="w"> </span><span class="nn">urllib.request</span>
+<span class="kn">from</span><span class="w"> </span><span class="nn">collections.abc</span><span class="w"> </span><span class="kn">import</span> <span class="n">Callable</span>
+<span class="kn">from</span><span class="w"> </span><span class="nn">dataclasses</span><span class="w"> </span><span class="kn">import</span> <span class="n">dataclass</span>
+<span class="kn">from</span><span class="w"> </span><span class="nn">datetime</span><span class="w"> </span><span class="kn">import</span> <span class="n">datetime</span><span class="p">,</span> <span class="n">timezone</span>
+
+<span class="kn">from</span><span class="w"> </span><span class="nn">.config</span><span class="w"> </span><span class="kn">import</span> <span class="n">ConfigError</span>
+
+<span class="c1">#: Reference sources: id -&gt; (display name, URL template taking the base code).</span>
+<span class="c1">#: ExchangeRate-API is the source SciTeX Hub uses for its yen reference column,</span>
+<span class="c1">#: so a figure computed here and one shown on scitex.ai agree on method.</span>
+<span class="n">PROVIDERS</span><span class="p">:</span> <span class="nb">dict</span><span class="p">[</span><span class="nb">str</span><span class="p">,</span> <span class="nb">tuple</span><span class="p">[</span><span class="nb">str</span><span class="p">,</span> <span class="nb">str</span><span class="p">]]</span> <span class="o">=</span> <span class="p">{</span>
+    <span class="s2">"open.er-api.com"</span><span class="p">:</span> <span class="p">(</span>
+        <span class="s2">"ExchangeRate-API (open.er-api.com)"</span><span class="p">,</span>
+        <span class="s2">"https://open.er-api.com/v6/latest/</span><span class="si">{base}</span><span class="s2">"</span><span class="p">,</span>
+    <span class="p">),</span>
+<span class="p">}</span>
+
+<span class="c1">#: ``opener(url, timeout_seconds) -&gt; response body bytes``. Injectable so tests</span>
+<span class="c1">#: can serve a real JSON body without patching this module.</span>
+<span class="n">Opener</span> <span class="o">=</span> <span class="n">Callable</span><span class="p">[[</span><span class="nb">str</span><span class="p">,</span> <span class="nb">float</span><span class="p">],</span> <span class="nb">bytes</span><span class="p">]</span>
+
+
+<div class="viewcode-block" id="FxError">
+<a class="viewcode-back" href="../../api/scitex_affairs.html#scitex_affairs.FxError">[docs]</a>
+<span class="k">class</span><span class="w"> </span><span class="nc">FxError</span><span class="p">(</span><span class="n">ConfigError</span><span class="p">):</span>
+<span class="w">    </span><span class="sd">"""A rate could not be obtained or the supplier's answer was unusable."""</span></div>
+
+
+
+<div class="viewcode-block" id="FxRate">
+<a class="viewcode-back" href="../../api/scitex_affairs.html#scitex_affairs.FxRate">[docs]</a>
+<span class="nd">@dataclass</span><span class="p">(</span><span class="n">frozen</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span> <span class="n">slots</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+<span class="k">class</span><span class="w"> </span><span class="nc">FxRate</span><span class="p">:</span>
+<span class="w">    </span><span class="sd">"""One ``base -&gt; quote`` rate with everything needed to disclose it."""</span>
+
+    <span class="n">base</span><span class="p">:</span> <span class="nb">str</span>
+    <span class="n">quote</span><span class="p">:</span> <span class="nb">str</span>
+    <span class="n">rate</span><span class="p">:</span> <span class="nb">float</span>
+    <span class="n">as_of</span><span class="p">:</span> <span class="nb">str</span>  <span class="c1"># the supplier's own last-update timestamp</span>
+    <span class="n">source</span><span class="p">:</span> <span class="nb">str</span>  <span class="c1"># provider id, e.g. "open.er-api.com"</span>
+    <span class="n">retrieved_at</span><span class="p">:</span> <span class="nb">str</span>  <span class="c1"># when this process fetched it (UTC, ISO 8601)</span>
+
+    <span class="nd">@property</span>
+    <span class="k">def</span><span class="w"> </span><span class="nf">source_label</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">str</span><span class="p">:</span>
+        <span class="k">return</span> <span class="n">PROVIDERS</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">source</span><span class="p">,</span> <span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">source</span><span class="p">,</span> <span class="s2">""</span><span class="p">))[</span><span class="mi">0</span><span class="p">]</span></div>
+
+
+
+<span class="k">def</span><span class="w"> </span><span class="nf">_urlopen</span><span class="p">(</span><span class="n">url</span><span class="p">:</span> <span class="nb">str</span><span class="p">,</span> <span class="n">timeout</span><span class="p">:</span> <span class="nb">float</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">bytes</span><span class="p">:</span>
+    <span class="n">request</span> <span class="o">=</span> <span class="n">urllib</span><span class="o">.</span><span class="n">request</span><span class="o">.</span><span class="n">Request</span><span class="p">(</span><span class="n">url</span><span class="p">,</span> <span class="n">headers</span><span class="o">=</span><span class="p">{</span><span class="s2">"User-Agent"</span><span class="p">:</span> <span class="s2">"scitex-affairs"</span><span class="p">})</span>
+    <span class="k">with</span> <span class="n">urllib</span><span class="o">.</span><span class="n">request</span><span class="o">.</span><span class="n">urlopen</span><span class="p">(</span><span class="n">request</span><span class="p">,</span> <span class="n">timeout</span><span class="o">=</span><span class="n">timeout</span><span class="p">)</span> <span class="k">as</span> <span class="n">response</span><span class="p">:</span>  <span class="c1"># noqa: S310</span>
+        <span class="k">return</span> <span class="n">response</span><span class="o">.</span><span class="n">read</span><span class="p">()</span>
+
+
+<div class="viewcode-block" id="fetch_rate">
+<a class="viewcode-back" href="../../api/scitex_affairs.html#scitex_affairs.fetch_rate">[docs]</a>
+<span class="k">def</span><span class="w"> </span><span class="nf">fetch_rate</span><span class="p">(</span>
+    <span class="n">base</span><span class="p">:</span> <span class="nb">str</span><span class="p">,</span>
+    <span class="n">quote</span><span class="p">:</span> <span class="nb">str</span><span class="p">,</span>
+    <span class="n">provider</span><span class="p">:</span> <span class="nb">str</span> <span class="o">=</span> <span class="s2">"open.er-api.com"</span><span class="p">,</span>
+    <span class="o">*</span><span class="p">,</span>
+    <span class="n">opener</span><span class="p">:</span> <span class="n">Opener</span> <span class="o">=</span> <span class="n">_urlopen</span><span class="p">,</span>
+    <span class="n">timeout</span><span class="p">:</span> <span class="nb">float</span> <span class="o">=</span> <span class="mf">10.0</span><span class="p">,</span>
+<span class="p">)</span> <span class="o">-&gt;</span> <span class="n">FxRate</span><span class="p">:</span>
+<span class="w">    </span><span class="sd">"""Fetch the current ``base -&gt; quote`` rate from a declared provider.</span>
+
+<span class="sd">    Raises :class:`FxError` when the provider is unknown, unreachable, or</span>
+<span class="sd">    answers with anything but a positive rate for ``quote``.</span>
+<span class="sd">    """</span>
+
+    <span class="n">base</span><span class="p">,</span> <span class="n">quote</span> <span class="o">=</span> <span class="n">base</span><span class="o">.</span><span class="n">upper</span><span class="p">(),</span> <span class="n">quote</span><span class="o">.</span><span class="n">upper</span><span class="p">()</span>
+    <span class="k">if</span> <span class="n">provider</span> <span class="ow">not</span> <span class="ow">in</span> <span class="n">PROVIDERS</span><span class="p">:</span>
+        <span class="k">raise</span> <span class="n">FxError</span><span class="p">(</span><span class="sa">f</span><span class="s2">"unknown fx provider </span><span class="si">{</span><span class="n">provider</span><span class="si">!r}</span><span class="s2">; known: </span><span class="si">{</span><span class="nb">sorted</span><span class="p">(</span><span class="n">PROVIDERS</span><span class="p">)</span><span class="si">}</span><span class="s2">"</span><span class="p">)</span>
+    <span class="n">url</span> <span class="o">=</span> <span class="n">PROVIDERS</span><span class="p">[</span><span class="n">provider</span><span class="p">][</span><span class="mi">1</span><span class="p">]</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">base</span><span class="o">=</span><span class="n">base</span><span class="p">)</span>
+    <span class="k">try</span><span class="p">:</span>
+        <span class="n">payload</span> <span class="o">=</span> <span class="n">json</span><span class="o">.</span><span class="n">loads</span><span class="p">(</span><span class="n">opener</span><span class="p">(</span><span class="n">url</span><span class="p">,</span> <span class="n">timeout</span><span class="p">))</span>
+    <span class="k">except</span> <span class="ne">Exception</span> <span class="k">as</span> <span class="n">exc</span><span class="p">:</span>  <span class="c1"># noqa: BLE001 — every failure is reported, not hidden</span>
+        <span class="k">raise</span> <span class="n">FxError</span><span class="p">(</span><span class="sa">f</span><span class="s2">"cannot fetch </span><span class="si">{</span><span class="n">base</span><span class="si">}</span><span class="s2">-&gt;</span><span class="si">{</span><span class="n">quote</span><span class="si">}</span><span class="s2"> from </span><span class="si">{</span><span class="n">provider</span><span class="si">}</span><span class="s2">: </span><span class="si">{</span><span class="n">exc</span><span class="si">}</span><span class="s2">"</span><span class="p">)</span> <span class="kn">from</span><span class="w"> </span><span class="nn">exc</span>
+    <span class="k">if</span> <span class="ow">not</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">payload</span><span class="p">,</span> <span class="nb">dict</span><span class="p">)</span> <span class="ow">or</span> <span class="n">payload</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s2">"result"</span><span class="p">)</span> <span class="o">!=</span> <span class="s2">"success"</span><span class="p">:</span>
+        <span class="k">raise</span> <span class="n">FxError</span><span class="p">(</span><span class="sa">f</span><span class="s2">"</span><span class="si">{</span><span class="n">provider</span><span class="si">}</span><span class="s2"> did not return a successful result for </span><span class="si">{</span><span class="n">base</span><span class="si">}</span><span class="s2">"</span><span class="p">)</span>
+    <span class="n">rate</span> <span class="o">=</span> <span class="n">payload</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s2">"rates"</span><span class="p">,</span> <span class="p">{})</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="n">quote</span><span class="p">)</span>
+    <span class="k">if</span> <span class="ow">not</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">rate</span><span class="p">,</span> <span class="p">(</span><span class="nb">int</span><span class="p">,</span> <span class="nb">float</span><span class="p">))</span> <span class="ow">or</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">rate</span><span class="p">,</span> <span class="nb">bool</span><span class="p">)</span> <span class="ow">or</span> <span class="n">rate</span> <span class="o">&lt;=</span> <span class="mi">0</span><span class="p">:</span>
+        <span class="k">raise</span> <span class="n">FxError</span><span class="p">(</span><span class="sa">f</span><span class="s2">"</span><span class="si">{</span><span class="n">provider</span><span class="si">}</span><span class="s2"> returned no positive </span><span class="si">{</span><span class="n">base</span><span class="si">}</span><span class="s2">-&gt;</span><span class="si">{</span><span class="n">quote</span><span class="si">}</span><span class="s2"> rate"</span><span class="p">)</span>
+    <span class="k">return</span> <span class="n">FxRate</span><span class="p">(</span>
+        <span class="n">base</span><span class="o">=</span><span class="n">base</span><span class="p">,</span>
+        <span class="n">quote</span><span class="o">=</span><span class="n">quote</span><span class="p">,</span>
+        <span class="n">rate</span><span class="o">=</span><span class="nb">float</span><span class="p">(</span><span class="n">rate</span><span class="p">),</span>
+        <span class="n">as_of</span><span class="o">=</span><span class="nb">str</span><span class="p">(</span><span class="n">payload</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s2">"time_last_update_utc"</span><span class="p">,</span> <span class="s2">""</span><span class="p">)),</span>
+        <span class="n">source</span><span class="o">=</span><span class="n">provider</span><span class="p">,</span>
+        <span class="n">retrieved_at</span><span class="o">=</span><span class="n">datetime</span><span class="o">.</span><span class="n">now</span><span class="p">(</span><span class="n">timezone</span><span class="o">.</span><span class="n">utc</span><span class="p">)</span><span class="o">.</span><span class="n">isoformat</span><span class="p">(</span><span class="n">timespec</span><span class="o">=</span><span class="s2">"seconds"</span><span class="p">),</span>
+    <span class="p">)</span></div>
+
+
+
+<div class="viewcode-block" id="disclosure">
+<a class="viewcode-back" href="../../api/scitex_affairs.html#scitex_affairs.disclosure">[docs]</a>
+<span class="k">def</span><span class="w"> </span><span class="nf">disclosure</span><span class="p">(</span><span class="n">rate</span><span class="p">:</span> <span class="n">FxRate</span><span class="p">,</span> <span class="n">language</span><span class="p">:</span> <span class="nb">str</span> <span class="o">=</span> <span class="s2">"en"</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">str</span><span class="p">:</span>
+<span class="w">    </span><span class="sd">"""State how a converted figure was obtained and that billing differs."""</span>
+
+    <span class="k">if</span> <span class="n">language</span> <span class="o">==</span> <span class="s2">"ja"</span><span class="p">:</span>
+        <span class="k">return</span> <span class="p">(</span>
+            <span class="sa">f</span><span class="s2">"</span><span class="si">{</span><span class="n">rate</span><span class="o">.</span><span class="n">quote</span><span class="si">}</span><span class="s2">換算額は、</span><span class="si">{</span><span class="n">rate</span><span class="o">.</span><span class="n">source_label</span><span class="si">}</span><span class="s2"> が公開する為替レート "</span>
+            <span class="sa">f</span><span class="s2">"1 </span><span class="si">{</span><span class="n">rate</span><span class="o">.</span><span class="n">base</span><span class="si">}</span><span class="s2"> = </span><span class="si">{</span><span class="n">rate</span><span class="o">.</span><span class="n">rate</span><span class="si">:</span><span class="s2">,.4g</span><span class="si">}</span><span class="s2"> </span><span class="si">{</span><span class="n">rate</span><span class="o">.</span><span class="n">quote</span><span class="si">}</span><span class="s2">（</span><span class="si">{</span><span class="n">rate</span><span class="o">.</span><span class="n">as_of</span><span class="si">}</span><span class="s2"> 時点。"</span>
+            <span class="sa">f</span><span class="s2">"</span><span class="si">{</span><span class="n">rate</span><span class="o">.</span><span class="n">retrieved_at</span><span class="si">}</span><span class="s2"> に取得）で求めた概算です。あくまで目安であり、"</span>
+            <span class="sa">f</span><span class="s2">"実際の請求は</span><span class="si">{</span><span class="n">rate</span><span class="o">.</span><span class="n">base</span><span class="si">}</span><span class="s2">で行われます。</span><span class="si">{</span><span class="n">rate</span><span class="o">.</span><span class="n">quote</span><span class="si">}</span><span class="s2">での請求額は、"</span>
+            <span class="s2">"カード会社等が決済時に適用する為替レートや手数料によって異なります。"</span>
+        <span class="p">)</span>
+    <span class="k">return</span> <span class="p">(</span>
+        <span class="sa">f</span><span class="s2">"</span><span class="si">{</span><span class="n">rate</span><span class="o">.</span><span class="n">quote</span><span class="si">}</span><span class="s2"> figures are estimates converted at the rate published by "</span>
+        <span class="sa">f</span><span class="s2">"</span><span class="si">{</span><span class="n">rate</span><span class="o">.</span><span class="n">source_label</span><span class="si">}</span><span class="s2">: 1 </span><span class="si">{</span><span class="n">rate</span><span class="o">.</span><span class="n">base</span><span class="si">}</span><span class="s2"> = </span><span class="si">{</span><span class="n">rate</span><span class="o">.</span><span class="n">rate</span><span class="si">:</span><span class="s2">,.4g</span><span class="si">}</span><span class="s2"> </span><span class="si">{</span><span class="n">rate</span><span class="o">.</span><span class="n">quote</span><span class="si">}</span><span class="s2"> "</span>
+        <span class="sa">f</span><span class="s2">"(as of </span><span class="si">{</span><span class="n">rate</span><span class="o">.</span><span class="n">as_of</span><span class="si">}</span><span class="s2">; retrieved </span><span class="si">{</span><span class="n">rate</span><span class="o">.</span><span class="n">retrieved_at</span><span class="si">}</span><span class="s2">). They are a guide "</span>
+        <span class="sa">f</span><span class="s2">"only. Actual billing is in </span><span class="si">{</span><span class="n">rate</span><span class="o">.</span><span class="n">base</span><span class="si">}</span><span class="s2">; an amount charged in "</span>
+        <span class="sa">f</span><span class="s2">"</span><span class="si">{</span><span class="n">rate</span><span class="o">.</span><span class="n">quote</span><span class="si">}</span><span class="s2"> is set by the card issuer's exchange rate and fees at "</span>
+        <span class="s2">"settlement and will differ."</span>
+    <span class="p">)</span></div>
+
+</pre></div>
+
+           </div>
+          </div>
+          <footer>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2026, Yusuke Watanabe.</p>
+  </div>
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

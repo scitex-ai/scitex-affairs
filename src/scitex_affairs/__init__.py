@@ -27,6 +27,9 @@ _LAZY: dict[str, str] = {
     "financial_statement": ".describe",
     "summarize": ".describe",
     "monthly_report": ".scenario",
+    "FxError": ".fx",
+    "FxRate": ".fx",
+    "fetch_rate": ".fx",
 }
 
 if TYPE_CHECKING:
@@ -41,6 +44,7 @@ if TYPE_CHECKING:
         resolve_config_path,
     )
     from .describe import catalog_frame, financial_statement, summarize
+    from .fx import FxError, FxRate, fetch_rate
     from .scenario import monthly_report
 
 
@@ -62,9 +66,12 @@ __all__ = [
     "CatalogItem",
     "ConfigError",
     "DiscountPhase",
+    "FxError",
+    "FxRate",
     "Price",
     "Scenario",
     "catalog_frame",
+    "fetch_rate",
     "financial_statement",
     "load_config",
     "resolve_config_path",

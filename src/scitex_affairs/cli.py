@@ -12,6 +12,7 @@ from . import __version__
 from .actuals import actuals_frame, open_actuals_store, record_actual
 from .config import ConfigError, load_config, resolve_config_path
 from .describe import catalog_frame, summarize
+from .fx import disclosure
 from .plot import plot_financials, save_figure
 from .render import render_frame, write_frame
 from .scenario import monthly_report
@@ -158,6 +159,10 @@ def scenario_report(
     monthly = monthly_report(config, scenario_id)
     frame = summarize(monthly, frequency, config.fiscal_year_start_month)
     _emit(frame, output_format, output)
+    # Converted figures are estimates; say how and that billing differs. On
+    # stderr so CSV/JSON on stdout stay machine-readable.
+    for rate in monthly.attrs.get("fx", []):
+        click.echo(disclosure(rate), err=True)
 
 
 @scenario_group.command("plot")

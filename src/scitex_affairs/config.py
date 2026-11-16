@@ -55,6 +55,8 @@ class Price:
     markup_percent: float | None = None
     policy: str = ""
     discount_schedule: tuple[DiscountPhase, ...] = ()
+    #: Currency the price is denominated in; "" means the config's currency.
+    currency: str = ""
 
     @classmethod
     def from_mapping(
@@ -116,6 +118,7 @@ class Price:
             markup_percent=markup,
             policy=policy,
             discount_schedule=schedule,
+            currency=str(merged.get("currency", "")).strip().upper(),
         )
 
     def amount_on(self, day: date) -> float | None:
@@ -241,6 +244,8 @@ class AffairsConfig:
     scenarios: Mapping[str, Scenario]
     pricing_policies: Mapping[str, Mapping[str, Any]]
     sources: tuple[Mapping[str, Any], ...] = ()
+    #: Live-rate source for prices in another currency, e.g. {"provider": ...}.
+    fx: Mapping[str, Any] | None = None
 
     @classmethod
     def from_mapping(cls, raw: Mapping[str, Any]) -> AffairsConfig:
@@ -272,10 +277,18 @@ class AffairsConfig:
             str(key): Scenario.from_mapping(str(key), value, catalog)
             for key, value in raw_scenarios.items()
         }
+        currency = _text(raw.get("currency"), "currency").upper()
+        fx = _optional_mapping(raw.get("fx"), "fx")
+        foreign = sorted({i.price.currency for i in catalog_items} - {"", currency})
+        if foreign and not (fx and str(fx.get("provider", "")).strip()):
+            raise ConfigError(
+                f"prices in {foreign} need fx.provider to convert to {currency}"
+            )
         return cls(
             schema_version=version,
             organization=_text(raw.get("organization"), "organization"),
-            currency=_text(raw.get("currency"), "currency").upper(),
+            currency=currency,
+            fx=fx,
             fiscal_year_start_month=month,
             catalog=catalog,
             scenarios=scenarios,

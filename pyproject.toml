@@ -4,7 +4,7 @@ build-backend = "hatchling.build"
 
 [project]
 name = "scitex-affairs"
-version = "0.1.0"
+version = "0.2.0"
 description = "Single-source business and personal affairs: catalogs, actuals, scenarios, reports, and plots"
 readme = "README.md"
 requires-python = ">=3.10"

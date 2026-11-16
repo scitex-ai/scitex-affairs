@@ -18,6 +18,12 @@ Scenarios
 .. automodule:: scitex_affairs.scenario
    :members:
 
+Exchange rates
+--------------
+
+.. automodule:: scitex_affairs.fx
+   :members:
+
 Descriptions and rendering
 --------------------------
 
