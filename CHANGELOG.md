@@ -6,6 +6,12 @@ follow [Semantic Versioning](https://semver.org/).
 
 ## [Unreleased]
 
+## [0.2.0] - 2026-11-16
+
+- Prices in another currency: `price.currency` plus `fx.provider`; `monthly_report()` converts into `config.currency` at a live rate from ExchangeRate-API (`open.er-api.com`, the source scitex.ai uses) and records `price_currency`, `fx_rate`, `fx_as_of`, `fx_source` on converted rows.
+- `scitex_affairs.fx`: `fetch_rate()`, `FxRate`, `FxError`, and `disclosure()` (EN/JA) stating that converted figures are estimates and that actual billing differs. `scenario report` prints it when a conversion was used.
+- No fallback rate: a foreign-currency price without `fx.provider` is a config error, and an unreachable or malformed rate raises `FxError`.
+
 ## [0.1.0] - 2026-11-16
 
 First public release. The package was developed privately as

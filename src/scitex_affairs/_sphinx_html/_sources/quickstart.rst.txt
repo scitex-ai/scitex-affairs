@@ -34,6 +34,17 @@ integrates daily values into monthly results before fiscal-quarter or
 fiscal-year aggregation, so a year-end target is never billed for all twelve
 months.
 
+Prices in another currency
+--------------------------
+
+A price may carry its own ``currency`` (for example USD) while the plan stays
+in the config's ``currency``; it is converted at a live rate from
+``fx.provider`` (``open.er-api.com``, ExchangeRate-API). Converted figures are
+estimates: billing happens in the price's own currency, and the amount charged
+in another currency depends on the card issuer's rate and fees. Every converted
+row records the rate, its as-of time and source; a rate that cannot be fetched
+is an error, never a guess.
+
 Actual observations
 -------------------
 

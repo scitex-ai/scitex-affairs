@@ -9,6 +9,7 @@ from typing import Any
 import pandas as pd
 
 from .config import AffairsConfig, CatalogItem, ConfigError, Scenario
+from .fx import FxRate, fetch_rate
 
 REPORT_COLUMNS = [
     "scenario_id",
@@ -28,17 +29,34 @@ REPORT_COLUMNS = [
     "units_flow",
     "amount",
     "signed_amount",
+    "price_currency",
+    "fx_rate",
+    "fx_as_of",
+    "fx_source",
 ]
 
 
-def monthly_report(config: AffairsConfig, scenario_id: str) -> pd.DataFrame:
-    """Calculate the canonical monthly ledger for one optional scenario."""
+def monthly_report(
+    config: AffairsConfig,
+    scenario_id: str,
+    *,
+    rates: Mapping[str, FxRate] | None = None,
+) -> pd.DataFrame:
+    """Calculate the canonical monthly ledger for one optional scenario.
+
+    Amounts are in ``config.currency``. A price set in another currency is
+    converted at a live rate from ``config.fx["provider"]`` (or from
+    ``rates``, keyed by the price currency, when the caller already holds
+    them). Converted rows record the rate, its as-of time and source; the
+    rates used are also in ``report.attrs["fx"]`` for :func:`fx.disclosure`.
+    """
 
     try:
         scenario = config.scenarios[scenario_id]
     except KeyError as exc:
         raise ConfigError(f"unknown scenario: {scenario_id}") from exc
 
+    used: dict[str, FxRate] = {}
     frames: list[pd.DataFrame] = []
     for series in scenario.series:
         item = config.catalog[str(series["item_id"])]
@@ -46,11 +64,30 @@ def monthly_report(config: AffairsConfig, scenario_id: str) -> pd.DataFrame:
             frame = _stock_months(scenario, item, series, config.currency)
         else:
             frame = _flow_months(scenario, item, series, config.currency)
+        price_currency = item.price.currency or config.currency
+        frame["price_currency"] = price_currency
+        if price_currency != config.currency:
+            if price_currency not in used:
+                used[price_currency] = (rates or {}).get(price_currency) or fetch_rate(
+                    price_currency, config.currency, str((config.fx or {})["provider"])
+                )
+            fx = used[price_currency]
+            frame["amount"] *= fx.rate
+            frame["signed_amount"] *= fx.rate
+            frame["fx_rate"], frame["fx_as_of"], frame["fx_source"] = (
+                fx.rate,
+                fx.as_of,
+                fx.source,
+            )
+        else:
+            frame["fx_rate"], frame["fx_as_of"], frame["fx_source"] = None, "", ""
         frames.append(frame)
     if not frames:
         return pd.DataFrame(columns=REPORT_COLUMNS)
     report = pd.concat(frames, ignore_index=True)[REPORT_COLUMNS]
-    return report.sort_values(["period_start", "item_id"]).reset_index(drop=True)
+    report = report.sort_values(["period_start", "item_id"]).reset_index(drop=True)
+    report.attrs["fx"] = list(used.values())
+    return report
 
 
 def _stock_months(

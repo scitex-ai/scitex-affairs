@@ -83,6 +83,24 @@ customers or subscriptions are `stock` measures; projects and usage totals are
 `flow` measures. The engine integrates daily values into monthly results
 before fiscal-quarter or fiscal-year aggregation.
 
+## Prices in Another Currency
+
+A price can be set in its own currency (the SciTeX price list is in USD) while plans and accounts stay in the config's `currency`. Amounts are converted at a live rate fetched from the declared reference source:
+
+```yaml
+currency: JPY                  # plans and accounts are kept in yen
+fx:
+  provider: open.er-api.com    # ExchangeRate-API, the source scitex.ai also uses
+catalog:
+  - id: subscription-general
+    name: SciTeX Cloud Standard
+    direction: revenue
+    model: recurring
+    price: {kind: fixed, amount: 39, currency: USD, interval: month, unit: person}
+```
+
+Every converted row records `price_currency`, `fx_rate`, `fx_as_of` and `fx_source`. A price in another currency without `fx.provider` is a config error, and a rate that cannot be fetched raises `FxError`: there is no fallback rate. Converted figures are **estimates**: actual billing is in the price's own currency, and an amount charged in another currency is set by the card issuer's rate and fees at settlement. `scitex_affairs.fx.disclosure(rate, 'en' | 'ja')` renders that statement; `scitex-affairs scenario report` prints it whenever a conversion was used.
+
 ## Architecture
 
 ```mermaid
