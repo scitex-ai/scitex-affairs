@@ -1,0 +1,73 @@
+:root {
+  color-scheme: light dark;
+}
+
+body {
+  margin: 0;
+  background: var(--workspace-bg, Canvas);
+  color: var(--text-primary, CanvasText);
+  font-family: var(--font-sans, system-ui, sans-serif);
+}
+
+.affairs-page {
+  max-width: 76rem;
+  margin: 0 auto;
+  padding: var(--spacing-xl, 2rem);
+}
+
+header,
+section {
+  margin-block-end: var(--spacing-xl, 2rem);
+}
+
+.eyebrow,
+small,
+.section-heading span {
+  color: var(--text-secondary, GrayText);
+}
+
+.eyebrow {
+  margin: 0;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+h1,
+h2 {
+  margin-block: var(--spacing-xs, 0.5rem);
+}
+
+.section-heading {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  gap: var(--spacing-md, 1rem);
+}
+
+.data-table-container,
+.notice {
+  overflow: auto;
+  border: 1px solid var(--border-color, ButtonBorder);
+  border-radius: var(--border-radius-md, 0.5rem);
+  background: var(--surface-primary, Canvas);
+}
+
+.notice {
+  padding: var(--spacing-lg, 1.5rem);
+}
+
+.scenario-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--spacing-sm, 0.75rem);
+}
+
+.scenario-list a {
+  padding: var(--spacing-sm, 0.75rem) var(--spacing-md, 1rem);
+  border: 1px solid var(--border-color, ButtonBorder);
+  border-radius: var(--border-radius-md, 0.5rem);
+  color: var(--text-primary, LinkText);
+  text-decoration: none;
+}
+

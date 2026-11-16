@@ -1,0 +1,13 @@
+__pycache__/
+*.py[cod]
+.coverage
+.pytest_cache/
+.ruff_cache/
+.venv/
+build/
+dist/
+*.egg-info/
+node_modules/
+.worktrees/
+# Sphinx local build output (the in-wheel src/<pkg>/_sphinx_html bundle IS tracked)
+docs/sphinx/_build/

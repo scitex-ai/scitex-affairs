@@ -1,0 +1,61 @@
+{% load static %}
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="stx-mount" content="{{ mount_prefix }}">
+  <title>SciTeX Affairs</title>
+  <link rel="stylesheet" href="{% static 'scitex_ui/css/app/data-table.css' %}">
+  <link rel="stylesheet" href="{% static 'scitex_affairs/affairs.css' %}">
+</head>
+<body>
+  <main class="affairs-page">
+    <header>
+      <p class="eyebrow">SciTeX Affairs</p>
+      <h1>{{ organization|default:"Business configuration" }}</h1>
+      <p>Catalog and actuals are useful now. Scenarios below are optional and explicitly hypothetical.</p>
+    </header>
+
+    {% if error %}
+      <section class="notice" role="alert"><h2>Configuration needed</h2><p>{{ error }}</p></section>
+    {% else %}
+      <section>
+        <div class="section-heading"><h2>Service catalog</h2><span>{{ currency }}</span></div>
+        <div class="data-table-container" data-component="{{ data_table.name }}">
+          <table class="data-table">
+            <thead><tr><th>Service</th><th>Category</th><th>Price</th><th>Interval</th><th>Status</th></tr></thead>
+            <tbody>
+            {% for item in catalog %}
+              <tr><td>{{ item.name }}</td><td>{{ item.category }}</td><td>{{ item.price|default_if_none:item.price_kind }}</td><td>{{ item.interval }}</td><td>{{ item.status }}</td></tr>
+            {% endfor %}
+            </tbody>
+          </table>
+        </div>
+      </section>
+
+      <section>
+        <div class="section-heading"><h2>Optional scenarios</h2></div>
+        <nav class="scenario-list" aria-label="Scenarios">
+          {% for scenario in scenarios %}
+            <a href="?scenario={{ scenario.id|urlencode }}">{{ scenario.label }} <small>{{ scenario.status }}</small></a>
+          {% empty %}<p>No forecast is required. Add a scenario only when it helps a decision.</p>{% endfor %}
+        </nav>
+      </section>
+
+      {% if statement %}
+      <section>
+        <div class="section-heading"><h2>{{ selected_scenario.label }}</h2><span>exploratory</span></div>
+        <div class="data-table-container">
+          <table class="data-table">
+            <thead><tr><th>Period</th><th>Revenue</th><th>Expense</th><th>Net</th></tr></thead>
+            <tbody>{% for row in statement %}<tr><td>{{ row.period }}</td><td>{{ row.revenue|floatformat:0 }}</td><td>{{ row.expense|floatformat:0 }}</td><td>{{ row.net|floatformat:0 }}</td></tr>{% endfor %}</tbody>
+          </table>
+        </div>
+      </section>
+      {% endif %}
+    {% endif %}
+  </main>
+</body>
+</html>
+

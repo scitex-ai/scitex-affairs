@@ -1,0 +1,42 @@
+schema_version: 1
+organization: Example Company
+currency: USD
+fiscal_year_start_month: 1
+
+catalog:
+  - id: membership
+    name: Membership
+    direction: revenue
+    model: recurring
+    price:
+      kind: fixed
+      amount: 100
+      interval: month
+      unit: member
+  - id: workshop
+    name: Workshop
+    direction: revenue
+    model: one_time
+    price:
+      kind: fixed
+      amount: 500
+      interval: case
+      unit: workshop
+
+scenarios:
+  measured-growth:
+    label: Measured growth example
+    status: exploratory
+    start_date: 2026-01-01
+    end_date: 2026-12-31
+    series:
+      - item_id: membership
+        measure: stock
+        interpolation: linear
+        points:
+          - {date: 2026-01-01, value: 0}
+          - {date: 2026-12-31, value: 120}
+      - item_id: workshop
+        measure: flow
+        periods:
+          - {start: 2026-04-01, end: 2026-06-30, value: 3}

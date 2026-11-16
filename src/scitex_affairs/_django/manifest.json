@@ -1,0 +1,29 @@
+{
+  "name": "scitex_affairs_app",
+  "slug": "affairs",
+  "label": "Affairs",
+  "pip_package": "scitex-affairs",
+  "icon": "fas fa-chart-line",
+  "subtitle": "Catalogs, actuals, and time-aware business scenarios",
+  "about": "Keep business facts in one place and derive consistent reports without rebuilding monthly, quarterly, and annual documents by hand.",
+  "description": "A pandas-first view of service catalogs and optional stock/flow scenarios. Point-in-time targets are integrated through time before revenue is aggregated.",
+  "author": "SciTeX Contributors",
+  "license": "AGPL-3.0-only",
+  "capabilities": [
+    "Render service and price catalogs",
+    "Aggregate reports by month, fiscal quarter, or fiscal year",
+    "Visualize optional time-aware scenarios",
+    "Read actual observations from the standard SciTeX PostgreSQL store"
+  ],
+  "allowed_extensions": [".yaml", ".yml", ".csv", ".json"],
+  "wip": true,
+  "standalone": true,
+  "standalone_command": "scitex-affairs app serve --config affairs.yaml",
+  "standalone_port": 8054,
+  "frontend_type": "django",
+  "embedded_package": true,
+  "dependencies": {
+    "python": ["scitex-affairs", "django", "scitex-app", "scitex-ui"]
+  }
+}
+

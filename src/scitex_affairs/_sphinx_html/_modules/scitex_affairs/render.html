@@ -1,0 +1,333 @@
+
+
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" data-content_root="../../">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>scitex_affairs.render &mdash; SciTeX Affairs v0.1.0</title>
+      <link rel="stylesheet" type="text/css" href="../../_static/pygments.css?v=b86133f3" />
+      <link rel="stylesheet" type="text/css" href="../../_static/css/theme.css?v=9edc463e" />
+      <link rel="stylesheet" type="text/css" href="../../_static/copybutton.css?v=76b2166b" />
+
+  
+      <script src="../../_static/jquery.js?v=5d32c60e"></script>
+      <script src="../../_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
+      <script src="../../_static/documentation_options.js?v=01f34227"></script>
+      <script src="../../_static/doctools.js?v=9a2dae69"></script>
+      <script src="../../_static/sphinx_highlight.js?v=dc90522c"></script>
+      <script src="../../_static/clipboard.min.js?v=a7894cd8"></script>
+      <script src="../../_static/copybutton.js?v=f281be69"></script>
+    <script src="../../_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="../../genindex.html" />
+    <link rel="search" title="Search" href="../../search.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+
+          
+          
+          <a href="../../index.html" class="icon icon-home">
+            SciTeX Affairs
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <p class="caption" role="heading"><span class="caption-text">Getting Started</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../installation.html">Installation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../quickstart.html">Quick Start</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../quickstart.html#configuration">Configuration</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../quickstart.html#command-line">Command line</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../quickstart.html#python">Python</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../quickstart.html#actual-observations">Actual observations</a></li>
+</ul>
+</li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">API Reference</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../api/scitex_affairs.html">scitex_affairs</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../api/scitex_affairs.html#scitex_affairs.AffairsConfig"><code class="docutils literal notranslate"><span class="pre">AffairsConfig</span></code></a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../../api/scitex_affairs.html#scitex_affairs.AffairsConfig.schema_version"><code class="docutils literal notranslate"><span class="pre">AffairsConfig.schema_version</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../api/scitex_affairs.html#scitex_affairs.AffairsConfig.organization"><code class="docutils literal notranslate"><span class="pre">AffairsConfig.organization</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../api/scitex_affairs.html#scitex_affairs.AffairsConfig.currency"><code class="docutils literal notranslate"><span class="pre">AffairsConfig.currency</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../api/scitex_affairs.html#scitex_affairs.AffairsConfig.fiscal_year_start_month"><code class="docutils literal notranslate"><span class="pre">AffairsConfig.fiscal_year_start_month</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../api/scitex_affairs.html#scitex_affairs.AffairsConfig.catalog"><code class="docutils literal notranslate"><span class="pre">AffairsConfig.catalog</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../api/scitex_affairs.html#scitex_affairs.AffairsConfig.scenarios"><code class="docutils literal notranslate"><span class="pre">AffairsConfig.scenarios</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../api/scitex_affairs.html#scitex_affairs.AffairsConfig.pricing_policies"><code class="docutils literal notranslate"><span class="pre">AffairsConfig.pricing_policies</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../api/scitex_affairs.html#scitex_affairs.AffairsConfig.sources"><code class="docutils literal notranslate"><span class="pre">AffairsConfig.sources</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../api/scitex_affairs.html#scitex_affairs.AffairsConfig.from_mapping"><code class="docutils literal notranslate"><span class="pre">AffairsConfig.from_mapping()</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../api/scitex_affairs.html#scitex_affairs.CatalogItem"><code class="docutils literal notranslate"><span class="pre">CatalogItem</span></code></a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../../api/scitex_affairs.html#scitex_affairs.CatalogItem.id"><code class="docutils literal notranslate"><span class="pre">CatalogItem.id</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../api/scitex_affairs.html#scitex_affairs.CatalogItem.name"><code class="docutils literal notranslate"><span class="pre">CatalogItem.name</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../api/scitex_affairs.html#scitex_affairs.CatalogItem.direction"><code class="docutils literal notranslate"><span class="pre">CatalogItem.direction</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../api/scitex_affairs.html#scitex_affairs.CatalogItem.model"><code class="docutils literal notranslate"><span class="pre">CatalogItem.model</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../api/scitex_affairs.html#scitex_affairs.CatalogItem.price"><code class="docutils literal notranslate"><span class="pre">CatalogItem.price</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../api/scitex_affairs.html#scitex_affairs.CatalogItem.description"><code class="docutils literal notranslate"><span class="pre">CatalogItem.description</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../api/scitex_affairs.html#scitex_affairs.CatalogItem.category"><code class="docutils literal notranslate"><span class="pre">CatalogItem.category</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../api/scitex_affairs.html#scitex_affairs.CatalogItem.status"><code class="docutils literal notranslate"><span class="pre">CatalogItem.status</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../api/scitex_affairs.html#scitex_affairs.CatalogItem.automated"><code class="docutils literal notranslate"><span class="pre">CatalogItem.automated</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../api/scitex_affairs.html#scitex_affairs.CatalogItem.attributes"><code class="docutils literal notranslate"><span class="pre">CatalogItem.attributes</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../api/scitex_affairs.html#scitex_affairs.CatalogItem.from_mapping"><code class="docutils literal notranslate"><span class="pre">CatalogItem.from_mapping()</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../api/scitex_affairs.html#scitex_affairs.ConfigError"><code class="docutils literal notranslate"><span class="pre">ConfigError</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../api/scitex_affairs.html#scitex_affairs.DiscountPhase"><code class="docutils literal notranslate"><span class="pre">DiscountPhase</span></code></a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../../api/scitex_affairs.html#scitex_affairs.DiscountPhase.start"><code class="docutils literal notranslate"><span class="pre">DiscountPhase.start</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../api/scitex_affairs.html#scitex_affairs.DiscountPhase.end"><code class="docutils literal notranslate"><span class="pre">DiscountPhase.end</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../api/scitex_affairs.html#scitex_affairs.DiscountPhase.percent"><code class="docutils literal notranslate"><span class="pre">DiscountPhase.percent</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../api/scitex_affairs.html#scitex_affairs.DiscountPhase.status"><code class="docutils literal notranslate"><span class="pre">DiscountPhase.status</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../api/scitex_affairs.html#scitex_affairs.DiscountPhase.label"><code class="docutils literal notranslate"><span class="pre">DiscountPhase.label</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../api/scitex_affairs.html#scitex_affairs.DiscountPhase.contains"><code class="docutils literal notranslate"><span class="pre">DiscountPhase.contains()</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../api/scitex_affairs.html#scitex_affairs.Price"><code class="docutils literal notranslate"><span class="pre">Price</span></code></a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../../api/scitex_affairs.html#scitex_affairs.Price.amount"><code class="docutils literal notranslate"><span class="pre">Price.amount</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../api/scitex_affairs.html#scitex_affairs.Price.interval"><code class="docutils literal notranslate"><span class="pre">Price.interval</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../api/scitex_affairs.html#scitex_affairs.Price.unit"><code class="docutils literal notranslate"><span class="pre">Price.unit</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../api/scitex_affairs.html#scitex_affairs.Price.kind"><code class="docutils literal notranslate"><span class="pre">Price.kind</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../api/scitex_affairs.html#scitex_affairs.Price.list_amount"><code class="docutils literal notranslate"><span class="pre">Price.list_amount</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../api/scitex_affairs.html#scitex_affairs.Price.discount_percent"><code class="docutils literal notranslate"><span class="pre">Price.discount_percent</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../api/scitex_affairs.html#scitex_affairs.Price.markup_percent"><code class="docutils literal notranslate"><span class="pre">Price.markup_percent</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../api/scitex_affairs.html#scitex_affairs.Price.policy"><code class="docutils literal notranslate"><span class="pre">Price.policy</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../api/scitex_affairs.html#scitex_affairs.Price.discount_schedule"><code class="docutils literal notranslate"><span class="pre">Price.discount_schedule</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../api/scitex_affairs.html#scitex_affairs.Price.from_mapping"><code class="docutils literal notranslate"><span class="pre">Price.from_mapping()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../api/scitex_affairs.html#scitex_affairs.Price.amount_on"><code class="docutils literal notranslate"><span class="pre">Price.amount_on()</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../api/scitex_affairs.html#scitex_affairs.Scenario"><code class="docutils literal notranslate"><span class="pre">Scenario</span></code></a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../../api/scitex_affairs.html#scitex_affairs.Scenario.id"><code class="docutils literal notranslate"><span class="pre">Scenario.id</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../api/scitex_affairs.html#scitex_affairs.Scenario.label"><code class="docutils literal notranslate"><span class="pre">Scenario.label</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../api/scitex_affairs.html#scitex_affairs.Scenario.status"><code class="docutils literal notranslate"><span class="pre">Scenario.status</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../api/scitex_affairs.html#scitex_affairs.Scenario.start_date"><code class="docutils literal notranslate"><span class="pre">Scenario.start_date</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../api/scitex_affairs.html#scitex_affairs.Scenario.end_date"><code class="docutils literal notranslate"><span class="pre">Scenario.end_date</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../api/scitex_affairs.html#scitex_affairs.Scenario.series"><code class="docutils literal notranslate"><span class="pre">Scenario.series</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../api/scitex_affairs.html#scitex_affairs.Scenario.from_mapping"><code class="docutils literal notranslate"><span class="pre">Scenario.from_mapping()</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../api/scitex_affairs.html#scitex_affairs.catalog_frame"><code class="docutils literal notranslate"><span class="pre">catalog_frame()</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../api/scitex_affairs.html#scitex_affairs.financial_statement"><code class="docutils literal notranslate"><span class="pre">financial_statement()</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../api/scitex_affairs.html#scitex_affairs.load_config"><code class="docutils literal notranslate"><span class="pre">load_config()</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../api/scitex_affairs.html#scitex_affairs.resolve_config_path"><code class="docutils literal notranslate"><span class="pre">resolve_config_path()</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../api/scitex_affairs.html#scitex_affairs.monthly_report"><code class="docutils literal notranslate"><span class="pre">monthly_report()</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../api/scitex_affairs.html#scitex_affairs.summarize"><code class="docutils literal notranslate"><span class="pre">summarize()</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../api/scitex_affairs.html#module-scitex_affairs.config">Configuration</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../../api/scitex_affairs.html#scitex_affairs.config.ConfigError"><code class="docutils literal notranslate"><span class="pre">ConfigError</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../api/scitex_affairs.html#scitex_affairs.config.DiscountPhase"><code class="docutils literal notranslate"><span class="pre">DiscountPhase</span></code></a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../../api/scitex_affairs.html#scitex_affairs.config.DiscountPhase.start"><code class="docutils literal notranslate"><span class="pre">DiscountPhase.start</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../api/scitex_affairs.html#scitex_affairs.config.DiscountPhase.end"><code class="docutils literal notranslate"><span class="pre">DiscountPhase.end</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../api/scitex_affairs.html#scitex_affairs.config.DiscountPhase.percent"><code class="docutils literal notranslate"><span class="pre">DiscountPhase.percent</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../api/scitex_affairs.html#scitex_affairs.config.DiscountPhase.status"><code class="docutils literal notranslate"><span class="pre">DiscountPhase.status</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../api/scitex_affairs.html#scitex_affairs.config.DiscountPhase.label"><code class="docutils literal notranslate"><span class="pre">DiscountPhase.label</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../api/scitex_affairs.html#scitex_affairs.config.DiscountPhase.contains"><code class="docutils literal notranslate"><span class="pre">DiscountPhase.contains()</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../../api/scitex_affairs.html#scitex_affairs.config.Price"><code class="docutils literal notranslate"><span class="pre">Price</span></code></a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../../api/scitex_affairs.html#scitex_affairs.config.Price.amount"><code class="docutils literal notranslate"><span class="pre">Price.amount</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../api/scitex_affairs.html#scitex_affairs.config.Price.interval"><code class="docutils literal notranslate"><span class="pre">Price.interval</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../api/scitex_affairs.html#scitex_affairs.config.Price.unit"><code class="docutils literal notranslate"><span class="pre">Price.unit</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../api/scitex_affairs.html#scitex_affairs.config.Price.kind"><code class="docutils literal notranslate"><span class="pre">Price.kind</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../api/scitex_affairs.html#scitex_affairs.config.Price.list_amount"><code class="docutils literal notranslate"><span class="pre">Price.list_amount</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../api/scitex_affairs.html#scitex_affairs.config.Price.discount_percent"><code class="docutils literal notranslate"><span class="pre">Price.discount_percent</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../api/scitex_affairs.html#scitex_affairs.config.Price.markup_percent"><code class="docutils literal notranslate"><span class="pre">Price.markup_percent</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../api/scitex_affairs.html#scitex_affairs.config.Price.policy"><code class="docutils literal notranslate"><span class="pre">Price.policy</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../api/scitex_affairs.html#scitex_affairs.config.Price.discount_schedule"><code class="docutils literal notranslate"><span class="pre">Price.discount_schedule</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../api/scitex_affairs.html#scitex_affairs.config.Price.from_mapping"><code class="docutils literal notranslate"><span class="pre">Price.from_mapping()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../api/scitex_affairs.html#scitex_affairs.config.Price.amount_on"><code class="docutils literal notranslate"><span class="pre">Price.amount_on()</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../../api/scitex_affairs.html#scitex_affairs.config.CatalogItem"><code class="docutils literal notranslate"><span class="pre">CatalogItem</span></code></a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../../api/scitex_affairs.html#scitex_affairs.config.CatalogItem.id"><code class="docutils literal notranslate"><span class="pre">CatalogItem.id</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../api/scitex_affairs.html#scitex_affairs.config.CatalogItem.name"><code class="docutils literal notranslate"><span class="pre">CatalogItem.name</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../api/scitex_affairs.html#scitex_affairs.config.CatalogItem.direction"><code class="docutils literal notranslate"><span class="pre">CatalogItem.direction</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../api/scitex_affairs.html#scitex_affairs.config.CatalogItem.model"><code class="docutils literal notranslate"><span class="pre">CatalogItem.model</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../api/scitex_affairs.html#scitex_affairs.config.CatalogItem.price"><code class="docutils literal notranslate"><span class="pre">CatalogItem.price</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../api/scitex_affairs.html#scitex_affairs.config.CatalogItem.description"><code class="docutils literal notranslate"><span class="pre">CatalogItem.description</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../api/scitex_affairs.html#scitex_affairs.config.CatalogItem.category"><code class="docutils literal notranslate"><span class="pre">CatalogItem.category</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../api/scitex_affairs.html#scitex_affairs.config.CatalogItem.status"><code class="docutils literal notranslate"><span class="pre">CatalogItem.status</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../api/scitex_affairs.html#scitex_affairs.config.CatalogItem.automated"><code class="docutils literal notranslate"><span class="pre">CatalogItem.automated</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../api/scitex_affairs.html#scitex_affairs.config.CatalogItem.attributes"><code class="docutils literal notranslate"><span class="pre">CatalogItem.attributes</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../api/scitex_affairs.html#scitex_affairs.config.CatalogItem.from_mapping"><code class="docutils literal notranslate"><span class="pre">CatalogItem.from_mapping()</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../../api/scitex_affairs.html#scitex_affairs.config.Scenario"><code class="docutils literal notranslate"><span class="pre">Scenario</span></code></a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../../api/scitex_affairs.html#scitex_affairs.config.Scenario.id"><code class="docutils literal notranslate"><span class="pre">Scenario.id</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../api/scitex_affairs.html#scitex_affairs.config.Scenario.label"><code class="docutils literal notranslate"><span class="pre">Scenario.label</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../api/scitex_affairs.html#scitex_affairs.config.Scenario.status"><code class="docutils literal notranslate"><span class="pre">Scenario.status</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../api/scitex_affairs.html#scitex_affairs.config.Scenario.start_date"><code class="docutils literal notranslate"><span class="pre">Scenario.start_date</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../api/scitex_affairs.html#scitex_affairs.config.Scenario.end_date"><code class="docutils literal notranslate"><span class="pre">Scenario.end_date</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../api/scitex_affairs.html#scitex_affairs.config.Scenario.series"><code class="docutils literal notranslate"><span class="pre">Scenario.series</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../api/scitex_affairs.html#scitex_affairs.config.Scenario.from_mapping"><code class="docutils literal notranslate"><span class="pre">Scenario.from_mapping()</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../../api/scitex_affairs.html#scitex_affairs.config.AffairsConfig"><code class="docutils literal notranslate"><span class="pre">AffairsConfig</span></code></a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../../api/scitex_affairs.html#scitex_affairs.config.AffairsConfig.schema_version"><code class="docutils literal notranslate"><span class="pre">AffairsConfig.schema_version</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../api/scitex_affairs.html#scitex_affairs.config.AffairsConfig.organization"><code class="docutils literal notranslate"><span class="pre">AffairsConfig.organization</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../api/scitex_affairs.html#scitex_affairs.config.AffairsConfig.currency"><code class="docutils literal notranslate"><span class="pre">AffairsConfig.currency</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../api/scitex_affairs.html#scitex_affairs.config.AffairsConfig.fiscal_year_start_month"><code class="docutils literal notranslate"><span class="pre">AffairsConfig.fiscal_year_start_month</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../api/scitex_affairs.html#scitex_affairs.config.AffairsConfig.catalog"><code class="docutils literal notranslate"><span class="pre">AffairsConfig.catalog</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../api/scitex_affairs.html#scitex_affairs.config.AffairsConfig.scenarios"><code class="docutils literal notranslate"><span class="pre">AffairsConfig.scenarios</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../api/scitex_affairs.html#scitex_affairs.config.AffairsConfig.pricing_policies"><code class="docutils literal notranslate"><span class="pre">AffairsConfig.pricing_policies</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../api/scitex_affairs.html#scitex_affairs.config.AffairsConfig.sources"><code class="docutils literal notranslate"><span class="pre">AffairsConfig.sources</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../api/scitex_affairs.html#scitex_affairs.config.AffairsConfig.from_mapping"><code class="docutils literal notranslate"><span class="pre">AffairsConfig.from_mapping()</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../../api/scitex_affairs.html#scitex_affairs.config.resolve_config_path"><code class="docutils literal notranslate"><span class="pre">resolve_config_path()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../api/scitex_affairs.html#scitex_affairs.config.load_config"><code class="docutils literal notranslate"><span class="pre">load_config()</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../api/scitex_affairs.html#module-scitex_affairs.scenario">Scenarios</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../../api/scitex_affairs.html#scitex_affairs.scenario.monthly_report"><code class="docutils literal notranslate"><span class="pre">monthly_report()</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../api/scitex_affairs.html#module-scitex_affairs.describe">Descriptions and rendering</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../../api/scitex_affairs.html#scitex_affairs.describe.catalog_frame"><code class="docutils literal notranslate"><span class="pre">catalog_frame()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../api/scitex_affairs.html#scitex_affairs.describe.summarize"><code class="docutils literal notranslate"><span class="pre">summarize()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../api/scitex_affairs.html#scitex_affairs.describe.financial_statement"><code class="docutils literal notranslate"><span class="pre">financial_statement()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../api/scitex_affairs.html#scitex_affairs.render.render_frame"><code class="docutils literal notranslate"><span class="pre">render_frame()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../api/scitex_affairs.html#scitex_affairs.render.write_frame"><code class="docutils literal notranslate"><span class="pre">write_frame()</span></code></a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../../index.html">SciTeX Affairs</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="../../index.html" class="icon icon-home" aria-label="Home"></a></li>
+          <li class="breadcrumb-item"><a href="../index.html">Module code</a></li>
+      <li class="breadcrumb-item active">scitex_affairs.render</li>
+      <li class="wy-breadcrumbs-aside">
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <h1>Source code for scitex_affairs.render</h1><div class="highlight"><pre>
+<span></span><span class="sd">"""Replaceable text and file renderers for pandas business reports."""</span>
+
+<span class="kn">from</span><span class="w"> </span><span class="nn">__future__</span><span class="w"> </span><span class="kn">import</span> <span class="n">annotations</span>
+
+<span class="kn">from</span><span class="w"> </span><span class="nn">pathlib</span><span class="w"> </span><span class="kn">import</span> <span class="n">Path</span>
+
+<span class="kn">import</span><span class="w"> </span><span class="nn">pandas</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">pd</span>
+
+
+<div class="viewcode-block" id="render_frame">
+<a class="viewcode-back" href="../../api/scitex_affairs.html#scitex_affairs.render.render_frame">[docs]</a>
+<span class="k">def</span><span class="w"> </span><span class="nf">render_frame</span><span class="p">(</span><span class="n">frame</span><span class="p">:</span> <span class="n">pd</span><span class="o">.</span><span class="n">DataFrame</span><span class="p">,</span> <span class="nb">format</span><span class="p">:</span> <span class="nb">str</span> <span class="o">=</span> <span class="s2">"table"</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">str</span><span class="p">:</span>
+<span class="w">    </span><span class="sd">"""Render a DataFrame without changing its business meaning."""</span>
+
+    <span class="k">if</span> <span class="nb">format</span> <span class="o">==</span> <span class="s2">"table"</span><span class="p">:</span>
+        <span class="k">return</span> <span class="n">frame</span><span class="o">.</span><span class="n">to_string</span><span class="p">(</span><span class="n">index</span><span class="o">=</span><span class="kc">False</span><span class="p">)</span>
+    <span class="k">if</span> <span class="nb">format</span> <span class="o">==</span> <span class="s2">"csv"</span><span class="p">:</span>
+        <span class="k">return</span> <span class="n">frame</span><span class="o">.</span><span class="n">to_csv</span><span class="p">(</span><span class="n">index</span><span class="o">=</span><span class="kc">False</span><span class="p">)</span>
+    <span class="k">if</span> <span class="nb">format</span> <span class="o">==</span> <span class="s2">"json"</span><span class="p">:</span>
+        <span class="k">return</span> <span class="n">frame</span><span class="o">.</span><span class="n">to_json</span><span class="p">(</span><span class="n">orient</span><span class="o">=</span><span class="s2">"records"</span><span class="p">,</span> <span class="n">date_format</span><span class="o">=</span><span class="s2">"iso"</span><span class="p">,</span> <span class="n">indent</span><span class="o">=</span><span class="mi">2</span><span class="p">)</span>
+    <span class="k">if</span> <span class="nb">format</span> <span class="o">==</span> <span class="s2">"html"</span><span class="p">:</span>
+        <span class="k">return</span> <span class="n">frame</span><span class="o">.</span><span class="n">to_html</span><span class="p">(</span><span class="n">index</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span> <span class="n">classes</span><span class="o">=</span><span class="p">[</span><span class="s2">"data-table"</span><span class="p">],</span> <span class="n">border</span><span class="o">=</span><span class="mi">0</span><span class="p">)</span>
+    <span class="k">if</span> <span class="nb">format</span> <span class="o">==</span> <span class="s2">"markdown"</span><span class="p">:</span>
+        <span class="k">return</span> <span class="n">_markdown</span><span class="p">(</span><span class="n">frame</span><span class="p">)</span>
+    <span class="k">raise</span> <span class="ne">ValueError</span><span class="p">(</span><span class="s2">"format must be table, csv, json, html, or markdown"</span><span class="p">)</span></div>
+
+
+
+<div class="viewcode-block" id="write_frame">
+<a class="viewcode-back" href="../../api/scitex_affairs.html#scitex_affairs.render.write_frame">[docs]</a>
+<span class="k">def</span><span class="w"> </span><span class="nf">write_frame</span><span class="p">(</span>
+    <span class="n">frame</span><span class="p">:</span> <span class="n">pd</span><span class="o">.</span><span class="n">DataFrame</span><span class="p">,</span> <span class="n">path</span><span class="p">:</span> <span class="nb">str</span> <span class="o">|</span> <span class="n">Path</span><span class="p">,</span> <span class="nb">format</span><span class="p">:</span> <span class="nb">str</span> <span class="o">|</span> <span class="kc">None</span> <span class="o">=</span> <span class="kc">None</span>
+<span class="p">)</span> <span class="o">-&gt;</span> <span class="n">Path</span><span class="p">:</span>
+<span class="w">    </span><span class="sd">"""Write a rendered DataFrame, inferring the format from the suffix."""</span>
+
+    <span class="n">destination</span> <span class="o">=</span> <span class="n">Path</span><span class="p">(</span><span class="n">path</span><span class="p">)</span>
+    <span class="n">selected</span> <span class="o">=</span> <span class="nb">format</span> <span class="ow">or</span> <span class="n">_format_for_suffix</span><span class="p">(</span><span class="n">destination</span><span class="o">.</span><span class="n">suffix</span><span class="p">)</span>
+    <span class="n">destination</span><span class="o">.</span><span class="n">parent</span><span class="o">.</span><span class="n">mkdir</span><span class="p">(</span><span class="n">parents</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span> <span class="n">exist_ok</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+    <span class="n">destination</span><span class="o">.</span><span class="n">write_text</span><span class="p">(</span><span class="n">render_frame</span><span class="p">(</span><span class="n">frame</span><span class="p">,</span> <span class="n">selected</span><span class="p">),</span> <span class="n">encoding</span><span class="o">=</span><span class="s2">"utf-8"</span><span class="p">)</span>
+    <span class="k">return</span> <span class="n">destination</span></div>
+
+
+
+<span class="k">def</span><span class="w"> </span><span class="nf">_markdown</span><span class="p">(</span><span class="n">frame</span><span class="p">:</span> <span class="n">pd</span><span class="o">.</span><span class="n">DataFrame</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">str</span><span class="p">:</span>
+    <span class="n">headers</span> <span class="o">=</span> <span class="p">[</span><span class="nb">str</span><span class="p">(</span><span class="n">column</span><span class="p">)</span> <span class="k">for</span> <span class="n">column</span> <span class="ow">in</span> <span class="n">frame</span><span class="o">.</span><span class="n">columns</span><span class="p">]</span>
+    <span class="n">lines</span> <span class="o">=</span> <span class="p">[</span>
+        <span class="s2">"| "</span> <span class="o">+</span> <span class="s2">" | "</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="n">_cell</span><span class="p">(</span><span class="n">header</span><span class="p">)</span> <span class="k">for</span> <span class="n">header</span> <span class="ow">in</span> <span class="n">headers</span><span class="p">)</span> <span class="o">+</span> <span class="s2">" |"</span><span class="p">,</span>
+        <span class="s2">"| "</span> <span class="o">+</span> <span class="s2">" | "</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="s2">"---"</span> <span class="k">for</span> <span class="n">_</span> <span class="ow">in</span> <span class="n">headers</span><span class="p">)</span> <span class="o">+</span> <span class="s2">" |"</span><span class="p">,</span>
+    <span class="p">]</span>
+    <span class="k">for</span> <span class="n">row</span> <span class="ow">in</span> <span class="n">frame</span><span class="o">.</span><span class="n">itertuples</span><span class="p">(</span><span class="n">index</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span> <span class="n">name</span><span class="o">=</span><span class="kc">None</span><span class="p">):</span>
+        <span class="n">lines</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="s2">"| "</span> <span class="o">+</span> <span class="s2">" | "</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="n">_cell</span><span class="p">(</span><span class="n">value</span><span class="p">)</span> <span class="k">for</span> <span class="n">value</span> <span class="ow">in</span> <span class="n">row</span><span class="p">)</span> <span class="o">+</span> <span class="s2">" |"</span><span class="p">)</span>
+    <span class="k">return</span> <span class="s2">"</span><span class="se">\n</span><span class="s2">"</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="n">lines</span><span class="p">)</span> <span class="o">+</span> <span class="s2">"</span><span class="se">\n</span><span class="s2">"</span>
+
+
+<span class="k">def</span><span class="w"> </span><span class="nf">_cell</span><span class="p">(</span><span class="n">value</span><span class="p">:</span> <span class="nb">object</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">str</span><span class="p">:</span>
+    <span class="k">if</span> <span class="n">pd</span><span class="o">.</span><span class="n">isna</span><span class="p">(</span><span class="n">value</span><span class="p">):</span>
+        <span class="k">return</span> <span class="s2">""</span>
+    <span class="k">return</span> <span class="nb">str</span><span class="p">(</span><span class="n">value</span><span class="p">)</span><span class="o">.</span><span class="n">replace</span><span class="p">(</span><span class="s2">"|"</span><span class="p">,</span> <span class="s2">"</span><span class="se">\\</span><span class="s2">|"</span><span class="p">)</span><span class="o">.</span><span class="n">replace</span><span class="p">(</span><span class="s2">"</span><span class="se">\n</span><span class="s2">"</span><span class="p">,</span> <span class="s2">" "</span><span class="p">)</span>
+
+
+<span class="k">def</span><span class="w"> </span><span class="nf">_format_for_suffix</span><span class="p">(</span><span class="n">suffix</span><span class="p">:</span> <span class="nb">str</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">str</span><span class="p">:</span>
+    <span class="n">formats</span> <span class="o">=</span> <span class="p">{</span>
+        <span class="s2">".csv"</span><span class="p">:</span> <span class="s2">"csv"</span><span class="p">,</span>
+        <span class="s2">".json"</span><span class="p">:</span> <span class="s2">"json"</span><span class="p">,</span>
+        <span class="s2">".html"</span><span class="p">:</span> <span class="s2">"html"</span><span class="p">,</span>
+        <span class="s2">".md"</span><span class="p">:</span> <span class="s2">"markdown"</span><span class="p">,</span>
+        <span class="s2">".markdown"</span><span class="p">:</span> <span class="s2">"markdown"</span><span class="p">,</span>
+        <span class="s2">".txt"</span><span class="p">:</span> <span class="s2">"table"</span><span class="p">,</span>
+    <span class="p">}</span>
+    <span class="k">try</span><span class="p">:</span>
+        <span class="k">return</span> <span class="n">formats</span><span class="p">[</span><span class="n">suffix</span><span class="o">.</span><span class="n">lower</span><span class="p">()]</span>
+    <span class="k">except</span> <span class="ne">KeyError</span> <span class="k">as</span> <span class="n">exc</span><span class="p">:</span>
+        <span class="k">raise</span> <span class="ne">ValueError</span><span class="p">(</span><span class="sa">f</span><span class="s2">"cannot infer output format from suffix: </span><span class="si">{</span><span class="n">suffix</span><span class="si">}</span><span class="s2">"</span><span class="p">)</span> <span class="kn">from</span><span class="w"> </span><span class="nn">exc</span>
+</pre></div>
+
+           </div>
+          </div>
+          <footer>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2026, Yusuke Watanabe.</p>
+  </div>
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

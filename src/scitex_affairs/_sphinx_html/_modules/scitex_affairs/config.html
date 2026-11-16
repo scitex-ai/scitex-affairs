@@ -1,0 +1,780 @@
+
+
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" data-content_root="../../">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>scitex_affairs.config &mdash; SciTeX Affairs v0.1.0</title>
+      <link rel="stylesheet" type="text/css" href="../../_static/pygments.css?v=b86133f3" />
+      <link rel="stylesheet" type="text/css" href="../../_static/css/theme.css?v=9edc463e" />
+      <link rel="stylesheet" type="text/css" href="../../_static/copybutton.css?v=76b2166b" />
+
+  
+      <script src="../../_static/jquery.js?v=5d32c60e"></script>
+      <script src="../../_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
+      <script src="../../_static/documentation_options.js?v=01f34227"></script>
+      <script src="../../_static/doctools.js?v=9a2dae69"></script>
+      <script src="../../_static/sphinx_highlight.js?v=dc90522c"></script>
+      <script src="../../_static/clipboard.min.js?v=a7894cd8"></script>
+      <script src="../../_static/copybutton.js?v=f281be69"></script>
+    <script src="../../_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="../../genindex.html" />
+    <link rel="search" title="Search" href="../../search.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+
+          
+          
+          <a href="../../index.html" class="icon icon-home">
+            SciTeX Affairs
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <p class="caption" role="heading"><span class="caption-text">Getting Started</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../installation.html">Installation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../quickstart.html">Quick Start</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../quickstart.html#configuration">Configuration</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../quickstart.html#command-line">Command line</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../quickstart.html#python">Python</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../quickstart.html#actual-observations">Actual observations</a></li>
+</ul>
+</li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">API Reference</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../api/scitex_affairs.html">scitex_affairs</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../api/scitex_affairs.html#scitex_affairs.AffairsConfig"><code class="docutils literal notranslate"><span class="pre">AffairsConfig</span></code></a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../../api/scitex_affairs.html#scitex_affairs.AffairsConfig.schema_version"><code class="docutils literal notranslate"><span class="pre">AffairsConfig.schema_version</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../api/scitex_affairs.html#scitex_affairs.AffairsConfig.organization"><code class="docutils literal notranslate"><span class="pre">AffairsConfig.organization</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../api/scitex_affairs.html#scitex_affairs.AffairsConfig.currency"><code class="docutils literal notranslate"><span class="pre">AffairsConfig.currency</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../api/scitex_affairs.html#scitex_affairs.AffairsConfig.fiscal_year_start_month"><code class="docutils literal notranslate"><span class="pre">AffairsConfig.fiscal_year_start_month</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../api/scitex_affairs.html#scitex_affairs.AffairsConfig.catalog"><code class="docutils literal notranslate"><span class="pre">AffairsConfig.catalog</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../api/scitex_affairs.html#scitex_affairs.AffairsConfig.scenarios"><code class="docutils literal notranslate"><span class="pre">AffairsConfig.scenarios</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../api/scitex_affairs.html#scitex_affairs.AffairsConfig.pricing_policies"><code class="docutils literal notranslate"><span class="pre">AffairsConfig.pricing_policies</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../api/scitex_affairs.html#scitex_affairs.AffairsConfig.sources"><code class="docutils literal notranslate"><span class="pre">AffairsConfig.sources</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../api/scitex_affairs.html#scitex_affairs.AffairsConfig.from_mapping"><code class="docutils literal notranslate"><span class="pre">AffairsConfig.from_mapping()</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../api/scitex_affairs.html#scitex_affairs.CatalogItem"><code class="docutils literal notranslate"><span class="pre">CatalogItem</span></code></a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../../api/scitex_affairs.html#scitex_affairs.CatalogItem.id"><code class="docutils literal notranslate"><span class="pre">CatalogItem.id</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../api/scitex_affairs.html#scitex_affairs.CatalogItem.name"><code class="docutils literal notranslate"><span class="pre">CatalogItem.name</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../api/scitex_affairs.html#scitex_affairs.CatalogItem.direction"><code class="docutils literal notranslate"><span class="pre">CatalogItem.direction</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../api/scitex_affairs.html#scitex_affairs.CatalogItem.model"><code class="docutils literal notranslate"><span class="pre">CatalogItem.model</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../api/scitex_affairs.html#scitex_affairs.CatalogItem.price"><code class="docutils literal notranslate"><span class="pre">CatalogItem.price</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../api/scitex_affairs.html#scitex_affairs.CatalogItem.description"><code class="docutils literal notranslate"><span class="pre">CatalogItem.description</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../api/scitex_affairs.html#scitex_affairs.CatalogItem.category"><code class="docutils literal notranslate"><span class="pre">CatalogItem.category</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../api/scitex_affairs.html#scitex_affairs.CatalogItem.status"><code class="docutils literal notranslate"><span class="pre">CatalogItem.status</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../api/scitex_affairs.html#scitex_affairs.CatalogItem.automated"><code class="docutils literal notranslate"><span class="pre">CatalogItem.automated</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../api/scitex_affairs.html#scitex_affairs.CatalogItem.attributes"><code class="docutils literal notranslate"><span class="pre">CatalogItem.attributes</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../api/scitex_affairs.html#scitex_affairs.CatalogItem.from_mapping"><code class="docutils literal notranslate"><span class="pre">CatalogItem.from_mapping()</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../api/scitex_affairs.html#scitex_affairs.ConfigError"><code class="docutils literal notranslate"><span class="pre">ConfigError</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../api/scitex_affairs.html#scitex_affairs.DiscountPhase"><code class="docutils literal notranslate"><span class="pre">DiscountPhase</span></code></a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../../api/scitex_affairs.html#scitex_affairs.DiscountPhase.start"><code class="docutils literal notranslate"><span class="pre">DiscountPhase.start</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../api/scitex_affairs.html#scitex_affairs.DiscountPhase.end"><code class="docutils literal notranslate"><span class="pre">DiscountPhase.end</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../api/scitex_affairs.html#scitex_affairs.DiscountPhase.percent"><code class="docutils literal notranslate"><span class="pre">DiscountPhase.percent</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../api/scitex_affairs.html#scitex_affairs.DiscountPhase.status"><code class="docutils literal notranslate"><span class="pre">DiscountPhase.status</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../api/scitex_affairs.html#scitex_affairs.DiscountPhase.label"><code class="docutils literal notranslate"><span class="pre">DiscountPhase.label</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../api/scitex_affairs.html#scitex_affairs.DiscountPhase.contains"><code class="docutils literal notranslate"><span class="pre">DiscountPhase.contains()</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../api/scitex_affairs.html#scitex_affairs.Price"><code class="docutils literal notranslate"><span class="pre">Price</span></code></a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../../api/scitex_affairs.html#scitex_affairs.Price.amount"><code class="docutils literal notranslate"><span class="pre">Price.amount</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../api/scitex_affairs.html#scitex_affairs.Price.interval"><code class="docutils literal notranslate"><span class="pre">Price.interval</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../api/scitex_affairs.html#scitex_affairs.Price.unit"><code class="docutils literal notranslate"><span class="pre">Price.unit</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../api/scitex_affairs.html#scitex_affairs.Price.kind"><code class="docutils literal notranslate"><span class="pre">Price.kind</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../api/scitex_affairs.html#scitex_affairs.Price.list_amount"><code class="docutils literal notranslate"><span class="pre">Price.list_amount</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../api/scitex_affairs.html#scitex_affairs.Price.discount_percent"><code class="docutils literal notranslate"><span class="pre">Price.discount_percent</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../api/scitex_affairs.html#scitex_affairs.Price.markup_percent"><code class="docutils literal notranslate"><span class="pre">Price.markup_percent</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../api/scitex_affairs.html#scitex_affairs.Price.policy"><code class="docutils literal notranslate"><span class="pre">Price.policy</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../api/scitex_affairs.html#scitex_affairs.Price.discount_schedule"><code class="docutils literal notranslate"><span class="pre">Price.discount_schedule</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../api/scitex_affairs.html#scitex_affairs.Price.from_mapping"><code class="docutils literal notranslate"><span class="pre">Price.from_mapping()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../api/scitex_affairs.html#scitex_affairs.Price.amount_on"><code class="docutils literal notranslate"><span class="pre">Price.amount_on()</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../api/scitex_affairs.html#scitex_affairs.Scenario"><code class="docutils literal notranslate"><span class="pre">Scenario</span></code></a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../../api/scitex_affairs.html#scitex_affairs.Scenario.id"><code class="docutils literal notranslate"><span class="pre">Scenario.id</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../api/scitex_affairs.html#scitex_affairs.Scenario.label"><code class="docutils literal notranslate"><span class="pre">Scenario.label</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../api/scitex_affairs.html#scitex_affairs.Scenario.status"><code class="docutils literal notranslate"><span class="pre">Scenario.status</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../api/scitex_affairs.html#scitex_affairs.Scenario.start_date"><code class="docutils literal notranslate"><span class="pre">Scenario.start_date</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../api/scitex_affairs.html#scitex_affairs.Scenario.end_date"><code class="docutils literal notranslate"><span class="pre">Scenario.end_date</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../api/scitex_affairs.html#scitex_affairs.Scenario.series"><code class="docutils literal notranslate"><span class="pre">Scenario.series</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../api/scitex_affairs.html#scitex_affairs.Scenario.from_mapping"><code class="docutils literal notranslate"><span class="pre">Scenario.from_mapping()</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../api/scitex_affairs.html#scitex_affairs.catalog_frame"><code class="docutils literal notranslate"><span class="pre">catalog_frame()</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../api/scitex_affairs.html#scitex_affairs.financial_statement"><code class="docutils literal notranslate"><span class="pre">financial_statement()</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../api/scitex_affairs.html#scitex_affairs.load_config"><code class="docutils literal notranslate"><span class="pre">load_config()</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../api/scitex_affairs.html#scitex_affairs.resolve_config_path"><code class="docutils literal notranslate"><span class="pre">resolve_config_path()</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../api/scitex_affairs.html#scitex_affairs.monthly_report"><code class="docutils literal notranslate"><span class="pre">monthly_report()</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../api/scitex_affairs.html#scitex_affairs.summarize"><code class="docutils literal notranslate"><span class="pre">summarize()</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../api/scitex_affairs.html#module-scitex_affairs.config">Configuration</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../../api/scitex_affairs.html#scitex_affairs.config.ConfigError"><code class="docutils literal notranslate"><span class="pre">ConfigError</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../api/scitex_affairs.html#scitex_affairs.config.DiscountPhase"><code class="docutils literal notranslate"><span class="pre">DiscountPhase</span></code></a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../../api/scitex_affairs.html#scitex_affairs.config.DiscountPhase.start"><code class="docutils literal notranslate"><span class="pre">DiscountPhase.start</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../api/scitex_affairs.html#scitex_affairs.config.DiscountPhase.end"><code class="docutils literal notranslate"><span class="pre">DiscountPhase.end</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../api/scitex_affairs.html#scitex_affairs.config.DiscountPhase.percent"><code class="docutils literal notranslate"><span class="pre">DiscountPhase.percent</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../api/scitex_affairs.html#scitex_affairs.config.DiscountPhase.status"><code class="docutils literal notranslate"><span class="pre">DiscountPhase.status</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../api/scitex_affairs.html#scitex_affairs.config.DiscountPhase.label"><code class="docutils literal notranslate"><span class="pre">DiscountPhase.label</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../api/scitex_affairs.html#scitex_affairs.config.DiscountPhase.contains"><code class="docutils literal notranslate"><span class="pre">DiscountPhase.contains()</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../../api/scitex_affairs.html#scitex_affairs.config.Price"><code class="docutils literal notranslate"><span class="pre">Price</span></code></a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../../api/scitex_affairs.html#scitex_affairs.config.Price.amount"><code class="docutils literal notranslate"><span class="pre">Price.amount</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../api/scitex_affairs.html#scitex_affairs.config.Price.interval"><code class="docutils literal notranslate"><span class="pre">Price.interval</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../api/scitex_affairs.html#scitex_affairs.config.Price.unit"><code class="docutils literal notranslate"><span class="pre">Price.unit</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../api/scitex_affairs.html#scitex_affairs.config.Price.kind"><code class="docutils literal notranslate"><span class="pre">Price.kind</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../api/scitex_affairs.html#scitex_affairs.config.Price.list_amount"><code class="docutils literal notranslate"><span class="pre">Price.list_amount</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../api/scitex_affairs.html#scitex_affairs.config.Price.discount_percent"><code class="docutils literal notranslate"><span class="pre">Price.discount_percent</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../api/scitex_affairs.html#scitex_affairs.config.Price.markup_percent"><code class="docutils literal notranslate"><span class="pre">Price.markup_percent</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../api/scitex_affairs.html#scitex_affairs.config.Price.policy"><code class="docutils literal notranslate"><span class="pre">Price.policy</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../api/scitex_affairs.html#scitex_affairs.config.Price.discount_schedule"><code class="docutils literal notranslate"><span class="pre">Price.discount_schedule</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../api/scitex_affairs.html#scitex_affairs.config.Price.from_mapping"><code class="docutils literal notranslate"><span class="pre">Price.from_mapping()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../api/scitex_affairs.html#scitex_affairs.config.Price.amount_on"><code class="docutils literal notranslate"><span class="pre">Price.amount_on()</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../../api/scitex_affairs.html#scitex_affairs.config.CatalogItem"><code class="docutils literal notranslate"><span class="pre">CatalogItem</span></code></a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../../api/scitex_affairs.html#scitex_affairs.config.CatalogItem.id"><code class="docutils literal notranslate"><span class="pre">CatalogItem.id</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../api/scitex_affairs.html#scitex_affairs.config.CatalogItem.name"><code class="docutils literal notranslate"><span class="pre">CatalogItem.name</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../api/scitex_affairs.html#scitex_affairs.config.CatalogItem.direction"><code class="docutils literal notranslate"><span class="pre">CatalogItem.direction</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../api/scitex_affairs.html#scitex_affairs.config.CatalogItem.model"><code class="docutils literal notranslate"><span class="pre">CatalogItem.model</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../api/scitex_affairs.html#scitex_affairs.config.CatalogItem.price"><code class="docutils literal notranslate"><span class="pre">CatalogItem.price</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../api/scitex_affairs.html#scitex_affairs.config.CatalogItem.description"><code class="docutils literal notranslate"><span class="pre">CatalogItem.description</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../api/scitex_affairs.html#scitex_affairs.config.CatalogItem.category"><code class="docutils literal notranslate"><span class="pre">CatalogItem.category</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../api/scitex_affairs.html#scitex_affairs.config.CatalogItem.status"><code class="docutils literal notranslate"><span class="pre">CatalogItem.status</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../api/scitex_affairs.html#scitex_affairs.config.CatalogItem.automated"><code class="docutils literal notranslate"><span class="pre">CatalogItem.automated</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../api/scitex_affairs.html#scitex_affairs.config.CatalogItem.attributes"><code class="docutils literal notranslate"><span class="pre">CatalogItem.attributes</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../api/scitex_affairs.html#scitex_affairs.config.CatalogItem.from_mapping"><code class="docutils literal notranslate"><span class="pre">CatalogItem.from_mapping()</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../../api/scitex_affairs.html#scitex_affairs.config.Scenario"><code class="docutils literal notranslate"><span class="pre">Scenario</span></code></a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../../api/scitex_affairs.html#scitex_affairs.config.Scenario.id"><code class="docutils literal notranslate"><span class="pre">Scenario.id</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../api/scitex_affairs.html#scitex_affairs.config.Scenario.label"><code class="docutils literal notranslate"><span class="pre">Scenario.label</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../api/scitex_affairs.html#scitex_affairs.config.Scenario.status"><code class="docutils literal notranslate"><span class="pre">Scenario.status</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../api/scitex_affairs.html#scitex_affairs.config.Scenario.start_date"><code class="docutils literal notranslate"><span class="pre">Scenario.start_date</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../api/scitex_affairs.html#scitex_affairs.config.Scenario.end_date"><code class="docutils literal notranslate"><span class="pre">Scenario.end_date</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../api/scitex_affairs.html#scitex_affairs.config.Scenario.series"><code class="docutils literal notranslate"><span class="pre">Scenario.series</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../api/scitex_affairs.html#scitex_affairs.config.Scenario.from_mapping"><code class="docutils literal notranslate"><span class="pre">Scenario.from_mapping()</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../../api/scitex_affairs.html#scitex_affairs.config.AffairsConfig"><code class="docutils literal notranslate"><span class="pre">AffairsConfig</span></code></a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../../api/scitex_affairs.html#scitex_affairs.config.AffairsConfig.schema_version"><code class="docutils literal notranslate"><span class="pre">AffairsConfig.schema_version</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../api/scitex_affairs.html#scitex_affairs.config.AffairsConfig.organization"><code class="docutils literal notranslate"><span class="pre">AffairsConfig.organization</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../api/scitex_affairs.html#scitex_affairs.config.AffairsConfig.currency"><code class="docutils literal notranslate"><span class="pre">AffairsConfig.currency</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../api/scitex_affairs.html#scitex_affairs.config.AffairsConfig.fiscal_year_start_month"><code class="docutils literal notranslate"><span class="pre">AffairsConfig.fiscal_year_start_month</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../api/scitex_affairs.html#scitex_affairs.config.AffairsConfig.catalog"><code class="docutils literal notranslate"><span class="pre">AffairsConfig.catalog</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../api/scitex_affairs.html#scitex_affairs.config.AffairsConfig.scenarios"><code class="docutils literal notranslate"><span class="pre">AffairsConfig.scenarios</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../api/scitex_affairs.html#scitex_affairs.config.AffairsConfig.pricing_policies"><code class="docutils literal notranslate"><span class="pre">AffairsConfig.pricing_policies</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../api/scitex_affairs.html#scitex_affairs.config.AffairsConfig.sources"><code class="docutils literal notranslate"><span class="pre">AffairsConfig.sources</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../api/scitex_affairs.html#scitex_affairs.config.AffairsConfig.from_mapping"><code class="docutils literal notranslate"><span class="pre">AffairsConfig.from_mapping()</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../../api/scitex_affairs.html#scitex_affairs.config.resolve_config_path"><code class="docutils literal notranslate"><span class="pre">resolve_config_path()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../api/scitex_affairs.html#scitex_affairs.config.load_config"><code class="docutils literal notranslate"><span class="pre">load_config()</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../api/scitex_affairs.html#module-scitex_affairs.scenario">Scenarios</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../../api/scitex_affairs.html#scitex_affairs.scenario.monthly_report"><code class="docutils literal notranslate"><span class="pre">monthly_report()</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../api/scitex_affairs.html#module-scitex_affairs.describe">Descriptions and rendering</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../../api/scitex_affairs.html#scitex_affairs.describe.catalog_frame"><code class="docutils literal notranslate"><span class="pre">catalog_frame()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../api/scitex_affairs.html#scitex_affairs.describe.summarize"><code class="docutils literal notranslate"><span class="pre">summarize()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../api/scitex_affairs.html#scitex_affairs.describe.financial_statement"><code class="docutils literal notranslate"><span class="pre">financial_statement()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../api/scitex_affairs.html#scitex_affairs.render.render_frame"><code class="docutils literal notranslate"><span class="pre">render_frame()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../api/scitex_affairs.html#scitex_affairs.render.write_frame"><code class="docutils literal notranslate"><span class="pre">write_frame()</span></code></a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../../index.html">SciTeX Affairs</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="../../index.html" class="icon icon-home" aria-label="Home"></a></li>
+          <li class="breadcrumb-item"><a href="../index.html">Module code</a></li>
+      <li class="breadcrumb-item active">scitex_affairs.config</li>
+      <li class="wy-breadcrumbs-aside">
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <h1>Source code for scitex_affairs.config</h1><div class="highlight"><pre>
+<span></span><span class="sd">"""Resolve, load, and validate the reviewable business design document."""</span>
+
+<span class="kn">from</span><span class="w"> </span><span class="nn">__future__</span><span class="w"> </span><span class="kn">import</span> <span class="n">annotations</span>
+
+<span class="kn">import</span><span class="w"> </span><span class="nn">os</span>
+<span class="kn">from</span><span class="w"> </span><span class="nn">collections.abc</span><span class="w"> </span><span class="kn">import</span> <span class="n">Mapping</span>
+<span class="kn">from</span><span class="w"> </span><span class="nn">dataclasses</span><span class="w"> </span><span class="kn">import</span> <span class="n">dataclass</span>
+<span class="kn">from</span><span class="w"> </span><span class="nn">datetime</span><span class="w"> </span><span class="kn">import</span> <span class="n">date</span>
+<span class="kn">from</span><span class="w"> </span><span class="nn">pathlib</span><span class="w"> </span><span class="kn">import</span> <span class="n">Path</span>
+<span class="kn">from</span><span class="w"> </span><span class="nn">typing</span><span class="w"> </span><span class="kn">import</span> <span class="n">Any</span>
+
+<span class="kn">import</span><span class="w"> </span><span class="nn">yaml</span>
+<span class="kn">from</span><span class="w"> </span><span class="nn">scitex_config._ecosystem</span><span class="w"> </span><span class="kn">import</span> <span class="n">local_state</span>
+
+<span class="n">CONFIG_ENV</span> <span class="o">=</span> <span class="s2">"SCITEX_AFFAIRS_CONFIG"</span>
+<span class="n">PACKAGE_SHORT</span> <span class="o">=</span> <span class="s2">"affairs"</span>
+<span class="n">CONFIG_NAME</span> <span class="o">=</span> <span class="s2">"config.yaml"</span>
+
+<span class="n">_DIRECTIONS</span> <span class="o">=</span> <span class="p">{</span><span class="s2">"revenue"</span><span class="p">,</span> <span class="s2">"expense"</span><span class="p">}</span>
+<span class="n">_MODELS</span> <span class="o">=</span> <span class="p">{</span><span class="s2">"recurring"</span><span class="p">,</span> <span class="s2">"one_time"</span><span class="p">,</span> <span class="s2">"usage"</span><span class="p">}</span>
+<span class="n">_INTERVALS</span> <span class="o">=</span> <span class="p">{</span><span class="s2">"month"</span><span class="p">,</span> <span class="s2">"year"</span><span class="p">,</span> <span class="s2">"day"</span><span class="p">,</span> <span class="s2">"hour"</span><span class="p">,</span> <span class="s2">"unit"</span><span class="p">,</span> <span class="s2">"case"</span><span class="p">,</span> <span class="s2">"usage"</span><span class="p">}</span>
+<span class="n">_PRICE_KINDS</span> <span class="o">=</span> <span class="p">{</span><span class="s2">"fixed"</span><span class="p">,</span> <span class="s2">"tbd"</span><span class="p">,</span> <span class="s2">"cost_plus"</span><span class="p">,</span> <span class="s2">"included"</span><span class="p">,</span> <span class="s2">"free"</span><span class="p">}</span>
+<span class="n">_DISCOUNT_STATUSES</span> <span class="o">=</span> <span class="p">{</span><span class="s2">"active"</span><span class="p">,</span> <span class="s2">"proposed"</span><span class="p">,</span> <span class="s2">"retired"</span><span class="p">}</span>
+<span class="n">_MEASURES</span> <span class="o">=</span> <span class="p">{</span><span class="s2">"stock"</span><span class="p">,</span> <span class="s2">"flow"</span><span class="p">}</span>
+
+
+<div class="viewcode-block" id="ConfigError">
+<a class="viewcode-back" href="../../api/scitex_affairs.html#scitex_affairs.ConfigError">[docs]</a>
+<span class="k">class</span><span class="w"> </span><span class="nc">ConfigError</span><span class="p">(</span><span class="ne">ValueError</span><span class="p">):</span>
+<span class="w">    </span><span class="sd">"""The business design document is inconsistent or incomplete."""</span></div>
+
+
+
+<div class="viewcode-block" id="DiscountPhase">
+<a class="viewcode-back" href="../../api/scitex_affairs.html#scitex_affairs.DiscountPhase">[docs]</a>
+<span class="nd">@dataclass</span><span class="p">(</span><span class="n">frozen</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span> <span class="n">slots</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+<span class="k">class</span><span class="w"> </span><span class="nc">DiscountPhase</span><span class="p">:</span>
+<span class="w">    </span><span class="sd">"""A dated discount phase shared through a pricing policy."""</span>
+
+    <span class="n">start</span><span class="p">:</span> <span class="n">date</span>
+    <span class="n">end</span><span class="p">:</span> <span class="n">date</span>
+    <span class="n">percent</span><span class="p">:</span> <span class="nb">float</span>
+    <span class="n">status</span><span class="p">:</span> <span class="nb">str</span>
+    <span class="n">label</span><span class="p">:</span> <span class="nb">str</span> <span class="o">=</span> <span class="s2">""</span>
+
+<div class="viewcode-block" id="DiscountPhase.contains">
+<a class="viewcode-back" href="../../api/scitex_affairs.html#scitex_affairs.DiscountPhase.contains">[docs]</a>
+    <span class="k">def</span><span class="w"> </span><span class="nf">contains</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">day</span><span class="p">:</span> <span class="n">date</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">bool</span><span class="p">:</span>
+        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">start</span> <span class="o">&lt;=</span> <span class="n">day</span> <span class="o">&lt;=</span> <span class="bp">self</span><span class="o">.</span><span class="n">end</span></div>
+</div>
+
+
+
+<div class="viewcode-block" id="Price">
+<a class="viewcode-back" href="../../api/scitex_affairs.html#scitex_affairs.Price">[docs]</a>
+<span class="nd">@dataclass</span><span class="p">(</span><span class="n">frozen</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span> <span class="n">slots</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+<span class="k">class</span><span class="w"> </span><span class="nc">Price</span><span class="p">:</span>
+<span class="w">    </span><span class="sd">"""A catalog price in the configuration's currency."""</span>
+
+    <span class="n">amount</span><span class="p">:</span> <span class="nb">float</span> <span class="o">|</span> <span class="kc">None</span>
+    <span class="n">interval</span><span class="p">:</span> <span class="nb">str</span>
+    <span class="n">unit</span><span class="p">:</span> <span class="nb">str</span>
+    <span class="n">kind</span><span class="p">:</span> <span class="nb">str</span> <span class="o">=</span> <span class="s2">"fixed"</span>
+    <span class="n">list_amount</span><span class="p">:</span> <span class="nb">float</span> <span class="o">|</span> <span class="kc">None</span> <span class="o">=</span> <span class="kc">None</span>
+    <span class="n">discount_percent</span><span class="p">:</span> <span class="nb">float</span> <span class="o">=</span> <span class="mf">0.0</span>
+    <span class="n">markup_percent</span><span class="p">:</span> <span class="nb">float</span> <span class="o">|</span> <span class="kc">None</span> <span class="o">=</span> <span class="kc">None</span>
+    <span class="n">policy</span><span class="p">:</span> <span class="nb">str</span> <span class="o">=</span> <span class="s2">""</span>
+    <span class="n">discount_schedule</span><span class="p">:</span> <span class="nb">tuple</span><span class="p">[</span><span class="n">DiscountPhase</span><span class="p">,</span> <span class="o">...</span><span class="p">]</span> <span class="o">=</span> <span class="p">()</span>
+
+<div class="viewcode-block" id="Price.from_mapping">
+<a class="viewcode-back" href="../../api/scitex_affairs.html#scitex_affairs.Price.from_mapping">[docs]</a>
+    <span class="nd">@classmethod</span>
+    <span class="k">def</span><span class="w"> </span><span class="nf">from_mapping</span><span class="p">(</span>
+        <span class="bp">cls</span><span class="p">,</span>
+        <span class="n">raw</span><span class="p">:</span> <span class="n">Mapping</span><span class="p">[</span><span class="nb">str</span><span class="p">,</span> <span class="n">Any</span><span class="p">],</span>
+        <span class="n">where</span><span class="p">:</span> <span class="nb">str</span><span class="p">,</span>
+        <span class="n">policies</span><span class="p">:</span> <span class="n">Mapping</span><span class="p">[</span><span class="nb">str</span><span class="p">,</span> <span class="n">Mapping</span><span class="p">[</span><span class="nb">str</span><span class="p">,</span> <span class="n">Any</span><span class="p">]],</span>
+    <span class="p">)</span> <span class="o">-&gt;</span> <span class="n">Price</span><span class="p">:</span>
+        <span class="n">policy</span> <span class="o">=</span> <span class="nb">str</span><span class="p">(</span><span class="n">raw</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s2">"policy"</span><span class="p">,</span> <span class="s2">""</span><span class="p">))</span><span class="o">.</span><span class="n">strip</span><span class="p">()</span>
+        <span class="k">if</span> <span class="n">policy</span> <span class="ow">and</span> <span class="n">policy</span> <span class="ow">not</span> <span class="ow">in</span> <span class="n">policies</span><span class="p">:</span>
+            <span class="k">raise</span> <span class="n">ConfigError</span><span class="p">(</span><span class="sa">f</span><span class="s2">"</span><span class="si">{</span><span class="n">where</span><span class="si">}</span><span class="s2">.policy is not defined: </span><span class="si">{</span><span class="n">policy</span><span class="si">}</span><span class="s2">"</span><span class="p">)</span>
+        <span class="n">merged</span> <span class="o">=</span> <span class="nb">dict</span><span class="p">(</span><span class="n">policies</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="n">policy</span><span class="p">,</span> <span class="p">{}))</span>
+        <span class="n">merged</span><span class="o">.</span><span class="n">update</span><span class="p">(</span><span class="n">raw</span><span class="p">)</span>
+        <span class="n">kind</span> <span class="o">=</span> <span class="n">_choice</span><span class="p">(</span><span class="n">merged</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s2">"kind"</span><span class="p">,</span> <span class="s2">"fixed"</span><span class="p">),</span> <span class="n">_PRICE_KINDS</span><span class="p">,</span> <span class="sa">f</span><span class="s2">"</span><span class="si">{</span><span class="n">where</span><span class="si">}</span><span class="s2">.kind"</span><span class="p">)</span>
+        <span class="n">interval</span> <span class="o">=</span> <span class="n">_choice</span><span class="p">(</span><span class="n">merged</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s2">"interval"</span><span class="p">),</span> <span class="n">_INTERVALS</span><span class="p">,</span> <span class="sa">f</span><span class="s2">"</span><span class="si">{</span><span class="n">where</span><span class="si">}</span><span class="s2">.interval"</span><span class="p">)</span>
+        <span class="n">unit</span> <span class="o">=</span> <span class="n">_text</span><span class="p">(</span><span class="n">merged</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s2">"unit"</span><span class="p">),</span> <span class="sa">f</span><span class="s2">"</span><span class="si">{</span><span class="n">where</span><span class="si">}</span><span class="s2">.unit"</span><span class="p">)</span>
+        <span class="n">amount</span> <span class="o">=</span> <span class="n">_optional_number</span><span class="p">(</span><span class="n">merged</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s2">"amount"</span><span class="p">),</span> <span class="sa">f</span><span class="s2">"</span><span class="si">{</span><span class="n">where</span><span class="si">}</span><span class="s2">.amount"</span><span class="p">)</span>
+        <span class="n">list_amount</span> <span class="o">=</span> <span class="n">_optional_number</span><span class="p">(</span>
+            <span class="n">merged</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s2">"list_amount"</span><span class="p">),</span> <span class="sa">f</span><span class="s2">"</span><span class="si">{</span><span class="n">where</span><span class="si">}</span><span class="s2">.list_amount"</span>
+        <span class="p">)</span>
+        <span class="n">schedule</span> <span class="o">=</span> <span class="n">_discount_schedule</span><span class="p">(</span>
+            <span class="n">merged</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s2">"discount_schedule"</span><span class="p">,</span> <span class="p">[]),</span> <span class="sa">f</span><span class="s2">"</span><span class="si">{</span><span class="n">where</span><span class="si">}</span><span class="s2">.discount_schedule"</span>
+        <span class="p">)</span>
+        <span class="n">discount</span> <span class="o">=</span> <span class="n">_optional_number</span><span class="p">(</span>
+            <span class="n">merged</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s2">"discount_percent"</span><span class="p">),</span> <span class="sa">f</span><span class="s2">"</span><span class="si">{</span><span class="n">where</span><span class="si">}</span><span class="s2">.discount_percent"</span>
+        <span class="p">)</span>
+        <span class="k">if</span> <span class="n">discount</span> <span class="ow">is</span> <span class="kc">None</span><span class="p">:</span>
+            <span class="n">active</span> <span class="o">=</span> <span class="p">[</span><span class="n">phase</span> <span class="k">for</span> <span class="n">phase</span> <span class="ow">in</span> <span class="n">schedule</span> <span class="k">if</span> <span class="n">phase</span><span class="o">.</span><span class="n">status</span> <span class="o">==</span> <span class="s2">"active"</span><span class="p">]</span>
+            <span class="n">discount</span> <span class="o">=</span> <span class="n">active</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="o">.</span><span class="n">percent</span> <span class="k">if</span> <span class="n">active</span> <span class="k">else</span> <span class="mf">0.0</span>
+        <span class="n">discount</span> <span class="o">=</span> <span class="mf">0.0</span> <span class="k">if</span> <span class="n">discount</span> <span class="ow">is</span> <span class="kc">None</span> <span class="k">else</span> <span class="n">discount</span>
+        <span class="n">markup</span> <span class="o">=</span> <span class="n">_optional_number</span><span class="p">(</span>
+            <span class="n">merged</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s2">"markup_percent"</span><span class="p">),</span> <span class="sa">f</span><span class="s2">"</span><span class="si">{</span><span class="n">where</span><span class="si">}</span><span class="s2">.markup_percent"</span>
+        <span class="p">)</span>
+        <span class="k">if</span> <span class="ow">not</span> <span class="mi">0</span> <span class="o">&lt;=</span> <span class="n">discount</span> <span class="o">&lt;=</span> <span class="mi">100</span><span class="p">:</span>
+            <span class="k">raise</span> <span class="n">ConfigError</span><span class="p">(</span><span class="sa">f</span><span class="s2">"</span><span class="si">{</span><span class="n">where</span><span class="si">}</span><span class="s2">.discount_percent must be between 0 and 100"</span><span class="p">)</span>
+        <span class="k">if</span> <span class="n">amount</span> <span class="ow">is</span> <span class="kc">None</span> <span class="ow">and</span> <span class="n">list_amount</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span><span class="p">:</span>
+            <span class="n">amount</span> <span class="o">=</span> <span class="n">list_amount</span> <span class="o">*</span> <span class="p">(</span><span class="mi">1</span> <span class="o">-</span> <span class="n">discount</span> <span class="o">/</span> <span class="mi">100</span><span class="p">)</span>
+        <span class="k">if</span> <span class="n">kind</span> <span class="o">==</span> <span class="s2">"fixed"</span> <span class="ow">and</span> <span class="n">amount</span> <span class="ow">is</span> <span class="kc">None</span><span class="p">:</span>
+            <span class="k">raise</span> <span class="n">ConfigError</span><span class="p">(</span><span class="sa">f</span><span class="s2">"</span><span class="si">{</span><span class="n">where</span><span class="si">}</span><span class="s2">: fixed pricing requires amount or list_amount"</span><span class="p">)</span>
+        <span class="k">if</span> <span class="n">kind</span> <span class="ow">in</span> <span class="p">{</span><span class="s2">"free"</span><span class="p">,</span> <span class="s2">"included"</span><span class="p">}:</span>
+            <span class="n">amount</span> <span class="o">=</span> <span class="mf">0.0</span>
+        <span class="k">if</span> <span class="n">kind</span> <span class="ow">in</span> <span class="p">{</span><span class="s2">"tbd"</span><span class="p">,</span> <span class="s2">"cost_plus"</span><span class="p">}</span> <span class="ow">and</span> <span class="n">amount</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span><span class="p">:</span>
+            <span class="k">raise</span> <span class="n">ConfigError</span><span class="p">(</span><span class="sa">f</span><span class="s2">"</span><span class="si">{</span><span class="n">where</span><span class="si">}</span><span class="s2">: </span><span class="si">{</span><span class="n">kind</span><span class="si">}</span><span class="s2"> pricing must not declare amount"</span><span class="p">)</span>
+        <span class="k">if</span> <span class="n">kind</span> <span class="o">==</span> <span class="s2">"cost_plus"</span> <span class="ow">and</span> <span class="n">markup</span> <span class="ow">is</span> <span class="kc">None</span><span class="p">:</span>
+            <span class="k">raise</span> <span class="n">ConfigError</span><span class="p">(</span><span class="sa">f</span><span class="s2">"</span><span class="si">{</span><span class="n">where</span><span class="si">}</span><span class="s2">: cost_plus pricing requires markup_percent"</span><span class="p">)</span>
+        <span class="k">if</span> <span class="nb">any</span><span class="p">(</span>
+            <span class="n">value</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span> <span class="ow">and</span> <span class="n">value</span> <span class="o">&lt;</span> <span class="mi">0</span> <span class="k">for</span> <span class="n">value</span> <span class="ow">in</span> <span class="p">(</span><span class="n">amount</span><span class="p">,</span> <span class="n">list_amount</span><span class="p">,</span> <span class="n">markup</span><span class="p">)</span>
+        <span class="p">):</span>
+            <span class="k">raise</span> <span class="n">ConfigError</span><span class="p">(</span>
+                <span class="sa">f</span><span class="s2">"</span><span class="si">{</span><span class="n">where</span><span class="si">}</span><span class="s2"> monetary values and markup must be non-negative"</span>
+            <span class="p">)</span>
+        <span class="k">return</span> <span class="bp">cls</span><span class="p">(</span>
+            <span class="n">amount</span><span class="o">=</span><span class="n">amount</span><span class="p">,</span>
+            <span class="n">interval</span><span class="o">=</span><span class="n">interval</span><span class="p">,</span>
+            <span class="n">unit</span><span class="o">=</span><span class="n">unit</span><span class="p">,</span>
+            <span class="n">kind</span><span class="o">=</span><span class="n">kind</span><span class="p">,</span>
+            <span class="n">list_amount</span><span class="o">=</span><span class="n">list_amount</span><span class="p">,</span>
+            <span class="n">discount_percent</span><span class="o">=</span><span class="n">discount</span><span class="p">,</span>
+            <span class="n">markup_percent</span><span class="o">=</span><span class="n">markup</span><span class="p">,</span>
+            <span class="n">policy</span><span class="o">=</span><span class="n">policy</span><span class="p">,</span>
+            <span class="n">discount_schedule</span><span class="o">=</span><span class="n">schedule</span><span class="p">,</span>
+        <span class="p">)</span></div>
+
+
+<div class="viewcode-block" id="Price.amount_on">
+<a class="viewcode-back" href="../../api/scitex_affairs.html#scitex_affairs.Price.amount_on">[docs]</a>
+    <span class="k">def</span><span class="w"> </span><span class="nf">amount_on</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">day</span><span class="p">:</span> <span class="n">date</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">float</span> <span class="o">|</span> <span class="kc">None</span><span class="p">:</span>
+<span class="w">        </span><span class="sd">"""Return the dated sell price, including proposed scenario phases."""</span>
+
+        <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">list_amount</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span> <span class="ow">and</span> <span class="bp">self</span><span class="o">.</span><span class="n">discount_schedule</span><span class="p">:</span>
+            <span class="k">for</span> <span class="n">phase</span> <span class="ow">in</span> <span class="bp">self</span><span class="o">.</span><span class="n">discount_schedule</span><span class="p">:</span>
+                <span class="k">if</span> <span class="n">phase</span><span class="o">.</span><span class="n">contains</span><span class="p">(</span><span class="n">day</span><span class="p">):</span>
+                    <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">list_amount</span> <span class="o">*</span> <span class="p">(</span><span class="mi">1</span> <span class="o">-</span> <span class="n">phase</span><span class="o">.</span><span class="n">percent</span> <span class="o">/</span> <span class="mi">100</span><span class="p">)</span>
+            <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">list_amount</span>
+        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">amount</span></div>
+</div>
+
+
+
+<div class="viewcode-block" id="CatalogItem">
+<a class="viewcode-back" href="../../api/scitex_affairs.html#scitex_affairs.CatalogItem">[docs]</a>
+<span class="nd">@dataclass</span><span class="p">(</span><span class="n">frozen</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span> <span class="n">slots</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+<span class="k">class</span><span class="w"> </span><span class="nc">CatalogItem</span><span class="p">:</span>
+<span class="w">    </span><span class="sd">"""One revenue or expense item."""</span>
+
+    <span class="nb">id</span><span class="p">:</span> <span class="nb">str</span>
+    <span class="n">name</span><span class="p">:</span> <span class="nb">str</span>
+    <span class="n">direction</span><span class="p">:</span> <span class="nb">str</span>
+    <span class="n">model</span><span class="p">:</span> <span class="nb">str</span>
+    <span class="n">price</span><span class="p">:</span> <span class="n">Price</span>
+    <span class="n">description</span><span class="p">:</span> <span class="nb">str</span> <span class="o">=</span> <span class="s2">""</span>
+    <span class="n">category</span><span class="p">:</span> <span class="nb">str</span> <span class="o">=</span> <span class="s2">""</span>
+    <span class="n">status</span><span class="p">:</span> <span class="nb">str</span> <span class="o">=</span> <span class="s2">"draft"</span>
+    <span class="n">automated</span><span class="p">:</span> <span class="nb">bool</span> <span class="o">|</span> <span class="kc">None</span> <span class="o">=</span> <span class="kc">None</span>
+    <span class="n">attributes</span><span class="p">:</span> <span class="n">Mapping</span><span class="p">[</span><span class="nb">str</span><span class="p">,</span> <span class="n">Any</span><span class="p">]</span> <span class="o">|</span> <span class="kc">None</span> <span class="o">=</span> <span class="kc">None</span>
+
+<div class="viewcode-block" id="CatalogItem.from_mapping">
+<a class="viewcode-back" href="../../api/scitex_affairs.html#scitex_affairs.CatalogItem.from_mapping">[docs]</a>
+    <span class="nd">@classmethod</span>
+    <span class="k">def</span><span class="w"> </span><span class="nf">from_mapping</span><span class="p">(</span>
+        <span class="bp">cls</span><span class="p">,</span>
+        <span class="n">raw</span><span class="p">:</span> <span class="n">Mapping</span><span class="p">[</span><span class="nb">str</span><span class="p">,</span> <span class="n">Any</span><span class="p">],</span>
+        <span class="n">index</span><span class="p">:</span> <span class="nb">int</span><span class="p">,</span>
+        <span class="n">policies</span><span class="p">:</span> <span class="n">Mapping</span><span class="p">[</span><span class="nb">str</span><span class="p">,</span> <span class="n">Mapping</span><span class="p">[</span><span class="nb">str</span><span class="p">,</span> <span class="n">Any</span><span class="p">]],</span>
+    <span class="p">)</span> <span class="o">-&gt;</span> <span class="n">CatalogItem</span><span class="p">:</span>
+        <span class="n">where</span> <span class="o">=</span> <span class="sa">f</span><span class="s2">"catalog[</span><span class="si">{</span><span class="n">index</span><span class="si">}</span><span class="s2">]"</span>
+        <span class="n">price_raw</span> <span class="o">=</span> <span class="n">raw</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s2">"price"</span><span class="p">)</span>
+        <span class="k">if</span> <span class="ow">not</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">price_raw</span><span class="p">,</span> <span class="n">Mapping</span><span class="p">):</span>
+            <span class="k">raise</span> <span class="n">ConfigError</span><span class="p">(</span><span class="sa">f</span><span class="s2">"</span><span class="si">{</span><span class="n">where</span><span class="si">}</span><span class="s2">.price must be a mapping"</span><span class="p">)</span>
+        <span class="n">item</span> <span class="o">=</span> <span class="bp">cls</span><span class="p">(</span>
+            <span class="nb">id</span><span class="o">=</span><span class="n">_text</span><span class="p">(</span><span class="n">raw</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s2">"id"</span><span class="p">),</span> <span class="sa">f</span><span class="s2">"</span><span class="si">{</span><span class="n">where</span><span class="si">}</span><span class="s2">.id"</span><span class="p">),</span>
+            <span class="n">name</span><span class="o">=</span><span class="n">_text</span><span class="p">(</span><span class="n">raw</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s2">"name"</span><span class="p">),</span> <span class="sa">f</span><span class="s2">"</span><span class="si">{</span><span class="n">where</span><span class="si">}</span><span class="s2">.name"</span><span class="p">),</span>
+            <span class="n">direction</span><span class="o">=</span><span class="n">_choice</span><span class="p">(</span><span class="n">raw</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s2">"direction"</span><span class="p">),</span> <span class="n">_DIRECTIONS</span><span class="p">,</span> <span class="sa">f</span><span class="s2">"</span><span class="si">{</span><span class="n">where</span><span class="si">}</span><span class="s2">.direction"</span><span class="p">),</span>
+            <span class="n">model</span><span class="o">=</span><span class="n">_choice</span><span class="p">(</span><span class="n">raw</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s2">"model"</span><span class="p">),</span> <span class="n">_MODELS</span><span class="p">,</span> <span class="sa">f</span><span class="s2">"</span><span class="si">{</span><span class="n">where</span><span class="si">}</span><span class="s2">.model"</span><span class="p">),</span>
+            <span class="n">price</span><span class="o">=</span><span class="n">Price</span><span class="o">.</span><span class="n">from_mapping</span><span class="p">(</span><span class="n">price_raw</span><span class="p">,</span> <span class="sa">f</span><span class="s2">"</span><span class="si">{</span><span class="n">where</span><span class="si">}</span><span class="s2">.price"</span><span class="p">,</span> <span class="n">policies</span><span class="p">),</span>
+            <span class="n">description</span><span class="o">=</span><span class="nb">str</span><span class="p">(</span><span class="n">raw</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s2">"description"</span><span class="p">,</span> <span class="s2">""</span><span class="p">))</span><span class="o">.</span><span class="n">strip</span><span class="p">(),</span>
+            <span class="n">category</span><span class="o">=</span><span class="nb">str</span><span class="p">(</span><span class="n">raw</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s2">"category"</span><span class="p">,</span> <span class="s2">""</span><span class="p">))</span><span class="o">.</span><span class="n">strip</span><span class="p">(),</span>
+            <span class="n">status</span><span class="o">=</span><span class="nb">str</span><span class="p">(</span><span class="n">raw</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s2">"status"</span><span class="p">,</span> <span class="s2">"draft"</span><span class="p">))</span><span class="o">.</span><span class="n">strip</span><span class="p">()</span> <span class="ow">or</span> <span class="s2">"draft"</span><span class="p">,</span>
+            <span class="n">automated</span><span class="o">=</span><span class="n">_optional_bool</span><span class="p">(</span><span class="n">raw</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s2">"automated"</span><span class="p">),</span> <span class="sa">f</span><span class="s2">"</span><span class="si">{</span><span class="n">where</span><span class="si">}</span><span class="s2">.automated"</span><span class="p">),</span>
+            <span class="n">attributes</span><span class="o">=</span><span class="n">_optional_mapping</span><span class="p">(</span><span class="n">raw</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s2">"attributes"</span><span class="p">),</span> <span class="sa">f</span><span class="s2">"</span><span class="si">{</span><span class="n">where</span><span class="si">}</span><span class="s2">.attributes"</span><span class="p">),</span>
+        <span class="p">)</span>
+        <span class="k">if</span> <span class="n">item</span><span class="o">.</span><span class="n">model</span> <span class="o">==</span> <span class="s2">"recurring"</span> <span class="ow">and</span> <span class="n">item</span><span class="o">.</span><span class="n">price</span><span class="o">.</span><span class="n">interval</span> <span class="ow">not</span> <span class="ow">in</span> <span class="p">{</span><span class="s2">"month"</span><span class="p">,</span> <span class="s2">"year"</span><span class="p">}:</span>
+            <span class="k">raise</span> <span class="n">ConfigError</span><span class="p">(</span>
+                <span class="sa">f</span><span class="s2">"</span><span class="si">{</span><span class="n">where</span><span class="si">}</span><span class="s2">: recurring items require a month or year price interval"</span>
+            <span class="p">)</span>
+        <span class="k">return</span> <span class="n">item</span></div>
+</div>
+
+
+
+<div class="viewcode-block" id="Scenario">
+<a class="viewcode-back" href="../../api/scitex_affairs.html#scitex_affairs.Scenario">[docs]</a>
+<span class="nd">@dataclass</span><span class="p">(</span><span class="n">frozen</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span> <span class="n">slots</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+<span class="k">class</span><span class="w"> </span><span class="nc">Scenario</span><span class="p">:</span>
+<span class="w">    </span><span class="sd">"""An explicitly optional set of hypothetical time series."""</span>
+
+    <span class="nb">id</span><span class="p">:</span> <span class="nb">str</span>
+    <span class="n">label</span><span class="p">:</span> <span class="nb">str</span>
+    <span class="n">status</span><span class="p">:</span> <span class="nb">str</span>
+    <span class="n">start_date</span><span class="p">:</span> <span class="n">date</span>
+    <span class="n">end_date</span><span class="p">:</span> <span class="n">date</span>
+    <span class="n">series</span><span class="p">:</span> <span class="nb">tuple</span><span class="p">[</span><span class="n">Mapping</span><span class="p">[</span><span class="nb">str</span><span class="p">,</span> <span class="n">Any</span><span class="p">],</span> <span class="o">...</span><span class="p">]</span>
+
+<div class="viewcode-block" id="Scenario.from_mapping">
+<a class="viewcode-back" href="../../api/scitex_affairs.html#scitex_affairs.Scenario.from_mapping">[docs]</a>
+    <span class="nd">@classmethod</span>
+    <span class="k">def</span><span class="w"> </span><span class="nf">from_mapping</span><span class="p">(</span>
+        <span class="bp">cls</span><span class="p">,</span>
+        <span class="n">scenario_id</span><span class="p">:</span> <span class="nb">str</span><span class="p">,</span>
+        <span class="n">raw</span><span class="p">:</span> <span class="n">Mapping</span><span class="p">[</span><span class="nb">str</span><span class="p">,</span> <span class="n">Any</span><span class="p">],</span>
+        <span class="n">catalog</span><span class="p">:</span> <span class="n">Mapping</span><span class="p">[</span><span class="nb">str</span><span class="p">,</span> <span class="n">CatalogItem</span><span class="p">],</span>
+    <span class="p">)</span> <span class="o">-&gt;</span> <span class="n">Scenario</span><span class="p">:</span>
+        <span class="n">where</span> <span class="o">=</span> <span class="sa">f</span><span class="s2">"scenarios.</span><span class="si">{</span><span class="n">scenario_id</span><span class="si">}</span><span class="s2">"</span>
+        <span class="n">start</span> <span class="o">=</span> <span class="n">_date</span><span class="p">(</span><span class="n">raw</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s2">"start_date"</span><span class="p">),</span> <span class="sa">f</span><span class="s2">"</span><span class="si">{</span><span class="n">where</span><span class="si">}</span><span class="s2">.start_date"</span><span class="p">)</span>
+        <span class="n">end</span> <span class="o">=</span> <span class="n">_date</span><span class="p">(</span><span class="n">raw</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s2">"end_date"</span><span class="p">),</span> <span class="sa">f</span><span class="s2">"</span><span class="si">{</span><span class="n">where</span><span class="si">}</span><span class="s2">.end_date"</span><span class="p">)</span>
+        <span class="k">if</span> <span class="n">end</span> <span class="o">&lt;</span> <span class="n">start</span><span class="p">:</span>
+            <span class="k">raise</span> <span class="n">ConfigError</span><span class="p">(</span><span class="sa">f</span><span class="s2">"</span><span class="si">{</span><span class="n">where</span><span class="si">}</span><span class="s2">.end_date must not precede start_date"</span><span class="p">)</span>
+        <span class="n">raw_series</span> <span class="o">=</span> <span class="n">raw</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s2">"series"</span><span class="p">,</span> <span class="p">[])</span>
+        <span class="k">if</span> <span class="ow">not</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">raw_series</span><span class="p">,</span> <span class="nb">list</span><span class="p">):</span>
+            <span class="k">raise</span> <span class="n">ConfigError</span><span class="p">(</span><span class="sa">f</span><span class="s2">"</span><span class="si">{</span><span class="n">where</span><span class="si">}</span><span class="s2">.series must be a list"</span><span class="p">)</span>
+        <span class="n">series</span><span class="p">:</span> <span class="nb">list</span><span class="p">[</span><span class="n">Mapping</span><span class="p">[</span><span class="nb">str</span><span class="p">,</span> <span class="n">Any</span><span class="p">]]</span> <span class="o">=</span> <span class="p">[]</span>
+        <span class="k">for</span> <span class="n">index</span><span class="p">,</span> <span class="n">entry</span> <span class="ow">in</span> <span class="nb">enumerate</span><span class="p">(</span><span class="n">raw_series</span><span class="p">):</span>
+            <span class="n">series_where</span> <span class="o">=</span> <span class="sa">f</span><span class="s2">"</span><span class="si">{</span><span class="n">where</span><span class="si">}</span><span class="s2">.series[</span><span class="si">{</span><span class="n">index</span><span class="si">}</span><span class="s2">]"</span>
+            <span class="k">if</span> <span class="ow">not</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">entry</span><span class="p">,</span> <span class="n">Mapping</span><span class="p">):</span>
+                <span class="k">raise</span> <span class="n">ConfigError</span><span class="p">(</span><span class="sa">f</span><span class="s2">"</span><span class="si">{</span><span class="n">series_where</span><span class="si">}</span><span class="s2"> must be a mapping"</span><span class="p">)</span>
+            <span class="n">item_id</span> <span class="o">=</span> <span class="n">_text</span><span class="p">(</span><span class="n">entry</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s2">"item_id"</span><span class="p">),</span> <span class="sa">f</span><span class="s2">"</span><span class="si">{</span><span class="n">series_where</span><span class="si">}</span><span class="s2">.item_id"</span><span class="p">)</span>
+            <span class="k">if</span> <span class="n">item_id</span> <span class="ow">not</span> <span class="ow">in</span> <span class="n">catalog</span><span class="p">:</span>
+                <span class="k">raise</span> <span class="n">ConfigError</span><span class="p">(</span>
+                    <span class="sa">f</span><span class="s2">"</span><span class="si">{</span><span class="n">series_where</span><span class="si">}</span><span class="s2">.item_id is not in catalog: </span><span class="si">{</span><span class="n">item_id</span><span class="si">}</span><span class="s2">"</span>
+                <span class="p">)</span>
+            <span class="n">measure</span> <span class="o">=</span> <span class="n">_choice</span><span class="p">(</span>
+                <span class="n">entry</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s2">"measure"</span><span class="p">),</span> <span class="n">_MEASURES</span><span class="p">,</span> <span class="sa">f</span><span class="s2">"</span><span class="si">{</span><span class="n">series_where</span><span class="si">}</span><span class="s2">.measure"</span>
+            <span class="p">)</span>
+            <span class="n">item</span> <span class="o">=</span> <span class="n">catalog</span><span class="p">[</span><span class="n">item_id</span><span class="p">]</span>
+            <span class="k">if</span> <span class="n">measure</span> <span class="o">==</span> <span class="s2">"stock"</span><span class="p">:</span>
+                <span class="n">_validate_stock</span><span class="p">(</span><span class="n">entry</span><span class="p">,</span> <span class="n">series_where</span><span class="p">,</span> <span class="n">item</span><span class="p">,</span> <span class="n">start</span><span class="p">,</span> <span class="n">end</span><span class="p">)</span>
+            <span class="k">else</span><span class="p">:</span>
+                <span class="n">_validate_flow</span><span class="p">(</span><span class="n">entry</span><span class="p">,</span> <span class="n">series_where</span><span class="p">,</span> <span class="n">item</span><span class="p">,</span> <span class="n">start</span><span class="p">,</span> <span class="n">end</span><span class="p">)</span>
+            <span class="n">series</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="nb">dict</span><span class="p">(</span><span class="n">entry</span><span class="p">))</span>
+        <span class="k">return</span> <span class="bp">cls</span><span class="p">(</span>
+            <span class="nb">id</span><span class="o">=</span><span class="n">scenario_id</span><span class="p">,</span>
+            <span class="n">label</span><span class="o">=</span><span class="nb">str</span><span class="p">(</span><span class="n">raw</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s2">"label"</span><span class="p">,</span> <span class="n">scenario_id</span><span class="p">))</span><span class="o">.</span><span class="n">strip</span><span class="p">()</span> <span class="ow">or</span> <span class="n">scenario_id</span><span class="p">,</span>
+            <span class="n">status</span><span class="o">=</span><span class="nb">str</span><span class="p">(</span><span class="n">raw</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s2">"status"</span><span class="p">,</span> <span class="s2">"exploratory"</span><span class="p">))</span><span class="o">.</span><span class="n">strip</span><span class="p">()</span> <span class="ow">or</span> <span class="s2">"exploratory"</span><span class="p">,</span>
+            <span class="n">start_date</span><span class="o">=</span><span class="n">start</span><span class="p">,</span>
+            <span class="n">end_date</span><span class="o">=</span><span class="n">end</span><span class="p">,</span>
+            <span class="n">series</span><span class="o">=</span><span class="nb">tuple</span><span class="p">(</span><span class="n">series</span><span class="p">),</span>
+        <span class="p">)</span></div>
+</div>
+
+
+
+<div class="viewcode-block" id="AffairsConfig">
+<a class="viewcode-back" href="../../api/scitex_affairs.html#scitex_affairs.AffairsConfig">[docs]</a>
+<span class="nd">@dataclass</span><span class="p">(</span><span class="n">frozen</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span> <span class="n">slots</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+<span class="k">class</span><span class="w"> </span><span class="nc">AffairsConfig</span><span class="p">:</span>
+<span class="w">    </span><span class="sd">"""Validated single source of truth for business design facts."""</span>
+
+    <span class="n">schema_version</span><span class="p">:</span> <span class="nb">int</span>
+    <span class="n">organization</span><span class="p">:</span> <span class="nb">str</span>
+    <span class="n">currency</span><span class="p">:</span> <span class="nb">str</span>
+    <span class="n">fiscal_year_start_month</span><span class="p">:</span> <span class="nb">int</span>
+    <span class="n">catalog</span><span class="p">:</span> <span class="n">Mapping</span><span class="p">[</span><span class="nb">str</span><span class="p">,</span> <span class="n">CatalogItem</span><span class="p">]</span>
+    <span class="n">scenarios</span><span class="p">:</span> <span class="n">Mapping</span><span class="p">[</span><span class="nb">str</span><span class="p">,</span> <span class="n">Scenario</span><span class="p">]</span>
+    <span class="n">pricing_policies</span><span class="p">:</span> <span class="n">Mapping</span><span class="p">[</span><span class="nb">str</span><span class="p">,</span> <span class="n">Mapping</span><span class="p">[</span><span class="nb">str</span><span class="p">,</span> <span class="n">Any</span><span class="p">]]</span>
+    <span class="n">sources</span><span class="p">:</span> <span class="nb">tuple</span><span class="p">[</span><span class="n">Mapping</span><span class="p">[</span><span class="nb">str</span><span class="p">,</span> <span class="n">Any</span><span class="p">],</span> <span class="o">...</span><span class="p">]</span> <span class="o">=</span> <span class="p">()</span>
+
+<div class="viewcode-block" id="AffairsConfig.from_mapping">
+<a class="viewcode-back" href="../../api/scitex_affairs.html#scitex_affairs.AffairsConfig.from_mapping">[docs]</a>
+    <span class="nd">@classmethod</span>
+    <span class="k">def</span><span class="w"> </span><span class="nf">from_mapping</span><span class="p">(</span><span class="bp">cls</span><span class="p">,</span> <span class="n">raw</span><span class="p">:</span> <span class="n">Mapping</span><span class="p">[</span><span class="nb">str</span><span class="p">,</span> <span class="n">Any</span><span class="p">])</span> <span class="o">-&gt;</span> <span class="n">AffairsConfig</span><span class="p">:</span>
+        <span class="n">version</span> <span class="o">=</span> <span class="n">raw</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s2">"schema_version"</span><span class="p">)</span>
+        <span class="k">if</span> <span class="n">version</span> <span class="o">!=</span> <span class="mi">1</span><span class="p">:</span>
+            <span class="k">raise</span> <span class="n">ConfigError</span><span class="p">(</span><span class="sa">f</span><span class="s2">"schema_version must be 1, got </span><span class="si">{</span><span class="n">version</span><span class="si">!r}</span><span class="s2">"</span><span class="p">)</span>
+        <span class="n">policies</span> <span class="o">=</span> <span class="n">_pricing_policies</span><span class="p">(</span><span class="n">raw</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s2">"pricing_policies"</span><span class="p">,</span> <span class="p">{}))</span>
+        <span class="n">raw_catalog</span> <span class="o">=</span> <span class="n">raw</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s2">"catalog"</span><span class="p">,</span> <span class="p">[])</span>
+        <span class="k">if</span> <span class="ow">not</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">raw_catalog</span><span class="p">,</span> <span class="nb">list</span><span class="p">):</span>
+            <span class="k">raise</span> <span class="n">ConfigError</span><span class="p">(</span><span class="s2">"catalog must be a list"</span><span class="p">)</span>
+        <span class="n">catalog_items</span> <span class="o">=</span> <span class="p">[</span>
+            <span class="n">CatalogItem</span><span class="o">.</span><span class="n">from_mapping</span><span class="p">(</span><span class="n">item</span><span class="p">,</span> <span class="n">i</span><span class="p">,</span> <span class="n">policies</span><span class="p">)</span>
+            <span class="k">for</span> <span class="n">i</span><span class="p">,</span> <span class="n">item</span> <span class="ow">in</span> <span class="nb">enumerate</span><span class="p">(</span><span class="n">raw_catalog</span><span class="p">)</span>
+        <span class="p">]</span>
+        <span class="n">catalog</span> <span class="o">=</span> <span class="p">{</span><span class="n">item</span><span class="o">.</span><span class="n">id</span><span class="p">:</span> <span class="n">item</span> <span class="k">for</span> <span class="n">item</span> <span class="ow">in</span> <span class="n">catalog_items</span><span class="p">}</span>
+        <span class="k">if</span> <span class="nb">len</span><span class="p">(</span><span class="n">catalog</span><span class="p">)</span> <span class="o">!=</span> <span class="nb">len</span><span class="p">(</span><span class="n">catalog_items</span><span class="p">):</span>
+            <span class="k">raise</span> <span class="n">ConfigError</span><span class="p">(</span><span class="s2">"catalog item ids must be unique"</span><span class="p">)</span>
+        <span class="n">month</span> <span class="o">=</span> <span class="n">raw</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s2">"fiscal_year_start_month"</span><span class="p">,</span> <span class="mi">1</span><span class="p">)</span>
+        <span class="k">if</span> <span class="p">(</span>
+            <span class="ow">not</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">month</span><span class="p">,</span> <span class="nb">int</span><span class="p">)</span>
+            <span class="ow">or</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">month</span><span class="p">,</span> <span class="nb">bool</span><span class="p">)</span>
+            <span class="ow">or</span> <span class="ow">not</span> <span class="mi">1</span> <span class="o">&lt;=</span> <span class="n">month</span> <span class="o">&lt;=</span> <span class="mi">12</span>
+        <span class="p">):</span>
+            <span class="k">raise</span> <span class="n">ConfigError</span><span class="p">(</span><span class="s2">"fiscal_year_start_month must be an integer from 1 to 12"</span><span class="p">)</span>
+        <span class="n">raw_scenarios</span> <span class="o">=</span> <span class="n">raw</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s2">"scenarios"</span><span class="p">,</span> <span class="p">{})</span>
+        <span class="k">if</span> <span class="ow">not</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">raw_scenarios</span><span class="p">,</span> <span class="n">Mapping</span><span class="p">):</span>
+            <span class="k">raise</span> <span class="n">ConfigError</span><span class="p">(</span><span class="s2">"scenarios must be a mapping"</span><span class="p">)</span>
+        <span class="n">scenarios</span> <span class="o">=</span> <span class="p">{</span>
+            <span class="nb">str</span><span class="p">(</span><span class="n">key</span><span class="p">):</span> <span class="n">Scenario</span><span class="o">.</span><span class="n">from_mapping</span><span class="p">(</span><span class="nb">str</span><span class="p">(</span><span class="n">key</span><span class="p">),</span> <span class="n">value</span><span class="p">,</span> <span class="n">catalog</span><span class="p">)</span>
+            <span class="k">for</span> <span class="n">key</span><span class="p">,</span> <span class="n">value</span> <span class="ow">in</span> <span class="n">raw_scenarios</span><span class="o">.</span><span class="n">items</span><span class="p">()</span>
+        <span class="p">}</span>
+        <span class="k">return</span> <span class="bp">cls</span><span class="p">(</span>
+            <span class="n">schema_version</span><span class="o">=</span><span class="n">version</span><span class="p">,</span>
+            <span class="n">organization</span><span class="o">=</span><span class="n">_text</span><span class="p">(</span><span class="n">raw</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s2">"organization"</span><span class="p">),</span> <span class="s2">"organization"</span><span class="p">),</span>
+            <span class="n">currency</span><span class="o">=</span><span class="n">_text</span><span class="p">(</span><span class="n">raw</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s2">"currency"</span><span class="p">),</span> <span class="s2">"currency"</span><span class="p">)</span><span class="o">.</span><span class="n">upper</span><span class="p">(),</span>
+            <span class="n">fiscal_year_start_month</span><span class="o">=</span><span class="n">month</span><span class="p">,</span>
+            <span class="n">catalog</span><span class="o">=</span><span class="n">catalog</span><span class="p">,</span>
+            <span class="n">scenarios</span><span class="o">=</span><span class="n">scenarios</span><span class="p">,</span>
+            <span class="n">pricing_policies</span><span class="o">=</span><span class="n">policies</span><span class="p">,</span>
+            <span class="n">sources</span><span class="o">=</span><span class="n">_sources</span><span class="p">(</span><span class="n">raw</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s2">"sources"</span><span class="p">,</span> <span class="p">[])),</span>
+        <span class="p">)</span></div>
+</div>
+
+
+
+<div class="viewcode-block" id="resolve_config_path">
+<a class="viewcode-back" href="../../api/scitex_affairs.html#scitex_affairs.resolve_config_path">[docs]</a>
+<span class="k">def</span><span class="w"> </span><span class="nf">resolve_config_path</span><span class="p">(</span><span class="n">source</span><span class="p">:</span> <span class="nb">str</span> <span class="o">|</span> <span class="n">Path</span> <span class="o">|</span> <span class="kc">None</span> <span class="o">=</span> <span class="kc">None</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">Path</span><span class="p">:</span>
+<span class="w">    </span><span class="sd">"""Resolve explicit, environment, then canonical SciTeX config paths."""</span>
+
+    <span class="k">if</span> <span class="n">source</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span><span class="p">:</span>
+        <span class="k">return</span> <span class="n">Path</span><span class="p">(</span><span class="n">source</span><span class="p">)</span><span class="o">.</span><span class="n">expanduser</span><span class="p">()</span>
+    <span class="n">configured</span> <span class="o">=</span> <span class="n">os</span><span class="o">.</span><span class="n">environ</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="n">CONFIG_ENV</span><span class="p">)</span>
+    <span class="k">if</span> <span class="n">configured</span><span class="p">:</span>
+        <span class="k">return</span> <span class="n">Path</span><span class="p">(</span><span class="n">configured</span><span class="p">)</span><span class="o">.</span><span class="n">expanduser</span><span class="p">()</span>
+    <span class="k">return</span> <span class="n">local_state</span><span class="o">.</span><span class="n">path</span><span class="p">(</span><span class="n">PACKAGE_SHORT</span><span class="p">,</span> <span class="n">CONFIG_NAME</span><span class="p">)</span></div>
+
+
+
+<div class="viewcode-block" id="load_config">
+<a class="viewcode-back" href="../../api/scitex_affairs.html#scitex_affairs.load_config">[docs]</a>
+<span class="k">def</span><span class="w"> </span><span class="nf">load_config</span><span class="p">(</span>
+    <span class="n">source</span><span class="p">:</span> <span class="nb">str</span> <span class="o">|</span> <span class="n">Path</span> <span class="o">|</span> <span class="n">Mapping</span><span class="p">[</span><span class="nb">str</span><span class="p">,</span> <span class="n">Any</span><span class="p">]</span> <span class="o">|</span> <span class="kc">None</span> <span class="o">=</span> <span class="kc">None</span><span class="p">,</span>
+<span class="p">)</span> <span class="o">-&gt;</span> <span class="n">AffairsConfig</span><span class="p">:</span>
+<span class="w">    </span><span class="sd">"""Load a mapping or resolved YAML config.</span>
+
+<span class="sd">    Path precedence is explicit argument, ``SCITEX_AFFAIRS_CONFIG``, then</span>
+<span class="sd">    ``$SCITEX_DIR/affairs/config.yaml`` (normally</span>
+<span class="sd">    ``~/.scitex/affairs/config.yaml``). Project-scope resolution is provided</span>
+<span class="sd">    by the ecosystem-wide :mod:`scitex_config` local-state primitive.</span>
+<span class="sd">    """</span>
+
+    <span class="k">if</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">source</span><span class="p">,</span> <span class="n">Mapping</span><span class="p">):</span>
+        <span class="n">raw</span> <span class="o">=</span> <span class="n">source</span>
+    <span class="k">else</span><span class="p">:</span>
+        <span class="n">path</span> <span class="o">=</span> <span class="n">resolve_config_path</span><span class="p">(</span><span class="n">source</span><span class="p">)</span>
+        <span class="k">try</span><span class="p">:</span>
+            <span class="n">raw</span> <span class="o">=</span> <span class="n">yaml</span><span class="o">.</span><span class="n">safe_load</span><span class="p">(</span><span class="n">path</span><span class="o">.</span><span class="n">read_text</span><span class="p">(</span><span class="n">encoding</span><span class="o">=</span><span class="s2">"utf-8"</span><span class="p">))</span>
+        <span class="k">except</span> <span class="p">(</span><span class="ne">OSError</span><span class="p">,</span> <span class="n">yaml</span><span class="o">.</span><span class="n">YAMLError</span><span class="p">)</span> <span class="k">as</span> <span class="n">exc</span><span class="p">:</span>
+            <span class="k">raise</span> <span class="n">ConfigError</span><span class="p">(</span><span class="sa">f</span><span class="s2">"cannot load </span><span class="si">{</span><span class="n">path</span><span class="si">}</span><span class="s2">: </span><span class="si">{</span><span class="n">exc</span><span class="si">}</span><span class="s2">"</span><span class="p">)</span> <span class="kn">from</span><span class="w"> </span><span class="nn">exc</span>
+    <span class="k">if</span> <span class="ow">not</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">raw</span><span class="p">,</span> <span class="n">Mapping</span><span class="p">):</span>
+        <span class="k">raise</span> <span class="n">ConfigError</span><span class="p">(</span><span class="s2">"configuration root must be a mapping"</span><span class="p">)</span>
+    <span class="k">return</span> <span class="n">AffairsConfig</span><span class="o">.</span><span class="n">from_mapping</span><span class="p">(</span><span class="n">raw</span><span class="p">)</span></div>
+
+
+
+<span class="k">def</span><span class="w"> </span><span class="nf">_validate_stock</span><span class="p">(</span>
+    <span class="n">raw</span><span class="p">:</span> <span class="n">Mapping</span><span class="p">[</span><span class="nb">str</span><span class="p">,</span> <span class="n">Any</span><span class="p">],</span>
+    <span class="n">where</span><span class="p">:</span> <span class="nb">str</span><span class="p">,</span>
+    <span class="n">item</span><span class="p">:</span> <span class="n">CatalogItem</span><span class="p">,</span>
+    <span class="n">start</span><span class="p">:</span> <span class="n">date</span><span class="p">,</span>
+    <span class="n">end</span><span class="p">:</span> <span class="n">date</span><span class="p">,</span>
+<span class="p">)</span> <span class="o">-&gt;</span> <span class="kc">None</span><span class="p">:</span>
+    <span class="k">if</span> <span class="n">item</span><span class="o">.</span><span class="n">model</span> <span class="o">!=</span> <span class="s2">"recurring"</span><span class="p">:</span>
+        <span class="k">raise</span> <span class="n">ConfigError</span><span class="p">(</span><span class="sa">f</span><span class="s2">"</span><span class="si">{</span><span class="n">where</span><span class="si">}</span><span class="s2">: stock measure requires a recurring catalog item"</span><span class="p">)</span>
+    <span class="k">if</span> <span class="n">item</span><span class="o">.</span><span class="n">price</span><span class="o">.</span><span class="n">amount</span> <span class="ow">is</span> <span class="kc">None</span><span class="p">:</span>
+        <span class="k">raise</span> <span class="n">ConfigError</span><span class="p">(</span><span class="sa">f</span><span class="s2">"</span><span class="si">{</span><span class="n">where</span><span class="si">}</span><span class="s2">: scenario items require a numeric price"</span><span class="p">)</span>
+    <span class="n">interpolation</span> <span class="o">=</span> <span class="n">raw</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s2">"interpolation"</span><span class="p">,</span> <span class="s2">"linear"</span><span class="p">)</span>
+    <span class="k">if</span> <span class="n">interpolation</span> <span class="ow">not</span> <span class="ow">in</span> <span class="p">{</span><span class="s2">"linear"</span><span class="p">,</span> <span class="s2">"step"</span><span class="p">}:</span>
+        <span class="k">raise</span> <span class="n">ConfigError</span><span class="p">(</span><span class="sa">f</span><span class="s2">"</span><span class="si">{</span><span class="n">where</span><span class="si">}</span><span class="s2">.interpolation must be linear or step"</span><span class="p">)</span>
+    <span class="n">points</span> <span class="o">=</span> <span class="n">raw</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s2">"points"</span><span class="p">)</span>
+    <span class="k">if</span> <span class="ow">not</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">points</span><span class="p">,</span> <span class="nb">list</span><span class="p">)</span> <span class="ow">or</span> <span class="ow">not</span> <span class="n">points</span><span class="p">:</span>
+        <span class="k">raise</span> <span class="n">ConfigError</span><span class="p">(</span><span class="sa">f</span><span class="s2">"</span><span class="si">{</span><span class="n">where</span><span class="si">}</span><span class="s2">.points must be a non-empty list"</span><span class="p">)</span>
+    <span class="n">dates</span><span class="p">:</span> <span class="nb">list</span><span class="p">[</span><span class="n">date</span><span class="p">]</span> <span class="o">=</span> <span class="p">[]</span>
+    <span class="k">for</span> <span class="n">index</span><span class="p">,</span> <span class="n">point</span> <span class="ow">in</span> <span class="nb">enumerate</span><span class="p">(</span><span class="n">points</span><span class="p">):</span>
+        <span class="k">if</span> <span class="ow">not</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">point</span><span class="p">,</span> <span class="n">Mapping</span><span class="p">):</span>
+            <span class="k">raise</span> <span class="n">ConfigError</span><span class="p">(</span><span class="sa">f</span><span class="s2">"</span><span class="si">{</span><span class="n">where</span><span class="si">}</span><span class="s2">.points[</span><span class="si">{</span><span class="n">index</span><span class="si">}</span><span class="s2">] must be a mapping"</span><span class="p">)</span>
+        <span class="n">point_date</span> <span class="o">=</span> <span class="n">_date</span><span class="p">(</span><span class="n">point</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s2">"date"</span><span class="p">),</span> <span class="sa">f</span><span class="s2">"</span><span class="si">{</span><span class="n">where</span><span class="si">}</span><span class="s2">.points[</span><span class="si">{</span><span class="n">index</span><span class="si">}</span><span class="s2">].date"</span><span class="p">)</span>
+        <span class="n">value</span> <span class="o">=</span> <span class="n">_number</span><span class="p">(</span><span class="n">point</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s2">"value"</span><span class="p">),</span> <span class="sa">f</span><span class="s2">"</span><span class="si">{</span><span class="n">where</span><span class="si">}</span><span class="s2">.points[</span><span class="si">{</span><span class="n">index</span><span class="si">}</span><span class="s2">].value"</span><span class="p">)</span>
+        <span class="k">if</span> <span class="n">value</span> <span class="o">&lt;</span> <span class="mi">0</span><span class="p">:</span>
+            <span class="k">raise</span> <span class="n">ConfigError</span><span class="p">(</span><span class="sa">f</span><span class="s2">"</span><span class="si">{</span><span class="n">where</span><span class="si">}</span><span class="s2">.points[</span><span class="si">{</span><span class="n">index</span><span class="si">}</span><span class="s2">].value must be non-negative"</span><span class="p">)</span>
+        <span class="k">if</span> <span class="ow">not</span> <span class="n">start</span> <span class="o">&lt;=</span> <span class="n">point_date</span> <span class="o">&lt;=</span> <span class="n">end</span><span class="p">:</span>
+            <span class="k">raise</span> <span class="n">ConfigError</span><span class="p">(</span><span class="sa">f</span><span class="s2">"</span><span class="si">{</span><span class="n">where</span><span class="si">}</span><span class="s2">.points[</span><span class="si">{</span><span class="n">index</span><span class="si">}</span><span class="s2">].date is outside the scenario"</span><span class="p">)</span>
+        <span class="n">dates</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">point_date</span><span class="p">)</span>
+    <span class="k">if</span> <span class="n">dates</span> <span class="o">!=</span> <span class="nb">sorted</span><span class="p">(</span><span class="n">dates</span><span class="p">)</span> <span class="ow">or</span> <span class="nb">len</span><span class="p">(</span><span class="n">dates</span><span class="p">)</span> <span class="o">!=</span> <span class="nb">len</span><span class="p">(</span><span class="nb">set</span><span class="p">(</span><span class="n">dates</span><span class="p">)):</span>
+        <span class="k">raise</span> <span class="n">ConfigError</span><span class="p">(</span><span class="sa">f</span><span class="s2">"</span><span class="si">{</span><span class="n">where</span><span class="si">}</span><span class="s2">.points dates must be unique and increasing"</span><span class="p">)</span>
+
+
+<span class="k">def</span><span class="w"> </span><span class="nf">_validate_flow</span><span class="p">(</span>
+    <span class="n">raw</span><span class="p">:</span> <span class="n">Mapping</span><span class="p">[</span><span class="nb">str</span><span class="p">,</span> <span class="n">Any</span><span class="p">],</span>
+    <span class="n">where</span><span class="p">:</span> <span class="nb">str</span><span class="p">,</span>
+    <span class="n">item</span><span class="p">:</span> <span class="n">CatalogItem</span><span class="p">,</span>
+    <span class="n">start</span><span class="p">:</span> <span class="n">date</span><span class="p">,</span>
+    <span class="n">end</span><span class="p">:</span> <span class="n">date</span><span class="p">,</span>
+<span class="p">)</span> <span class="o">-&gt;</span> <span class="kc">None</span><span class="p">:</span>
+    <span class="k">if</span> <span class="n">item</span><span class="o">.</span><span class="n">model</span> <span class="o">==</span> <span class="s2">"recurring"</span><span class="p">:</span>
+        <span class="k">raise</span> <span class="n">ConfigError</span><span class="p">(</span><span class="sa">f</span><span class="s2">"</span><span class="si">{</span><span class="n">where</span><span class="si">}</span><span class="s2">: flow measure cannot use a recurring catalog item"</span><span class="p">)</span>
+    <span class="k">if</span> <span class="n">item</span><span class="o">.</span><span class="n">price</span><span class="o">.</span><span class="n">amount</span> <span class="ow">is</span> <span class="kc">None</span><span class="p">:</span>
+        <span class="k">raise</span> <span class="n">ConfigError</span><span class="p">(</span><span class="sa">f</span><span class="s2">"</span><span class="si">{</span><span class="n">where</span><span class="si">}</span><span class="s2">: scenario items require a numeric price"</span><span class="p">)</span>
+    <span class="n">periods</span> <span class="o">=</span> <span class="n">raw</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s2">"periods"</span><span class="p">)</span>
+    <span class="k">if</span> <span class="ow">not</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">periods</span><span class="p">,</span> <span class="nb">list</span><span class="p">)</span> <span class="ow">or</span> <span class="ow">not</span> <span class="n">periods</span><span class="p">:</span>
+        <span class="k">raise</span> <span class="n">ConfigError</span><span class="p">(</span><span class="sa">f</span><span class="s2">"</span><span class="si">{</span><span class="n">where</span><span class="si">}</span><span class="s2">.periods must be a non-empty list"</span><span class="p">)</span>
+    <span class="k">for</span> <span class="n">index</span><span class="p">,</span> <span class="n">period</span> <span class="ow">in</span> <span class="nb">enumerate</span><span class="p">(</span><span class="n">periods</span><span class="p">):</span>
+        <span class="k">if</span> <span class="ow">not</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">period</span><span class="p">,</span> <span class="n">Mapping</span><span class="p">):</span>
+            <span class="k">raise</span> <span class="n">ConfigError</span><span class="p">(</span><span class="sa">f</span><span class="s2">"</span><span class="si">{</span><span class="n">where</span><span class="si">}</span><span class="s2">.periods[</span><span class="si">{</span><span class="n">index</span><span class="si">}</span><span class="s2">] must be a mapping"</span><span class="p">)</span>
+        <span class="n">period_start</span> <span class="o">=</span> <span class="n">_date</span><span class="p">(</span><span class="n">period</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s2">"start"</span><span class="p">),</span> <span class="sa">f</span><span class="s2">"</span><span class="si">{</span><span class="n">where</span><span class="si">}</span><span class="s2">.periods[</span><span class="si">{</span><span class="n">index</span><span class="si">}</span><span class="s2">].start"</span><span class="p">)</span>
+        <span class="n">period_end</span> <span class="o">=</span> <span class="n">_date</span><span class="p">(</span><span class="n">period</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s2">"end"</span><span class="p">),</span> <span class="sa">f</span><span class="s2">"</span><span class="si">{</span><span class="n">where</span><span class="si">}</span><span class="s2">.periods[</span><span class="si">{</span><span class="n">index</span><span class="si">}</span><span class="s2">].end"</span><span class="p">)</span>
+        <span class="n">value</span> <span class="o">=</span> <span class="n">_number</span><span class="p">(</span><span class="n">period</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s2">"value"</span><span class="p">),</span> <span class="sa">f</span><span class="s2">"</span><span class="si">{</span><span class="n">where</span><span class="si">}</span><span class="s2">.periods[</span><span class="si">{</span><span class="n">index</span><span class="si">}</span><span class="s2">].value"</span><span class="p">)</span>
+        <span class="k">if</span> <span class="n">period_end</span> <span class="o">&lt;</span> <span class="n">period_start</span><span class="p">:</span>
+            <span class="k">raise</span> <span class="n">ConfigError</span><span class="p">(</span><span class="sa">f</span><span class="s2">"</span><span class="si">{</span><span class="n">where</span><span class="si">}</span><span class="s2">.periods[</span><span class="si">{</span><span class="n">index</span><span class="si">}</span><span class="s2">] has end before start"</span><span class="p">)</span>
+        <span class="k">if</span> <span class="n">period_start</span> <span class="o">&lt;</span> <span class="n">start</span> <span class="ow">or</span> <span class="n">period_end</span> <span class="o">&gt;</span> <span class="n">end</span><span class="p">:</span>
+            <span class="k">raise</span> <span class="n">ConfigError</span><span class="p">(</span><span class="sa">f</span><span class="s2">"</span><span class="si">{</span><span class="n">where</span><span class="si">}</span><span class="s2">.periods[</span><span class="si">{</span><span class="n">index</span><span class="si">}</span><span class="s2">] is outside the scenario"</span><span class="p">)</span>
+        <span class="k">if</span> <span class="n">value</span> <span class="o">&lt;</span> <span class="mi">0</span><span class="p">:</span>
+            <span class="k">raise</span> <span class="n">ConfigError</span><span class="p">(</span><span class="sa">f</span><span class="s2">"</span><span class="si">{</span><span class="n">where</span><span class="si">}</span><span class="s2">.periods[</span><span class="si">{</span><span class="n">index</span><span class="si">}</span><span class="s2">].value must be non-negative"</span><span class="p">)</span>
+
+
+<span class="k">def</span><span class="w"> </span><span class="nf">_text</span><span class="p">(</span><span class="n">value</span><span class="p">:</span> <span class="n">Any</span><span class="p">,</span> <span class="n">where</span><span class="p">:</span> <span class="nb">str</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">str</span><span class="p">:</span>
+    <span class="k">if</span> <span class="ow">not</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">value</span><span class="p">,</span> <span class="nb">str</span><span class="p">)</span> <span class="ow">or</span> <span class="ow">not</span> <span class="n">value</span><span class="o">.</span><span class="n">strip</span><span class="p">():</span>
+        <span class="k">raise</span> <span class="n">ConfigError</span><span class="p">(</span><span class="sa">f</span><span class="s2">"</span><span class="si">{</span><span class="n">where</span><span class="si">}</span><span class="s2"> must be a non-empty string"</span><span class="p">)</span>
+    <span class="k">return</span> <span class="n">value</span><span class="o">.</span><span class="n">strip</span><span class="p">()</span>
+
+
+<span class="k">def</span><span class="w"> </span><span class="nf">_choice</span><span class="p">(</span><span class="n">value</span><span class="p">:</span> <span class="n">Any</span><span class="p">,</span> <span class="n">choices</span><span class="p">:</span> <span class="nb">set</span><span class="p">[</span><span class="nb">str</span><span class="p">],</span> <span class="n">where</span><span class="p">:</span> <span class="nb">str</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">str</span><span class="p">:</span>
+    <span class="n">text</span> <span class="o">=</span> <span class="n">_text</span><span class="p">(</span><span class="n">value</span><span class="p">,</span> <span class="n">where</span><span class="p">)</span>
+    <span class="k">if</span> <span class="n">text</span> <span class="ow">not</span> <span class="ow">in</span> <span class="n">choices</span><span class="p">:</span>
+        <span class="k">raise</span> <span class="n">ConfigError</span><span class="p">(</span><span class="sa">f</span><span class="s2">"</span><span class="si">{</span><span class="n">where</span><span class="si">}</span><span class="s2"> must be one of </span><span class="si">{</span><span class="nb">sorted</span><span class="p">(</span><span class="n">choices</span><span class="p">)</span><span class="si">}</span><span class="s2">, got </span><span class="si">{</span><span class="n">text</span><span class="si">!r}</span><span class="s2">"</span><span class="p">)</span>
+    <span class="k">return</span> <span class="n">text</span>
+
+
+<span class="k">def</span><span class="w"> </span><span class="nf">_number</span><span class="p">(</span><span class="n">value</span><span class="p">:</span> <span class="n">Any</span><span class="p">,</span> <span class="n">where</span><span class="p">:</span> <span class="nb">str</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">float</span><span class="p">:</span>
+    <span class="k">if</span> <span class="ow">not</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">value</span><span class="p">,</span> <span class="p">(</span><span class="nb">int</span><span class="p">,</span> <span class="nb">float</span><span class="p">))</span> <span class="ow">or</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">value</span><span class="p">,</span> <span class="nb">bool</span><span class="p">):</span>
+        <span class="k">raise</span> <span class="n">ConfigError</span><span class="p">(</span><span class="sa">f</span><span class="s2">"</span><span class="si">{</span><span class="n">where</span><span class="si">}</span><span class="s2"> must be a number"</span><span class="p">)</span>
+    <span class="k">return</span> <span class="nb">float</span><span class="p">(</span><span class="n">value</span><span class="p">)</span>
+
+
+<span class="k">def</span><span class="w"> </span><span class="nf">_optional_number</span><span class="p">(</span><span class="n">value</span><span class="p">:</span> <span class="n">Any</span><span class="p">,</span> <span class="n">where</span><span class="p">:</span> <span class="nb">str</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">float</span> <span class="o">|</span> <span class="kc">None</span><span class="p">:</span>
+    <span class="k">if</span> <span class="n">value</span> <span class="ow">is</span> <span class="kc">None</span><span class="p">:</span>
+        <span class="k">return</span> <span class="kc">None</span>
+    <span class="k">return</span> <span class="n">_number</span><span class="p">(</span><span class="n">value</span><span class="p">,</span> <span class="n">where</span><span class="p">)</span>
+
+
+<span class="k">def</span><span class="w"> </span><span class="nf">_optional_bool</span><span class="p">(</span><span class="n">value</span><span class="p">:</span> <span class="n">Any</span><span class="p">,</span> <span class="n">where</span><span class="p">:</span> <span class="nb">str</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">bool</span> <span class="o">|</span> <span class="kc">None</span><span class="p">:</span>
+    <span class="k">if</span> <span class="n">value</span> <span class="ow">is</span> <span class="kc">None</span><span class="p">:</span>
+        <span class="k">return</span> <span class="kc">None</span>
+    <span class="k">if</span> <span class="ow">not</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">value</span><span class="p">,</span> <span class="nb">bool</span><span class="p">):</span>
+        <span class="k">raise</span> <span class="n">ConfigError</span><span class="p">(</span><span class="sa">f</span><span class="s2">"</span><span class="si">{</span><span class="n">where</span><span class="si">}</span><span class="s2"> must be true or false"</span><span class="p">)</span>
+    <span class="k">return</span> <span class="n">value</span>
+
+
+<span class="k">def</span><span class="w"> </span><span class="nf">_optional_mapping</span><span class="p">(</span><span class="n">value</span><span class="p">:</span> <span class="n">Any</span><span class="p">,</span> <span class="n">where</span><span class="p">:</span> <span class="nb">str</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">Mapping</span><span class="p">[</span><span class="nb">str</span><span class="p">,</span> <span class="n">Any</span><span class="p">]</span> <span class="o">|</span> <span class="kc">None</span><span class="p">:</span>
+    <span class="k">if</span> <span class="n">value</span> <span class="ow">is</span> <span class="kc">None</span><span class="p">:</span>
+        <span class="k">return</span> <span class="kc">None</span>
+    <span class="k">if</span> <span class="ow">not</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">value</span><span class="p">,</span> <span class="n">Mapping</span><span class="p">):</span>
+        <span class="k">raise</span> <span class="n">ConfigError</span><span class="p">(</span><span class="sa">f</span><span class="s2">"</span><span class="si">{</span><span class="n">where</span><span class="si">}</span><span class="s2"> must be a mapping"</span><span class="p">)</span>
+    <span class="k">return</span> <span class="nb">dict</span><span class="p">(</span><span class="n">value</span><span class="p">)</span>
+
+
+<span class="k">def</span><span class="w"> </span><span class="nf">_sources</span><span class="p">(</span><span class="n">value</span><span class="p">:</span> <span class="n">Any</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">tuple</span><span class="p">[</span><span class="n">Mapping</span><span class="p">[</span><span class="nb">str</span><span class="p">,</span> <span class="n">Any</span><span class="p">],</span> <span class="o">...</span><span class="p">]:</span>
+    <span class="k">if</span> <span class="ow">not</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">value</span><span class="p">,</span> <span class="nb">list</span><span class="p">):</span>
+        <span class="k">raise</span> <span class="n">ConfigError</span><span class="p">(</span><span class="s2">"sources must be a list"</span><span class="p">)</span>
+    <span class="k">if</span> <span class="ow">not</span> <span class="nb">all</span><span class="p">(</span><span class="nb">isinstance</span><span class="p">(</span><span class="n">item</span><span class="p">,</span> <span class="n">Mapping</span><span class="p">)</span> <span class="k">for</span> <span class="n">item</span> <span class="ow">in</span> <span class="n">value</span><span class="p">):</span>
+        <span class="k">raise</span> <span class="n">ConfigError</span><span class="p">(</span><span class="s2">"each source must be a mapping"</span><span class="p">)</span>
+    <span class="k">return</span> <span class="nb">tuple</span><span class="p">(</span><span class="nb">dict</span><span class="p">(</span><span class="n">item</span><span class="p">)</span> <span class="k">for</span> <span class="n">item</span> <span class="ow">in</span> <span class="n">value</span><span class="p">)</span>
+
+
+<span class="k">def</span><span class="w"> </span><span class="nf">_pricing_policies</span><span class="p">(</span><span class="n">value</span><span class="p">:</span> <span class="n">Any</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">Mapping</span><span class="p">[</span><span class="nb">str</span><span class="p">,</span> <span class="n">Mapping</span><span class="p">[</span><span class="nb">str</span><span class="p">,</span> <span class="n">Any</span><span class="p">]]:</span>
+    <span class="k">if</span> <span class="ow">not</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">value</span><span class="p">,</span> <span class="n">Mapping</span><span class="p">):</span>
+        <span class="k">raise</span> <span class="n">ConfigError</span><span class="p">(</span><span class="s2">"pricing_policies must be a mapping"</span><span class="p">)</span>
+    <span class="k">if</span> <span class="ow">not</span> <span class="nb">all</span><span class="p">(</span><span class="nb">isinstance</span><span class="p">(</span><span class="n">item</span><span class="p">,</span> <span class="n">Mapping</span><span class="p">)</span> <span class="k">for</span> <span class="n">item</span> <span class="ow">in</span> <span class="n">value</span><span class="o">.</span><span class="n">values</span><span class="p">()):</span>
+        <span class="k">raise</span> <span class="n">ConfigError</span><span class="p">(</span><span class="s2">"each pricing policy must be a mapping"</span><span class="p">)</span>
+    <span class="k">return</span> <span class="p">{</span><span class="nb">str</span><span class="p">(</span><span class="n">key</span><span class="p">):</span> <span class="nb">dict</span><span class="p">(</span><span class="n">item</span><span class="p">)</span> <span class="k">for</span> <span class="n">key</span><span class="p">,</span> <span class="n">item</span> <span class="ow">in</span> <span class="n">value</span><span class="o">.</span><span class="n">items</span><span class="p">()}</span>
+
+
+<span class="k">def</span><span class="w"> </span><span class="nf">_discount_schedule</span><span class="p">(</span><span class="n">value</span><span class="p">:</span> <span class="n">Any</span><span class="p">,</span> <span class="n">where</span><span class="p">:</span> <span class="nb">str</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">tuple</span><span class="p">[</span><span class="n">DiscountPhase</span><span class="p">,</span> <span class="o">...</span><span class="p">]:</span>
+    <span class="k">if</span> <span class="ow">not</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">value</span><span class="p">,</span> <span class="nb">list</span><span class="p">):</span>
+        <span class="k">raise</span> <span class="n">ConfigError</span><span class="p">(</span><span class="sa">f</span><span class="s2">"</span><span class="si">{</span><span class="n">where</span><span class="si">}</span><span class="s2"> must be a list"</span><span class="p">)</span>
+    <span class="n">phases</span> <span class="o">=</span> <span class="p">[]</span>
+    <span class="k">for</span> <span class="n">index</span><span class="p">,</span> <span class="n">raw</span> <span class="ow">in</span> <span class="nb">enumerate</span><span class="p">(</span><span class="n">value</span><span class="p">):</span>
+        <span class="n">phase_where</span> <span class="o">=</span> <span class="sa">f</span><span class="s2">"</span><span class="si">{</span><span class="n">where</span><span class="si">}</span><span class="s2">[</span><span class="si">{</span><span class="n">index</span><span class="si">}</span><span class="s2">]"</span>
+        <span class="k">if</span> <span class="ow">not</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">raw</span><span class="p">,</span> <span class="n">Mapping</span><span class="p">):</span>
+            <span class="k">raise</span> <span class="n">ConfigError</span><span class="p">(</span><span class="sa">f</span><span class="s2">"</span><span class="si">{</span><span class="n">phase_where</span><span class="si">}</span><span class="s2"> must be a mapping"</span><span class="p">)</span>
+        <span class="n">percent</span> <span class="o">=</span> <span class="n">_number</span><span class="p">(</span><span class="n">raw</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s2">"percent"</span><span class="p">),</span> <span class="sa">f</span><span class="s2">"</span><span class="si">{</span><span class="n">phase_where</span><span class="si">}</span><span class="s2">.percent"</span><span class="p">)</span>
+        <span class="k">if</span> <span class="ow">not</span> <span class="mi">0</span> <span class="o">&lt;=</span> <span class="n">percent</span> <span class="o">&lt;=</span> <span class="mi">100</span><span class="p">:</span>
+            <span class="k">raise</span> <span class="n">ConfigError</span><span class="p">(</span><span class="sa">f</span><span class="s2">"</span><span class="si">{</span><span class="n">phase_where</span><span class="si">}</span><span class="s2">.percent must be between 0 and 100"</span><span class="p">)</span>
+        <span class="n">phase</span> <span class="o">=</span> <span class="n">DiscountPhase</span><span class="p">(</span>
+            <span class="n">start</span><span class="o">=</span><span class="n">_date</span><span class="p">(</span><span class="n">raw</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s2">"start"</span><span class="p">),</span> <span class="sa">f</span><span class="s2">"</span><span class="si">{</span><span class="n">phase_where</span><span class="si">}</span><span class="s2">.start"</span><span class="p">),</span>
+            <span class="n">end</span><span class="o">=</span><span class="n">_date</span><span class="p">(</span><span class="n">raw</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s2">"end"</span><span class="p">),</span> <span class="sa">f</span><span class="s2">"</span><span class="si">{</span><span class="n">phase_where</span><span class="si">}</span><span class="s2">.end"</span><span class="p">),</span>
+            <span class="n">percent</span><span class="o">=</span><span class="n">percent</span><span class="p">,</span>
+            <span class="n">status</span><span class="o">=</span><span class="n">_choice</span><span class="p">(</span>
+                <span class="n">raw</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s2">"status"</span><span class="p">),</span> <span class="n">_DISCOUNT_STATUSES</span><span class="p">,</span> <span class="sa">f</span><span class="s2">"</span><span class="si">{</span><span class="n">phase_where</span><span class="si">}</span><span class="s2">.status"</span>
+            <span class="p">),</span>
+            <span class="n">label</span><span class="o">=</span><span class="nb">str</span><span class="p">(</span><span class="n">raw</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s2">"label"</span><span class="p">,</span> <span class="s2">""</span><span class="p">))</span><span class="o">.</span><span class="n">strip</span><span class="p">(),</span>
+        <span class="p">)</span>
+        <span class="k">if</span> <span class="n">phase</span><span class="o">.</span><span class="n">end</span> <span class="o">&lt;</span> <span class="n">phase</span><span class="o">.</span><span class="n">start</span><span class="p">:</span>
+            <span class="k">raise</span> <span class="n">ConfigError</span><span class="p">(</span><span class="sa">f</span><span class="s2">"</span><span class="si">{</span><span class="n">phase_where</span><span class="si">}</span><span class="s2">.end must not precede start"</span><span class="p">)</span>
+        <span class="k">if</span> <span class="n">phases</span> <span class="ow">and</span> <span class="n">phase</span><span class="o">.</span><span class="n">start</span> <span class="o">&lt;=</span> <span class="n">phases</span><span class="p">[</span><span class="o">-</span><span class="mi">1</span><span class="p">]</span><span class="o">.</span><span class="n">end</span><span class="p">:</span>
+            <span class="k">raise</span> <span class="n">ConfigError</span><span class="p">(</span><span class="sa">f</span><span class="s2">"</span><span class="si">{</span><span class="n">where</span><span class="si">}</span><span class="s2"> phases must be ordered and non-overlapping"</span><span class="p">)</span>
+        <span class="n">phases</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">phase</span><span class="p">)</span>
+    <span class="n">active_count</span> <span class="o">=</span> <span class="nb">sum</span><span class="p">(</span><span class="n">phase</span><span class="o">.</span><span class="n">status</span> <span class="o">==</span> <span class="s2">"active"</span> <span class="k">for</span> <span class="n">phase</span> <span class="ow">in</span> <span class="n">phases</span><span class="p">)</span>
+    <span class="k">if</span> <span class="n">active_count</span> <span class="o">&gt;</span> <span class="mi">1</span><span class="p">:</span>
+        <span class="k">raise</span> <span class="n">ConfigError</span><span class="p">(</span><span class="sa">f</span><span class="s2">"</span><span class="si">{</span><span class="n">where</span><span class="si">}</span><span class="s2"> must not contain multiple active phases"</span><span class="p">)</span>
+    <span class="k">return</span> <span class="nb">tuple</span><span class="p">(</span><span class="n">phases</span><span class="p">)</span>
+
+
+<span class="k">def</span><span class="w"> </span><span class="nf">_date</span><span class="p">(</span><span class="n">value</span><span class="p">:</span> <span class="n">Any</span><span class="p">,</span> <span class="n">where</span><span class="p">:</span> <span class="nb">str</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">date</span><span class="p">:</span>
+    <span class="k">if</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">value</span><span class="p">,</span> <span class="n">date</span><span class="p">):</span>
+        <span class="k">return</span> <span class="n">value</span>
+    <span class="k">if</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">value</span><span class="p">,</span> <span class="nb">str</span><span class="p">):</span>
+        <span class="k">try</span><span class="p">:</span>
+            <span class="k">return</span> <span class="n">date</span><span class="o">.</span><span class="n">fromisoformat</span><span class="p">(</span><span class="n">value</span><span class="p">)</span>
+        <span class="k">except</span> <span class="ne">ValueError</span> <span class="k">as</span> <span class="n">exc</span><span class="p">:</span>
+            <span class="k">raise</span> <span class="n">ConfigError</span><span class="p">(</span><span class="sa">f</span><span class="s2">"</span><span class="si">{</span><span class="n">where</span><span class="si">}</span><span class="s2"> must be an ISO date"</span><span class="p">)</span> <span class="kn">from</span><span class="w"> </span><span class="nn">exc</span>
+    <span class="k">raise</span> <span class="n">ConfigError</span><span class="p">(</span><span class="sa">f</span><span class="s2">"</span><span class="si">{</span><span class="n">where</span><span class="si">}</span><span class="s2"> must be an ISO date"</span><span class="p">)</span>
+</pre></div>
+
+           </div>
+          </div>
+          <footer>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2026, Yusuke Watanabe.</p>
+  </div>
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>
