@@ -12,6 +12,7 @@ CROSS_PACKAGE_IMPORTS = [
     "scitex_dev",
     "scitex_dev.cli",
     "scitex_dev.store",
+    "scitex_logging",
     "scitex_ui",
 ]
 

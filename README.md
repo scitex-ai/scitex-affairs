@@ -127,6 +127,11 @@ formulas.
 3. SciTeX App: the thin `scitex_affairs._django` standalone/Hub adapter.
 4. Skills: packaged only under `src/scitex_affairs/_skills/scitex-affairs/`.
 
+The skill includes reusable procurement screening, business contest preparation,
+and presentation revision workflows. Company qualifications, templates, private
+feedback, financial records, and submission evidence stay in the user's private
+workspace. The package contains methods and tools, not an applicant profile.
+
 ## PostgreSQL Actuals
 
 `scitex_affairs.actuals` registers the `affairs_actuals` plugin with
