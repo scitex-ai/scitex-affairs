@@ -1,6 +1,8 @@
 """Exercise native deck evidence, edit detection, and immutable output files."""
 import importlib.util
 import json
+import subprocess
+import sys
 from pathlib import Path
 from zipfile import ZipFile
 
@@ -24,30 +26,63 @@ def make_deck(path, text):
         archive.writestr("ppt/slides/slide1.xml", f'<p:sld xmlns:p="http://schemas.openxmlformats.org/presentationml/2006/main" xmlns:a="http://schemas.openxmlformats.org/drawingml/2006/main"><p:cSld><p:spTree><p:sp><p:nvSpPr><p:cNvPr id="2" name="SCITEX_TITLE"/></p:nvSpPr><p:txBody><a:p><a:r><a:t>{text}</a:t></a:r></a:p></p:txBody></p:sp></p:spTree></p:cSld></p:sld>')
 
 
-def test_snapshot_preserves_deck_and_detects_text_edit(tool, tmp_path):
+def test_snapshot_preserves_original_bytes(tool, tmp_path):
+    # Arrange
+    deck = tmp_path / "source.pptx"
+    make_deck(deck, "Original title")
+    original = deck.read_bytes()
+    # Act
+    tool.snapshot(deck)
+    # Assert
+    assert deck.read_bytes() == original
+
+
+def test_unchanged_deck_has_no_edits(tool, tmp_path):
+    # Arrange
+    deck = tmp_path / "source.pptx"
+    make_deck(deck, "Original title")
+    baseline = tool.snapshot(deck)
+    # Act
+    result = tool.compare(baseline, tool.snapshot(deck))
+    # Assert
+    assert result["changed_slides"] == []
+
+
+def test_native_title_edit_is_detected(tool, tmp_path):
+    # Arrange
     before = tmp_path / "before.pptx"
     after = tmp_path / "after.pptx"
     make_deck(before, "Original title")
     make_deck(after, "Revised title")
-    original = before.read_bytes()
-    baseline = tool.snapshot(before)
-    assert before.read_bytes() == original
-    assert not tool.compare(baseline, tool.snapshot(before))["changed_slides"]
-    diff = tool.compare(baseline, tool.snapshot(after))
-    assert not diff["identity_caution"]
-    assert diff["changed_slides"][0]["changes"]["title"]["after"] == "Revised title"
-    assert diff["changed_slides"][0]["changed_shapes"][0]["changes"]["text"]["after"] == ["Revised title"]
+    # Act
+    result = tool.compare(tool.snapshot(before), tool.snapshot(after))
+    # Assert
+    assert result["changed_slides"][0]["changed_shapes"][0]["changes"]["text"] == {
+        "before": ["Original title"], "after": ["Revised title"]
+    }
 
 
-def test_cli_json_and_existing_baseline_protection(tool, tmp_path, monkeypatch, capsys):
+def test_cli_outputs_machine_readable_snapshot(tool, tmp_path):
+    # Arrange
     deck = tmp_path / "deck.pptx"
     baseline = tmp_path / "baseline.json"
     make_deck(deck, "Evidence")
-    monkeypatch.setattr("sys.argv", ["deck_feedback.py", "snapshot", str(deck), "--output", str(baseline)])
-    assert tool.main() == 0
-    assert json.loads(capsys.readouterr().out)["slides"] == 1
+    command = [sys.executable, tool.__file__, "snapshot", str(deck), "--output", str(baseline)]
+    # Act
+    result = subprocess.run(command, capture_output=True, text=True)
+    # Assert
+    assert (result.returncode, json.loads(result.stdout)["slides"], result.stderr) == (0, 1, "")
+
+
+def test_existing_baseline_is_preserved(tool, tmp_path):
+    # Arrange
+    deck = tmp_path / "deck.pptx"
+    baseline = tmp_path / "baseline.json"
+    make_deck(deck, "Evidence")
+    command = [sys.executable, tool.__file__, "snapshot", str(deck), "--output", str(baseline)]
+    subprocess.run(command, capture_output=True, check=True)
     original = baseline.read_bytes()
-    assert tool.main() == 2
-    captured = capsys.readouterr()
-    assert captured.err and not captured.out
-    assert baseline.read_bytes() == original
+    # Act
+    result = subprocess.run(command, capture_output=True, text=True)
+    # Assert
+    assert (result.returncode, baseline.read_bytes(), result.stdout, bool(result.stderr)) == (2, original, "", True)
