@@ -15,7 +15,7 @@ PPTX and inspect legibility, clipping, density, navigation, and links. Code/XML
 checks do not substitute for visual review. Do not claim VBA execution was
 tested from metadata inspection alone.
 
-The standard-library [deck_feedback.py](../scripts/deck_feedback.py) snapshots
+The read-only [deck_feedback.py](../scripts/deck_feedback.py) snapshots
 PPTX/PPTM semantics without rewriting the deck:
 
 ```bash

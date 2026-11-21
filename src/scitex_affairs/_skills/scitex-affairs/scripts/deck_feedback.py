@@ -1,7 +1,7 @@
 #!/usr/bin/env python3
 """Read-only OOXML snapshots/diffs for learning from PowerPoint edits.
 
-Uses only the Python standard library. It supports PPTX and PPTM without
+Uses the package logging streams. It supports PPTX and PPTM without
 rewriting either file. Diffs describe edits, not the operator's motives.
 """
 from __future__ import annotations
@@ -17,6 +17,10 @@ import sys
 from urllib.parse import unquote
 from xml.etree import ElementTree as E
 from zipfile import ZipFile
+
+import scitex_logging as slogging
+
+_console = slogging.getPlainConsole(__name__)
 
 P='http://schemas.openxmlformats.org/presentationml/2006/main'
 A='http://schemas.openxmlformats.org/drawingml/2006/main'
@@ -207,10 +211,10 @@ def main():
             if args.command=='snapshot':summary={'baseline':str(args.output),'slides':len(value['slides']),'sha256':value['source_sha256']}
             else:summary={'diff':str(args.output),'changed_slides':len(value['changed_slides']),
                           'added_slides':len(value['added_slides']),'removed_slides':len(value['removed_slides'])}
-            print(json.dumps(summary,ensure_ascii=False))
-        else:print(payload,end='')
+            _console.emit(json.dumps(summary,ensure_ascii=False))
+        else:_console.emit(payload,end='')
     except (OSError,ValueError,KeyError,E.ParseError) as exc:
-        print(f'{type(exc).__name__}: {exc}',file=sys.stderr);return 2
+        _console.emit(f'{type(exc).__name__}: {exc}',stream=sys.stderr);return 2
     return 0
 
 
