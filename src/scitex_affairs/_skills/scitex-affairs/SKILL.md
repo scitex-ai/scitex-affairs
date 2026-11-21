@@ -1,8 +1,8 @@
 ---
 name: scitex-affairs
 description: |
-  [WHAT] Business catalog, actual-observation, time-aware scenario, pandas report, and plotting primitives.
-  [WHEN] Use for service catalogs, pricing SSOTs, actual business reports, or optional monthly/quarterly/yearly scenarios where point targets must be integrated through time.
+  [WHAT] Business catalog, actual-observation, time-aware scenario, reporting primitives, procurement screening, contest preparation, and deck revision workflows.
+  [WHEN] Use for service catalogs, pricing SSOTs, actual business reports, time-aware scenarios, public procurement screening, business contest applications, or presentation revision workflows.
   [HOW] Keep design in YAML, actuals in the resolved SciTeX PostgreSQL store, then use the Python API or `scitex-affairs` noun-verb CLI.
 tags: [scitex-affairs]
 primary_interface: python
@@ -55,3 +55,19 @@ average before `summarize()` aggregates it.
 - [Python API](03_python-api.md)
 - [CLI reference](04_cli-reference.md)
 - [Environment variables](20_env-vars.md)
+
+## Business workflows
+
+Read only the workflow needed for the request:
+
+- [Public procurement](references/procurement.md): official notices, eligibility,
+  scope/estimate risks, and evidence-backed opportunity reports.
+- [Business contests](references/business-contests.md): entrant rules, judging
+  criteria, application versions, and pitch preparation.
+- [Presentations](references/presentations.md): native decks and semantic revision
+  evidence, including the reusable deck snapshot/diff script.
+
+These are reusable methods. Applicant qualifications, capacity, source exclusions,
+company facts, templates, feedback, correspondence, submissions, prices, and
+calendar/email identities belong to the user's private workspace. Obtain that
+context for the requested task; do not copy it into this public package.
